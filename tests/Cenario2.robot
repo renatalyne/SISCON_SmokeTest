@@ -14,3 +14,11 @@ Cenário 2 : Validar criação de fussy outages
   E preenche estado
 #Então
   E Fecha página Chamadas
+
+
+
+
+
+
+
+  
