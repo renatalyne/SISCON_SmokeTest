@@ -90,24 +90,3 @@ E Fecha página Chamadas
     Right Click                   sp7-dist-chamada-titulo-listagem.png
     Click                         fechar.png
     Click                         sp7-icone.png
-
-Quando gero um nova "CHAMADA" sem cliente
-
-    Click                        spectrum-distribuição-chamada.png
-    Right Click                  titulo.png
-    Click                        minimizar.png
-    Wait Until Screen Contain    sp7-dist-chamada-titulo.png                             ${TEMPO}
-    Click                        sp7-dist-chamada-novo.png
-    Wait Until Screen Contain    sp7-dist-chamada-nova-detalhes.png                      ${TEMPO}
-    Wait Until Screen Contain    sp7-dist-chamada-nova-dadosReclamante.png               ${TEMPO}
-    Click                        sp7-dist-chamada-nova-tipo.png
-    Click                        sp7-dist-chamada-nova-tipo-1.png
-    Click                        maximiza.png
-    Input Text                   sp7-dist-chamada-nova-obs.png    Automacao
-    ${imageCoordinates}=	       Get Image Coordinates	sp7-dist-chamada-dados-estado.png=0.65
-    Click Region                 ${imageCoordinates}
-    Click                        sp7-dist-chamada-dados-estado-pernambuco
-    Wait Until Screen Not Contain    sp7-dist-chamada-dados-cidadevazia                 ${TEMPO}
-    ${score} =	Get Match Score                  sp7-dist-chamada-nova-salvar2.png
-    ${imageCoordinates}=	       Get Image Coordinates	sp7-dist-chamada-nova-salvar2.png=0.75
-    #Click Region                 ${imageCoordinates}
