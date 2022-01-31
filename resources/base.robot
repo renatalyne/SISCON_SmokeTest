@@ -55,7 +55,8 @@ E estou na aba "DISTRIBUIÇÃO"
 
 Quando gero um nova "CHAMADA"
     Click                        spectrum-distribuição-chamada.png
-    Click                         minimiza.png
+    Right Click                  titulo.png
+    Click                        minimizar.png
     Wait Until Screen Contain    sp7-dist-chamada-titulo.png                  ${TEMPO}
     Click                        sp7-dist-chamada-novo.png
     Wait Until Screen Contain    sp7-dist-chamada-nova-detalhes.png           ${TEMPO}
@@ -93,7 +94,8 @@ E Fecha página Chamadas
 Quando gero um nova "CHAMADA" sem cliente
 
     Click                        spectrum-distribuição-chamada.png
-    Click                         minimiza.png
+    Right Click                  titulo.png
+    Click                        minimizar.png
     Wait Until Screen Contain    sp7-dist-chamada-titulo.png                             ${TEMPO}
     Click                        sp7-dist-chamada-novo.png
     Wait Until Screen Contain    sp7-dist-chamada-nova-detalhes.png                      ${TEMPO}

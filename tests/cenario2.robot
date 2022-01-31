@@ -12,13 +12,5 @@ Cenário 2 : Validar criação de fussy outages
   E estou na aba "DISTRIBUIÇÃO"
   Quando gero um nova "CHAMADA"
   E preenche estado
-#Então
+#Então falta completar o resultado esperado
   E Fecha página Chamadas
-
-
-
-
-
-
-
-  
