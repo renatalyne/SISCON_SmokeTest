@@ -9,10 +9,138 @@ Test Teardown     Stop Remote Server
 
 
 Cenário 1 : Validar criação de outages por Tcall
-    Dado que estou logado no sistema
-    E estou na aba "DISTRIBUIÇÃO"
-    Quando gero um nova "CHAMADA"
-    E busca cliente
-    E preenche estado
-#    Então aparece a nova CHAMADA no grid
-    E Fecha página Chamadas
+    [Tags]   t1
+       log  Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador
+       Dado que estou logado no sistema
+       E estou na aba "DISTRIBUIÇÃO"
+       Quando gero um nova "CHAMADA"
+       E busca cliente
+       E preenche estado
+       Então aparece a nova CHAMADA no grid
+       E valida tipo de ocorrência diferente de "Ocorrência indefinida"
+       E Fecha página Chamadas detalhes
+       E realiza pesquisa na listagem
+       E Fecha página de listagem de chamadas
+
+     [Teardown]
+
+Cenário 2 : Validar fuzzy outage
+      [Tags]   SmokeTest
+  log  Objetivo do teste é criar uma nova ocorrência por chamada de cliente não morador
+          Dado que estou logado no sistema
+          E estou na aba "DISTRIBUIÇÃO"
+           Quando gero um nova "CHAMADA"
+           E preenche estado
+           Então aparece a nova CHAMADA no grid
+           E valida tipo de ocorrência igual a "Ocorrência indefinida"
+           E Fecha página Chamadas detalhes
+           E realiza pesquisa na listagem
+           E Fecha página de listagem de chamadas
+         [Teardown]
+
+Cenário 3: Validar criação outage com abertura manual de chave
+     [Tags]   SmokeTest
+
+     log  Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela 
+     Dado que estou logado no sistema
+     E estou na tela "Lista de Telas"
+     Minimiza sp7
+     Quando realizo a pesquisa
+      E clico em chamar
+      E abro chave escolhida
+      Então a ocorrência é gerada
+      E fecha "histórico de ocorrência"
+      E fecha chave aberta
+      E fecha tela "Processo/TempoReal"
+      E fecha tela "TA nomes"
+      E abre sp7
+
+    [Teardown]
+
+Cenario 4 : Criar Outage planejado
+  
+  [Tags]   SmokeTest
+
+  log   Objetivo do teste é criar uma ocorrência planejada
+
+  Dado que estou logado no sistema
+  E estou na aba "DISTRIBUIÇÃO"
+  E Estou na tela "Ocorrências"
+  Minimiza sp7
+  E estou na aba "Ocorrências Planejadas"
+  Quando gero uma nova ocorrência Planejadas
+  E preencho "Tipo Serviço"
+  E clico em "Salvar"
+  Então gera uma nova ocorrência planejada
+  E fecha "trabalho planejado"
+  E fecha "gerenciamento de ocorrências"
+  E abre sp7
+
+      [Teardown]
+
+Cenário 5: Criar Outage pelo Bau
+   
+   [Tags]   testando
+
+   log   Objetivo deste teste é criar uma ocorrência utilizando o simulador bau, não funciona em sistema distribuido.
+
+  Dado que estou logado no sistema
+  E verifico as ocorrências emergenciais
+  Minimiza sp7 
+  Quando gero a ocorrência via bau
+  E abre sp7
+  E verifico as ocorrências emergenciais após ocorrência
+  Então uma nova ocorrência é gerado no relatório
+  E fecha "gerenciamento de ocorrências"
+  E abre sp7
+
+        [Teardown]
+
+Cenário 6: Validar criação de Tarefa
+
+   [Tags]   SmokeTest
+
+  Dado que estou logado no sistema
+  E estou na aba "DISTRIBUIÇÃO"
+  E Estou na tela "Ocorrências"
+  Minimiza sp7
+  E estou na aba "Ocorrências Emergênciais"
+  E seleciono ocorrência
+  Quando crio uma nova tarefa
+  
+  
+  
+
+    [Teardown]
+
+Cenário 7: Completar o fluxo da tarefa
+
+
+   [Tags]    SmokeTest
+
+  Quando associo uma equipe disponivel 
+  E evoluo os status da tarefa 
+  Então as datas de realizado são preechida 
+  E fecha detalhes da tarefa
+  Então tarefa é apresentada no grid de tarefas
+  E fecha tarefas 
+  E fecha "gerenciamento de ocorrências"
+  E abre sp7
+    
+
+   [Teardown]
+
+Cenário 8: Editar alguma info do outage;
+
+
+   [Tags]    SmokeTest
+
+  #Dado que estou na tela de detalhes da ocorrência
+  E seleciono ocorrência condicional
+  Quando preencho os dados básicos 
+  E clico em "Salvar" condicional 
+  Então aparece a mensagem salvo com sucesso 
+
+
+
+Cenário 9: Completar o fluxo do outage;
