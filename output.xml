@@ -1,191 +1,480 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220204 09:49:44.279" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220224 14:09:34.286" rpa="false" schemaversion="2">
 <suite id="s1" name="Cenario1" source="C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\tests\cenario1.robot">
-<test id="s1-t1" name="Cenário 3: Validar criação outage com abertura manual de chave">
+<test id="s1-t1" name="Cenário 1 : Validar criação de outages por Tcall">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220204 09:49:47.265" endtime="20220204 09:49:47.285"/>
+<status status="PASS" starttime="20220224 14:09:38.422" endtime="20220224 14:09:38.435"/>
 </kw>
-<status status="PASS" starttime="20220204 09:49:47.264" endtime="20220204 09:49:47.285"/>
+<status status="PASS" starttime="20220224 14:09:38.421" endtime="20220224 14:09:38.436"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220224 14:09:38.436" level="INFO">Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador</msg>
+<status status="PASS" starttime="20220224 14:09:38.436" endtime="20220224 14:09:38.436"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220204 09:49:47.802" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978987794.png'/&gt;</msg>
-<status status="PASS" starttime="20220204 09:49:47.286" endtime="20220204 09:49:47.802"/>
+<msg timestamp="20220224 14:09:39.058" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722579046.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:38.438" endtime="20220224 14:09:39.058"/>
 </kw>
-<status status="PASS" starttime="20220204 09:49:47.286" endtime="20220204 09:49:47.802"/>
+<status status="PASS" starttime="20220224 14:09:38.437" endtime="20220224 14:09:39.058"/>
 </kw>
-<kw name="E estou na tela &quot;Lista de Telas&quot;" library="base">
+<kw name="E estou na aba &quot;DISTRIBUIÇÃO&quot;" library="base">
+<kw name="Get Image Coordinates" library="SikuliLibrary">
+<var>${imageCoordinates}</var>
+<arg>spectrum-distribuição.png</arg>
+<doc>Get Image Coordinates</doc>
+<msg timestamp="20220224 14:09:39.356" level="INFO">${imageCoordinates} = [467, 116, 115, 25]</msg>
+<status status="PASS" starttime="20220224 14:09:39.058" endtime="20220224 14:09:39.356"/>
+</kw>
+<kw name="Click Region" library="SikuliLibrary">
+<arg>${imageCoordinates}</arg>
+<doc>Click region</doc>
+<msg timestamp="20220224 14:09:43.050" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722579384.png'/&gt;
+[log] CLICK on L[524,128]@S(0) (588 msec)</msg>
+<msg timestamp="20220224 14:09:43.050" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722583034.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:39.356" endtime="20220224 14:09:43.050"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>spectrum-distribuição-interno.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:09:43.323" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722583313.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:43.051" endtime="20220224 14:09:43.323"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>spectrum-distribuição-chamada.png</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220224 14:09:43.648" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722583639.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:43.323" endtime="20220224 14:09:43.648"/>
+</kw>
+<status status="PASS" starttime="20220224 14:09:39.058" endtime="20220224 14:09:43.649"/>
+</kw>
+<kw name="Quando gero um nova &quot;CHAMADA&quot;" library="base">
 <kw name="Click" library="SikuliLibrary">
-<arg>sp7-listaTelas.png</arg>
+<arg>spectrum-distribuição-chamada.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220204 09:49:49.016" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978988107.png'/&gt;
-[log] CLICK on L[558,61]@S(0) (571 msec)</msg>
-<status status="PASS" starttime="20220204 09:49:47.803" endtime="20220204 09:49:49.016"/>
+<msg timestamp="20220224 14:09:44.753" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722583936.png'/&gt;
+[log] CLICK on L[566,153]@S(0) (564 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:43.650" endtime="20220224 14:09:44.753"/>
 </kw>
-<status status="PASS" starttime="20220204 09:49:47.803" endtime="20220204 09:49:49.019"/>
-</kw>
-<kw name="Minimiza sp7" library="base">
 <kw name="Right Click" library="SikuliLibrary">
 <arg>titulo.png</arg>
 <doc>Right click</doc>
-<msg timestamp="20220204 09:49:50.665" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978989683.png'/&gt;
+<msg timestamp="20220224 14:09:46.067" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722585089.png'/&gt;
 [log] RIGHT CLICK on L[290,15]@S(0) (568 msec)</msg>
-<status status="PASS" starttime="20220204 09:49:49.022" endtime="20220204 09:49:50.665"/>
+<status status="PASS" starttime="20220224 14:09:44.753" endtime="20220224 14:09:46.068"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>minimizar.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220204 09:49:52.103" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978991255.png'/&gt;
-[log] CLICK on L[343,70]@S(0) (599 msec)</msg>
-<status status="PASS" starttime="20220204 09:49:50.665" endtime="20220204 09:49:52.103"/>
+<msg timestamp="20220224 14:09:47.954" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722587056.png'/&gt;
+[log] CLICK on L[343,70]@S(0) (597 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:46.068" endtime="20220224 14:09:47.955"/>
 </kw>
-<status status="PASS" starttime="20220204 09:49:49.020" endtime="20220204 09:49:52.103"/>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-dist-chamada-titulo.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:09:48.244" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722588239.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:47.955" endtime="20220224 14:09:48.244"/>
 </kw>
-<kw name="Quando realizo a pesquisa" library="base">
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-novo.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:09:49.332" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722588521.png'/&gt;
+[log] CLICK on L[523,581]@S(0) (570 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:48.244" endtime="20220224 14:09:49.332"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-dist-chamada-nova-detalhes.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:09:49.751" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722589748.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:49.332" endtime="20220224 14:09:49.751"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-dist-chamada-nova-dadosReclamante.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:09:50.756" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722590751.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:49.752" endtime="20220224 14:09:50.756"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-nova-tipo.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:09:51.918" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722591060.png'/&gt;
+[log] CLICK on L[487,649]@S(0) (573 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:50.756" endtime="20220224 14:09:51.918"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-nova-tipo-1.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:09:53.335" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722592524.png'/&gt;
+[log] CLICK on L[453,774]@S(0) (574 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:51.918" endtime="20220224 14:09:53.335"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>maximiza.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:09:54.402" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722593601.png'/&gt;
+[log] CLICK on L[1887,537]@S(0) (559 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:53.335" endtime="20220224 14:09:54.402"/>
+</kw>
 <kw name="Input Text" library="SikuliLibrary">
-<arg>sp7-listaTelas-NomeB2.png</arg>
-<arg>13TRF</arg>
+<arg>sp7-dist-chamada-nova-obs.png</arg>
+<arg>Automacao</arg>
 <doc>Input text.
  Image could be empty</doc>
-<msg timestamp="20220204 09:49:53.773" level="INFO">Input Text:
-13TRF</msg>
-<msg timestamp="20220204 09:49:53.773" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978992356.png'/&gt;
-[log] CLICK on L[669,491]@S(0) (577 msec)
-[log]  TYPE "13TRF"</msg>
-<status status="PASS" starttime="20220204 09:49:52.104" endtime="20220204 09:49:53.774"/>
+<msg timestamp="20220224 14:09:56.386" level="INFO">Input Text:
+Automacao</msg>
+<msg timestamp="20220224 14:09:56.386" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722594677.png'/&gt;
+[log] CLICK on L[297,225]@S(0) (561 msec)
+[log]  TYPE "Automacao"</msg>
+<status status="PASS" starttime="20220224 14:09:54.403" endtime="20220224 14:09:56.386"/>
 </kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220204 09:49:53.888" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220204 09:49:53.774" endtime="20220204 09:49:53.889"/>
+<status status="PASS" starttime="20220224 14:09:43.650" endtime="20220224 14:09:56.386"/>
 </kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>sp7-listaTelas-NomeB3.png</arg>
-<arg>C00704</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220204 09:49:55.120" level="INFO">Paste Text:
-C00704</msg>
-<msg timestamp="20220204 09:49:55.120" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978994180.png'/&gt;
-[log] CLICK on L[606,484]@S(0) (553 msec)</msg>
-<status status="PASS" starttime="20220204 09:49:53.889" endtime="20220204 09:49:55.121"/>
+<kw name="E busca cliente" library="base">
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-nova-dadosReclamante-buscar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:09:57.614" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722596746.png'/&gt;
+[log] CLICK on L[1130,98]@S(0) (573 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:56.391" endtime="20220224 14:09:57.614"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-nova-dados-buscar-buscar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:09:59.030" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722598219.png'/&gt;
+[log] CLICK on L[94,233]@S(0) (567 msec)</msg>
+<status status="PASS" starttime="20220224 14:09:57.614" endtime="20220224 14:09:59.030"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-dadosReclamante-buscar-buscar-ultimachamada.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:10:00.347" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722600343.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:09:59.030" endtime="20220224 14:10:00.347"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dadosReclamante-buscar-buscar-ultimachamada.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:01.435" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722600607.png'/&gt;
+[log] CLICK on L[1252,311]@S(0) (574 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:00.348" endtime="20220224 14:10:01.435"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220224 14:10:02.445" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220224 14:10:01.435" endtime="20220224 14:10:02.445"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-dadosReclamante-buscar-buscar-ultimachamada2.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:10:02.712" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722602704.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:02.445" endtime="20220224 14:10:02.712"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dadosReclamante-buscar-buscar-ultimachamada2.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:03.783" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722602969.png'/&gt;
+[log] CLICK on L[1260,307]@S(0) (567 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:02.712" endtime="20220224 14:10:03.783"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220224 14:10:04.794" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220224 14:10:03.783" endtime="20220224 14:10:04.794"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-dadosReclamante-buscar-buscar-ultimachamada3.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:10:05.109" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722605106.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:04.795" endtime="20220224 14:10:05.110"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dadosReclamante-buscar-buscar-copiar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:06.178" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722605353.png'/&gt;
+[log] CLICK on L[93,338]@S(0) (572 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:05.110" endtime="20220224 14:10:06.178"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220224 14:10:08.179" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220224 14:10:06.178" endtime="20220224 14:10:08.180"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-chamada-interno.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:10:08.509" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722608491.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:08.180" endtime="20220224 14:10:08.509"/>
+</kw>
+<status status="PASS" starttime="20220224 14:09:56.387" endtime="20220224 14:10:08.509"/>
+</kw>
+<kw name="E preenche estado" library="base">
+<kw name="Get Image Coordinates" library="SikuliLibrary">
+<var>${imageCoordinates}</var>
+<arg>sp7-dist-chamada-dados-estado.png=0.65</arg>
+<doc>Get Image Coordinates</doc>
+<msg timestamp="20220224 14:10:08.792" level="INFO">${imageCoordinates} = [622, 241, 186, 52]</msg>
+<status status="PASS" starttime="20220224 14:10:08.511" endtime="20220224 14:10:08.792"/>
+</kw>
+<kw name="Click Region" library="SikuliLibrary">
+<arg>${imageCoordinates}</arg>
+<doc>Click region</doc>
+<msg timestamp="20220224 14:10:09.445" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722608830.png'/&gt;
+[log] CLICK on L[715,267]@S(0) (555 msec)</msg>
+<msg timestamp="20220224 14:10:09.445" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722609440.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:08.792" endtime="20220224 14:10:09.445"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-dados-estado-pernambuco</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:10.883" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722610059.png'/&gt;
+[log] CLICK on L[716,305]@S(0) (567 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:09.445" endtime="20220224 14:10:10.883"/>
+</kw>
+<kw name="Wait Until Screen Not Contain" library="SikuliLibrary">
+<arg>sp7-dist-chamada-dados-cidadevazia</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen not contain
+ Wait until image not in screen</doc>
+<msg timestamp="20220224 14:10:11.631" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722611539.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:10.883" endtime="20220224 14:10:11.632"/>
+</kw>
+<kw name="Get Match Score" library="SikuliLibrary">
+<var>${score}</var>
+<arg>sp7-dist-chamada-nova-salvar2.png</arg>
+<doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</doc>
+<msg timestamp="20220224 14:10:11.969" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722611963.png'/&gt;</msg>
+<msg timestamp="20220224 14:10:11.969" level="INFO">${score} = 0.9999999403953552</msg>
+<status status="PASS" starttime="20220224 14:10:11.632" endtime="20220224 14:10:11.970"/>
+</kw>
+<kw name="Get Image Coordinates" library="SikuliLibrary">
+<var>${imageCoordinates}</var>
+<arg>sp7-dist-chamada-nova-salvar2.png=0.75</arg>
+<doc>Get Image Coordinates</doc>
+<msg timestamp="20220224 14:10:12.271" level="INFO">${imageCoordinates} = [393, 400, 111, 94]</msg>
+<status status="PASS" starttime="20220224 14:10:11.970" endtime="20220224 14:10:12.271"/>
+</kw>
+<kw name="Click Region" library="SikuliLibrary">
+<arg>${imageCoordinates}</arg>
+<doc>Click region</doc>
+<msg timestamp="20220224 14:10:15.283" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722612292.png'/&gt;
+[log] CLICK on L[448,447]@S(0) (583 msec)</msg>
+<msg timestamp="20220224 14:10:15.283" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722615279.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:12.271" endtime="20220224 14:10:15.283"/>
+</kw>
+<status status="PASS" starttime="20220224 14:10:08.510" endtime="20220224 14:10:15.283"/>
+</kw>
+<kw name="Então aparece a nova CHAMADA no grid" library="base">
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-chamada-result-tipo.png</arg>
+<arg>${TEMPO}</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:10:15.547" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722615544.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:15.284" endtime="20220224 14:10:15.547"/>
+</kw>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>sp7-chamada-result-titulo.png</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220224 14:10:15.812" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722615809.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:15.548" endtime="20220224 14:10:15.813"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-chamada-result-idOcorrencia.png</arg>
+<arg>100</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<msg timestamp="20220224 14:10:26.133" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722626126.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:15.813" endtime="20220224 14:10:26.133"/>
+</kw>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>sp7-chamada-result-tipo.png</arg>
+<doc>Right click</doc>
+<msg timestamp="20220224 14:10:27.217" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722626408.png'/&gt;
+[log] RIGHT CLICK on L[1100,412]@S(0) (561 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:26.133" endtime="20220224 14:10:27.218"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>copiar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:28.651" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722627826.png'/&gt;
+[log] CLICK on L[1142,424]@S(0) (575 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:27.218" endtime="20220224 14:10:28.651"/>
+</kw>
+<status status="PASS" starttime="20220224 14:10:15.283" endtime="20220224 14:10:28.652"/>
+</kw>
+<kw name="E valida tipo de ocorrência diferente de &quot;Ocorrência indefinida&quot;" library="base">
+<kw name="Get Text From Clipboard" library="nova">
+<var>${TIPO_OCOR}</var>
+<msg timestamp="20220224 14:10:28.654" level="INFO">${TIPO_OCOR} = Ocorrência de serviço</msg>
+<status status="PASS" starttime="20220224 14:10:28.653" endtime="20220224 14:10:28.654"/>
+</kw>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>sp7-chamada-result-idOcorrencia.png</arg>
+<doc>Right click</doc>
+<msg timestamp="20220224 14:10:29.768" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722628952.png'/&gt;
+[log] RIGHT CLICK on L[680,412]@S(0) (571 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:28.654" endtime="20220224 14:10:29.768"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>copiar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:31.170" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722630373.png'/&gt;
+[log] CLICK on L[722,424]@S(0) (553 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:29.768" endtime="20220224 14:10:31.170"/>
+</kw>
+<kw name="Get Text From Clipboard" library="nova">
+<var>${ID_OCOR}</var>
+<msg timestamp="20220224 14:10:31.171" level="INFO">${ID_OCOR} = 2022-02-000063</msg>
+<status status="PASS" starttime="20220224 14:10:31.170" endtime="20220224 14:10:31.171"/>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<arg>${TIPO_OCOR}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<msg timestamp="20220224 14:10:31.171" level="INFO">Length is 21</msg>
+<status status="PASS" starttime="20220224 14:10:31.171" endtime="20220224 14:10:31.171"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
+<arg>${TIPO_OCOR}</arg>
+<arg>${TIPO2}</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" starttime="20220224 14:10:31.172" endtime="20220224 14:10:31.172"/>
+</kw>
+<status status="PASS" starttime="20220224 14:10:28.652" endtime="20220224 14:10:31.172"/>
+</kw>
+<kw name="E Fecha página Chamadas detalhes" library="base">
+<kw name="Right Click" library="SikuliLibrary">
+<arg>sp7-dist-chamada-titulo-detalhesdachamada.png</arg>
+<doc>Right click</doc>
+<msg timestamp="20220224 14:10:32.295" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722631493.png'/&gt;
+[log] RIGHT CLICK on L[96,11]@S(0) (570 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:31.173" endtime="20220224 14:10:32.296"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>fechar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:33.711" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722632884.png'/&gt;
+[log] CLICK on L[163,116]@S(0) (590 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:32.296" endtime="20220224 14:10:33.711"/>
+</kw>
+<status status="PASS" starttime="20220224 14:10:31.172" endtime="20220224 14:10:33.711"/>
+</kw>
+<kw name="E realiza pesquisa na listagem" library="base">
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-chamada-listagem-idOcorr.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220224 14:10:34.867" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722634039.png'/&gt;
+[log] CLICK on L[674,619]@S(0) (560 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:33.713" endtime="20220224 14:10:34.867"/>
+</kw>
+<kw name="Type With Modifiers" library="SikuliLibrary">
+<arg>v</arg>
+<arg>CTRL</arg>
+<doc>Type with modifiers</doc>
+<msg timestamp="20220224 14:10:35.071" level="INFO">Input Text:
+CTRL+v
+[log] ( Ctrl )  TYPE "v"</msg>
+<status status="PASS" starttime="20220224 14:10:34.867" endtime="20220224 14:10:35.071"/>
 </kw>
 <kw name="Press Special Key" library="SikuliLibrary">
 <arg>ENTER</arg>
 <doc>Press special key
  Presses a special keyboard key.</doc>
-<msg timestamp="20220204 09:49:55.228" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220204 09:49:55.121" endtime="20220204 09:49:55.228"/>
+<msg timestamp="20220224 14:10:35.180" level="INFO">[log]  TYPE "#ENTER."</msg>
+<status status="PASS" starttime="20220224 14:10:35.072" endtime="20220224 14:10:35.180"/>
 </kw>
-<status status="PASS" starttime="20220204 09:49:52.104" endtime="20220204 09:49:55.228"/>
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>sp7-chamada-listagem-interno.png</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220224 14:10:35.541" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722635537.png'/&gt;</msg>
+<status status="PASS" starttime="20220224 14:10:35.180" endtime="20220224 14:10:35.541"/>
 </kw>
-<kw name="E clico em chamar" library="base">
-<kw name="Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220204 09:49:56.357" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978995525.png'/&gt;
-[log] CLICK on L[1149,521]@S(0) (564 msec)</msg>
-<status status="PASS" starttime="20220204 09:49:55.229" endtime="20220204 09:49:56.357"/>
+<status status="PASS" starttime="20220224 14:10:33.712" endtime="20220224 14:10:35.541"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220204 09:49:59.371" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220204 09:49:56.357" endtime="20220204 09:49:59.371"/>
-</kw>
-<status status="PASS" starttime="20220204 09:49:55.229" endtime="20220204 09:49:59.371"/>
-</kw>
-<kw name="E abro chave escolhida" library="base">
+<kw name="E Fecha página de listagem de chamadas" library="base">
 <kw name="Right Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar-simboloVerde.png</arg>
+<arg>sp7-dist-chamada-titulo-listagem.png</arg>
 <doc>Right click</doc>
-<msg timestamp="20220204 09:50:00.686" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643978999697.png'/&gt;
-[log] RIGHT CLICK on L[1378,574]@S(0) (574 msec)</msg>
-<status status="PASS" starttime="20220204 09:49:59.373" endtime="20220204 09:50:00.687"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220204 09:50:02.946" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643979002015.png'/&gt;
-[log] CLICK on L[1549,771]@S(0) (575 msec)</msg>
-<status status="PASS" starttime="20220204 09:50:00.687" endtime="20220204 09:50:02.946"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-hist.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220204 09:50:04.128" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1643979003245.png'/&gt;
-[log] CLICK on L[1764,794]@S(0) (581 msec)</msg>
-<status status="PASS" starttime="20220204 09:50:02.946" endtime="20220204 09:50:04.128"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220204 09:50:06.129" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220204 09:50:04.128" endtime="20220204 09:50:06.129"/>
-</kw>
-<kw name="Get Image Coordinates" library="SikuliLibrary">
-<var>${imageCoordinates}</var>
-<arg>sp7-listaTelas-gerenciamento-historico-interno-idOcor.png</arg>
-<doc>Get Image Coordinates</doc>
-<msg timestamp="20220204 09:50:06.406" level="FAIL">org.sikuli.script.FindFailed: sp7-listaTelas-gerenciamento-historico-interno-idOcor.png: (102x374) in R[0,0 1920x1080]@S(0)</msg>
-<status status="FAIL" starttime="20220204 09:50:06.129" endtime="20220204 09:50:06.406"/>
-</kw>
-<kw name="Get Text" library="SikuliLibrary">
-<var>${TEXTO}</var>
-<arg>Capture Region</arg>
-<arg>${imageCoordinates}</arg>
-<doc>Get text</doc>
-<status status="NOT RUN" starttime="20220204 09:50:06.406" endtime="20220204 09:50:06.406"/>
-</kw>
-<kw name="Right Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-gerenciamento-historico-titulo.png</arg>
-<doc>Right click</doc>
-<status status="NOT RUN" starttime="20220204 09:50:06.407" endtime="20220204 09:50:06.407"/>
+<msg timestamp="20220224 14:10:36.677" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722635849.png'/&gt;
+[log] RIGHT CLICK on L[400,260]@S(0) (571 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:35.543" endtime="20220224 14:10:36.677"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>fechar.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220204 09:50:06.407" endtime="20220204 09:50:06.407"/>
+<msg timestamp="20220224 14:10:38.082" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722637266.png'/&gt;
+[log] CLICK on L[467,365]@S(0) (568 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:36.677" endtime="20220224 14:10:38.082"/>
 </kw>
-<kw name="Right Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar-simboloVerde.png</arg>
-<doc>Right click</doc>
-<status status="NOT RUN" starttime="20220204 09:50:06.407" endtime="20220204 09:50:06.407"/>
+<kw name="Get Match Score" library="SikuliLibrary">
+<var>${score}</var>
+<arg>sp7-icone-escuro.png</arg>
+<doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</doc>
+<msg timestamp="20220224 14:10:38.088" level="INFO">[error] ImagePath: find: not there: sp7-icone-escuro.png
+[error] ImagePath: find: not there: sp7-icone-escuro.png
+Could not find P(sp7-icone-escuro.png -- not valid!) S: 0.699999988079071</msg>
+<msg timestamp="20220224 14:10:38.088" level="INFO">${score} = 0.0</msg>
+<status status="PASS" starttime="20220224 14:10:38.082" endtime="20220224 14:10:38.088"/>
 </kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${score} &gt; 0.95</arg>
+<arg>E abre sp7 escuro</arg>
+<arg>ELSE</arg>
+<arg>E abre sp7</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="E abre sp7" library="base">
 <kw name="Click" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar-simboloVerde-abrir.png</arg>
+<arg>sp7-icone.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220204 09:50:06.407" endtime="20220204 09:50:06.407"/>
+<msg timestamp="20220224 14:10:39.737" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1645722638853.png'/&gt;
+[log] CLICK on L[1268,1056]@S(0) (576 msec)</msg>
+<status status="PASS" starttime="20220224 14:10:38.091" endtime="20220224 14:10:39.739"/>
 </kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>sp7-listaTelas-chamar-simboloVerde-abrir-cometario.png</arg>
-<arg>Automacao</arg>
-<doc>Input text.
- Image could be empty</doc>
-<status status="NOT RUN" starttime="20220204 09:50:06.407" endtime="20220204 09:50:06.407"/>
+<status status="PASS" starttime="20220224 14:10:38.091" endtime="20220224 14:10:39.740"/>
 </kw>
-<status status="FAIL" starttime="20220204 09:49:59.372" endtime="20220204 09:50:06.408"/>
+<status status="PASS" starttime="20220224 14:10:38.089" endtime="20220224 14:10:39.740"/>
 </kw>
-<tag>Smoke</tag>
-<status status="FAIL" starttime="20220204 09:49:47.264" endtime="20220204 09:50:06.409">org.sikuli.script.FindFailed: sp7-listaTelas-gerenciamento-historico-interno-idOcor.png: (102x374) in R[0,0 1920x1080]@S(0)</status>
+<status status="PASS" starttime="20220224 14:10:35.542" endtime="20220224 14:10:39.741"/>
+</kw>
+<tag>t1</tag>
+<status status="PASS" starttime="20220224 14:09:38.421" endtime="20220224 14:10:39.745"/>
 </test>
-<status status="FAIL" starttime="20220204 09:49:44.280" endtime="20220204 09:50:06.410"/>
+<status status="PASS" starttime="20220224 14:09:34.287" endtime="20220224 14:10:39.748"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Smoke</stat>
+<stat pass="1" fail="0" skip="0">t1</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Cenario1">Cenario1</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cenario1">Cenario1</stat>
 </suite>
 </statistics>
 <errors>
