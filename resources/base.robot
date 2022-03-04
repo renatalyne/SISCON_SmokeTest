@@ -16,6 +16,9 @@ ${TEMPO}           10
 ${SLEEP}           40
 ${TIPO2}           Ocorrência indefinida
 ${MAQUINA}         dvl81ibd
+${LOGIN}           psene
+${PASSWORD}        jS4BvgnjmCXtgnTs
+${present}         Run Keyword and Return Status    Screen Should Contain    sp7-close-symbol.png
 
 
 ${TACOMANDO}               ta/US-S3/13/Bay7/CB/Status
@@ -115,6 +118,7 @@ E Fecha página de listagem de chamadas
     Right Click                   sp7-dist-chamada-titulo-listagem.png
     Click                         fechar.png
     ${score} =                    Get Match Score         sp7-icone-escuro.png
+    Log to console      ${score}
     Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
 
 Então aparece a nova CHAMADA no grid
@@ -164,18 +168,16 @@ Quando realizo a pesquisa
 
 E clico em chamar
   Click    sp7-listaTelas-chamar.png
-  SLeep    3
-
-
+  Sleep    3
 
 E abro chave escolhida
   Right Click    sp7-listaTelas-chamar-simboloVerde.png
   Click         sp7-listaTelas-chamar-simboloVerde-gerOcorrencia.png
   Click         sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-hist.png
   #Sleep         10
-  Wait Until Screen Contain   sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png    100 
+  Wait Until Screen Contain     sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr-name.png    100 
   Set Screenshot Directory      ${IMAGE_DIR}
-  Take Partial Screenshot	   sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png    none    none    912	     450    100    400      true   800px   1
+  Take Partial Screenshot	    sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png    none    none    912	     450    100    400      true   800px   1
   ${TEXTO} =   Get Text         sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png	
   Set Global Variable     ${TEXTO}
   Right Click    sp7-listaTelas-gerenciamento-historico-titulo.png
@@ -303,15 +305,15 @@ Quando gero a ocorrência via bau
     Press Special Key               ENTER
 E verifico as ocorrências emergenciais 
 
-    Click                       sp7-dist-ocorrencias-botao.png
-    Wait Until Screen Contain   sp7-dist-ocorrencias-abas.png          100
-    Click                       sp7-dist-ocorrencias-aba-ocorrenciasEmergênciais.png
+    Click                        sp7-dist-ocorrencias-botao.png
+    Wait Until Screen Contain    sp7-dist-ocorrencias-abas.png          100
+    Click                        sp7-dist-ocorrencias-aba-ocorrenciasEmergênciais.png
     Sleep                        10
-    Click                       botãoLiberarListagem.png
-    Sleep                       10
-    Click                       taferas-nome-retirarFiltro.png
+    Click                        botãoLiberarListagem.png
     Sleep                        10
-    Click                       filtro.png
+    Click                        taferas-nome-retirarFiltro.png
+    Sleep                        10
+    Click                        filtro.png
     Sleep                        5
     Type With Modifiers            r              WIN
     Press Special Key              DELETE
@@ -555,3 +557,16 @@ Então aparece a mensagem salvo com sucesso
     Click           sp7-dist-chamada-nova-salvar2.png 
     Wait Until Screen Contain       ocorrenciasEmergenciais-detalhes-dadosBasicos-salvoComSucesso.png      10
     Screen Should Contain           ocorrenciasEmergenciais-detalhes-dadosBasicos-salvoComSucesso.png
+
+Completar Ocorrencia
+    Right Click      US-S313Bay7CB.png
+    Mouse Move       alter-status-ocorr.png
+    Click            status-ocorr-complete.png
+    Wait Until Screen Contain     registro-status-completado.png
+
+Arquivar Ocorrencia
+    Right Click      US-S313Bay7CB.png
+    Mouse Move       alter-status-ocorr.png
+    Click            status-ocorr-fechado.png
+    Right Click      US-S313Bay7CB.png
+    Click            arquivar-ocorr.png

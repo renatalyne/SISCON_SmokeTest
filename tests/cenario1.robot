@@ -41,11 +41,11 @@ Cenário 2 : Validar fuzzy outage
 Cenário 3: Validar criação outage com abertura manual de chave
      [Tags]   SmokeTest
 
-     log  Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela 
-     Dado que estou logado no sistema
-     E estou na tela "Lista de Telas"
-     Minimiza sp7
-     Quando realizo a pesquisa
+      log  Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela 
+      Dado que estou logado no sistema
+      E estou na tela "Lista de Telas"
+      Minimiza sp7
+      Quando realizo a pesquisa
       E clico em chamar
       E abro chave escolhida
       Então a ocorrência é gerada
@@ -53,7 +53,7 @@ Cenário 3: Validar criação outage com abertura manual de chave
       E fecha chave aberta
       E fecha tela "Processo/TempoReal"
       E fecha tela "TA nomes"
-      E abre sp7
+      E abre sp7 escuro
 
     [Teardown]
 
@@ -74,7 +74,7 @@ Cenario 4 : Criar Outage planejado
   Então gera uma nova ocorrência planejada
   E fecha "trabalho planejado"
   E fecha "gerenciamento de ocorrências"
-  E abre sp7
+  E abre sp7 escuro
 
       [Teardown]
 
@@ -88,11 +88,11 @@ Cenário 5: Criar Outage pelo Bau
   E verifico as ocorrências emergenciais
   Minimiza sp7 
   Quando gero a ocorrência via bau
-  E abre sp7
+  E abre sp7 escuro
   E verifico as ocorrências emergenciais após ocorrência
   Então uma nova ocorrência é gerado no relatório
   E fecha "gerenciamento de ocorrências"
-  E abre sp7
+  E abre sp7 escuro
 
         [Teardown]
 
@@ -107,8 +107,6 @@ Cenário 6: Validar criação de Tarefa
   E estou na aba "Ocorrências Emergênciais"
   E seleciono ocorrência
   Quando crio uma nova tarefa
-  
-  
   
 
     [Teardown]
@@ -125,14 +123,12 @@ Cenário 7: Completar o fluxo da tarefa
   Então tarefa é apresentada no grid de tarefas
   E fecha tarefas 
   E fecha "gerenciamento de ocorrências"
-  E abre sp7
+  E abre sp7 escuro
     
 
    [Teardown]
 
 Cenário 8: Editar alguma info do outage;
-
-
    [Tags]    SmokeTest
 
   #Dado que estou na tela de detalhes da ocorrência
@@ -144,3 +140,19 @@ Cenário 8: Editar alguma info do outage;
 
 
 Cenário 9: Completar o fluxo do outage;
+    [Tags]    t2
+  
+    E abre sp7 escuro
+    E Estou na tela "Ocorrências"
+    Minimiza sp7
+    E estou na aba "Ocorrências Emergênciais"
+    Completar Ocorrencia
+
+    #Dado que estou na tela de detalhes da ocorrência
+
+Cenário 10: Arquivar Outage
+    [Tags]    SmokeTest
+    Arquivar Ocorrencia
+
+
+  
