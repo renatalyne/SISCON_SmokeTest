@@ -174,7 +174,7 @@ E abro chave escolhida
   Right Click    sp7-listaTelas-chamar-simboloVerde.png
   Click         sp7-listaTelas-chamar-simboloVerde-gerOcorrencia.png
   Click         sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-hist.png
-  #Sleep         10
+  Sleep         5
   Wait Until Screen Contain     sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr-name.png    100 
   Set Screenshot Directory      ${IMAGE_DIR}
   Take Partial Screenshot	    sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png    none    none    912	     450    100    400      true   800px   1
@@ -196,7 +196,7 @@ Então a ocorrência é gerada
   Sleep         10
   Set Screenshot Directory      ${IMAGE_DIR}
   Take Partial Screenshot	   sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr2.png    none    none    912	     450    100    400      true   800px   1
-  Sleep         2
+  Sleep         5
   ${TEXTO 2} =   Get Text         sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr2.png
   Should Not Be Equal As Strings    ${TEXTO}    ${TEXTO2}
 
@@ -267,7 +267,7 @@ E fecha chave aberta
 Abrir putty
     Type With Modifiers            r              WIN
     Press Special Key              DELETE
-    Input Text                    windows-cmd-abrir.png     putty
+    Input Text                    windows-r.png     putty
     Press Special Key              ENTER
     Wait Until Screen Contain      putty-interno.png          10
     Input Text                     putty-hostName.png        ${MAQUINA}
@@ -282,7 +282,7 @@ Abrir putty
 Abrir comando
     Type With Modifiers            r              WIN
     Press Special Key              DELETE
-    Input Text                     windows-cmd-abrir.png     ${TACOMANDO} 
+    Input Text                     windows-r.png     ${TACOMANDO} 
     Type With Modifiers             a           CTRL     
     Type With Modifiers             c           CTRL
 
@@ -315,14 +315,16 @@ E verifico as ocorrências emergenciais
     Sleep                        10
     Click                        filtro.png
     Sleep                        5
+    Minimiza sp7
     Type With Modifiers            r              WIN
     Press Special Key              DELETE
-    Input Text                  windows-cmd-abrir.png        ${TA} 
-    Click                        windows-cmd-abrir.png
+    Input Text                  windows-r.png        ${TA} 
+    Click                         windows-r.png 
     Type With Modifiers             a           CTRL
     Type With Modifiers            c              CTRL
-    Click                       sp7-dist-ocorrencias-aba-ocorrenciasEmergênciais-nomeDispositivo.png        0       15
+    Click                       sp7-dist-ocorrencias-aba-ocorrenciasEmergênciais-nomeDispositivo.png        0       18
     Type With Modifiers            v              CTRL
+    Wait Until Screen Contain     sp7-dist-ocorrencias-aba-ocorrenciasEmergênciais-nomeDispositivo-preenchido.png    15
     Press Special Key           ENTER
     Sleep                        5
     Click                       sp7-dist-botaoUltimaPágina.png
@@ -562,7 +564,7 @@ Completar Ocorrencia
     Right Click      US-S313Bay7CB.png
     Mouse Move       alter-status-ocorr.png
     Click            status-ocorr-complete.png
-    Wait Until Screen Contain     registro-status-completado.png
+    Wait Until Screen Contain     registro-status-completado.png    10
 
 Arquivar Ocorrencia
     Right Click      US-S313Bay7CB.png
@@ -570,3 +572,11 @@ Arquivar Ocorrencia
     Click            status-ocorr-fechado.png
     Right Click      US-S313Bay7CB.png
     Click            arquivar-ocorr.png
+
+E estou no Historico de ocorrencias
+    Click            sp7-historico.png
+    Wait Until Screen Contain     sp7-aba-historico.png    10
+    Click            sp7-historico-ocorrencias.png
+    Wait Until Screen Contain     sp7-historico-ocorrencias-pagina.png    10
+    Click            todas-as-ocorrencias.png
+    Wait Until Screen Contain     US-S313Bay7CB-arquivado.png    10

@@ -9,7 +9,7 @@ Test Teardown     Stop Remote Server
 
 
 Cenário 1 : Validar criação de outages por Tcall
-    [Tags]   t1
+    [Tags]   Teste1
        log  Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador
        Dado que estou logado no sistema
        E estou na aba "DISTRIBUIÇÃO"
@@ -25,7 +25,7 @@ Cenário 1 : Validar criação de outages por Tcall
      [Teardown]
 
 Cenário 2 : Validar fuzzy outage
-      [Tags]   SmokeTest
+      [Tags]   Teste2
   log  Objetivo do teste é criar uma nova ocorrência por chamada de cliente não morador
           Dado que estou logado no sistema
           E estou na aba "DISTRIBUIÇÃO"
@@ -39,7 +39,7 @@ Cenário 2 : Validar fuzzy outage
          [Teardown]
 
 Cenário 3: Validar criação outage com abertura manual de chave
-     [Tags]   SmokeTest
+     [Tags]   Teste3
 
       log  Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela 
       Dado que estou logado no sistema
@@ -59,7 +59,7 @@ Cenário 3: Validar criação outage com abertura manual de chave
 
 Cenario 4 : Criar Outage planejado
   
-  [Tags]   SmokeTest
+  [Tags]   Teste4
 
   log   Objetivo do teste é criar uma ocorrência planejada
 
@@ -74,19 +74,20 @@ Cenario 4 : Criar Outage planejado
   Então gera uma nova ocorrência planejada
   E fecha "trabalho planejado"
   E fecha "gerenciamento de ocorrências"
+  Sleep   5 
   E abre sp7 escuro
 
       [Teardown]
 
 Cenário 5: Criar Outage pelo Bau
    
-   [Tags]   testando
+   [Tags]   Teste5
 
    log   Objetivo deste teste é criar uma ocorrência utilizando o simulador bau, não funciona em sistema distribuido.
 
   Dado que estou logado no sistema
-  E verifico as ocorrências emergenciais
-  Minimiza sp7 
+  E estou na aba "DISTRIBUIÇÃO"
+  E verifico as ocorrências emergenciais 
   Quando gero a ocorrência via bau
   E abre sp7 escuro
   E verifico as ocorrências emergenciais após ocorrência
@@ -98,7 +99,7 @@ Cenário 5: Criar Outage pelo Bau
 
 Cenário 6: Validar criação de Tarefa
 
-   [Tags]   SmokeTest
+   [Tags]   Teste6
 
   Dado que estou logado no sistema
   E estou na aba "DISTRIBUIÇÃO"
@@ -114,7 +115,7 @@ Cenário 6: Validar criação de Tarefa
 Cenário 7: Completar o fluxo da tarefa
 
 
-   [Tags]    SmokeTest
+   [Tags]    Teste7
 
   Quando associo uma equipe disponivel 
   E evoluo os status da tarefa 
@@ -129,7 +130,7 @@ Cenário 7: Completar o fluxo da tarefa
    [Teardown]
 
 Cenário 8: Editar alguma info do outage;
-   [Tags]    SmokeTest
+   [Tags]    Teste8
 
   #Dado que estou na tela de detalhes da ocorrência
   E seleciono ocorrência condicional
@@ -140,7 +141,7 @@ Cenário 8: Editar alguma info do outage;
 
 
 Cenário 9: Completar o fluxo do outage;
-    [Tags]    t2
+    [Tags]    Teste9
   
     E abre sp7 escuro
     E Estou na tela "Ocorrências"
@@ -151,8 +152,9 @@ Cenário 9: Completar o fluxo do outage;
     #Dado que estou na tela de detalhes da ocorrência
 
 Cenário 10: Arquivar Outage
-    [Tags]    SmokeTest
+    [Tags]    Teste10
     Arquivar Ocorrencia
-
+    E fecha "gerenciamento de ocorrências"
+    E Verifico Historico de ocorrencias
 
   
