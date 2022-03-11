@@ -573,10 +573,37 @@ Arquivar Ocorrencia
     Right Click      US-S313Bay7CB.png
     Click            arquivar-ocorr.png
 
-E estou no Historico de ocorrencias
+E Verifico Historico de ocorrencias
     Click            sp7-historico.png
     Wait Until Screen Contain     sp7-aba-historico.png    10
     Click            sp7-historico-ocorrencias.png
     Wait Until Screen Contain     sp7-historico-ocorrencias-pagina.png    10
     Click            todas-as-ocorrencias.png
     Wait Until Screen Contain     US-S313Bay7CB-arquivado.png    10
+
+
+
+E estou na tela "Equipes"
+    Click   sp7-dist-equipes.png
+    Click   sp7-Dis-Equipes-MostrarEquipes.png
+    
+Iniciar Turno de Equipe
+    Minimiza sp7
+    Click   Equipes-IniciarTurno.png
+    Sleep   1
+    Click   Equipes-IniciarTurno-Tipo1.png      105      0
+    Click   Equipes-IniciarTurno-Tipo2.png
+    Click   Equipes-IniciarTurno-Empresa1.png       109      0
+    Click   Equipes-IniciarTurno-Empresa2.png
+    Click   Equipes-IniciarTurno-Contato.png    0   -3
+    Input Text    Equipes-IniciarTurno-Contato.png       12345678
+    Click   Equipes-IniciarTurno-Areas.png
+    Click   Equipes-IniciarTurno-Base1.png      80       0
+    Click   Equipes-IniciarTurno-Base2.png
+    Click   Equipes-IniciarTurno-Odometro.png   20   -3
+    Input Text    Equipes-IniciarTurno-Odometro.png      1
+    Click   Equipe-IniciarTurno-Salvar.png
+
+Selecionar Equipe
+    Click   Equipes-ForaDeTurno.png
+

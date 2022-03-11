@@ -53,7 +53,7 @@ Cenário 3: Validar criação outage com abertura manual de chave
       E fecha chave aberta
       E fecha tela "Processo/TempoReal"
       E fecha tela "TA nomes"
-      E abre sp7 escuro
+      Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
 
     [Teardown]
 
@@ -75,7 +75,7 @@ Cenario 4 : Criar Outage planejado
   E fecha "trabalho planejado"
   E fecha "gerenciamento de ocorrências"
   Sleep   5 
-  E abre sp7 escuro
+  Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
 
       [Teardown]
 
@@ -89,11 +89,11 @@ Cenário 5: Criar Outage pelo Bau
   E estou na aba "DISTRIBUIÇÃO"
   E verifico as ocorrências emergenciais 
   Quando gero a ocorrência via bau
-  E abre sp7 escuro
+  Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
   E verifico as ocorrências emergenciais após ocorrência
   Então uma nova ocorrência é gerado no relatório
   E fecha "gerenciamento de ocorrências"
-  E abre sp7 escuro
+  Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
 
         [Teardown]
 
@@ -124,7 +124,7 @@ Cenário 7: Completar o fluxo da tarefa
   Então tarefa é apresentada no grid de tarefas
   E fecha tarefas 
   E fecha "gerenciamento de ocorrências"
-  E abre sp7 escuro
+  Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
     
 
    [Teardown]
@@ -132,7 +132,6 @@ Cenário 7: Completar o fluxo da tarefa
 Cenário 8: Editar alguma info do outage;
    [Tags]    Teste8
 
-  #Dado que estou na tela de detalhes da ocorrência
   E seleciono ocorrência condicional
   Quando preencho os dados básicos 
   E clico em "Salvar" condicional 
@@ -143,18 +142,19 @@ Cenário 8: Editar alguma info do outage;
 Cenário 9: Completar o fluxo do outage;
     [Tags]    Teste9
   
-    E abre sp7 escuro
+    Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
     E Estou na tela "Ocorrências"
     Minimiza sp7
     E estou na aba "Ocorrências Emergênciais"
     Completar Ocorrencia
 
-    #Dado que estou na tela de detalhes da ocorrência
 
 Cenário 10: Arquivar Outage
     [Tags]    Teste10
     Arquivar Ocorrencia
     E fecha "gerenciamento de ocorrências"
+    Sleep  5
+    Run Keyword if                ${score} > 0.95         E abre sp7 escuro      ELSE    E abre sp7
     E Verifico Historico de ocorrencias
 
   
