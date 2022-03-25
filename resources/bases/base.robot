@@ -87,6 +87,7 @@ Quando gero um nova "CHAMADA"
     Click                        sp7-dist-chamada-nova-tipo-1.png
     Click                        maximiza.png
     Input Text                   sp7-dist-chamada-nova-obs.png    Automacao
+    
 E busca cliente
     Click                        sp7-dist-chamada-nova-dadosReclamante-buscar.png
     Click                        sp7-dist-chamada-nova-dados-buscar-buscar.png
@@ -100,6 +101,7 @@ E busca cliente
     Click                        sp7-dadosReclamante-buscar-buscar-copiar.png
     Sleep   2
     Wait Until Screen Contain    sp7-chamada-interno.png                                  ${TEMPO}
+
 E preenche estado
     ${imageCoordinates}=	       Get Image Coordinates	sp7-dist-chamada-dados-estado.png=0.65
     Click Region                 ${imageCoordinates}
@@ -125,7 +127,6 @@ Então aparece a nova CHAMADA no grid
     Wait Until Screen Contain    sp7-chamada-result-tipo.png    ${TEMPO}
     Screen Should Contain    sp7-chamada-result-titulo.png
     Wait Until Screen Contain   sp7-chamada-result-idOcorrencia.png    100  
-   # Sleep    ${SLEEP}
     Right Click    sp7-chamada-result-tipo.png
     Click    copiar.png
 
