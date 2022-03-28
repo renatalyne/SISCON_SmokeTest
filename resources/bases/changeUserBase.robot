@@ -8,13 +8,13 @@ Resource    ${EXEC_DIR}\\resources\\bases\\base.robot
 Library     ${EXECDIR}\\resources\\libraries\\nova.py
 
 *** Variables ***
-${USERS_IMAGE_DIR}          ${EXECDIR}\\resources\\elements\\MudarUsuario
+${CHANGE_USERS_IMAGE_DIR}          ${EXECDIR}\\resources\\elements\\MudarUsuario
 
 *** Keywords ***
 
 Add Change Users Image Path
     Add Base Image Path
-    Add Image Path      ${USERS_IMAGE_DIR}
+    Add Image Path      ${CHANGE_USERS_IMAGE_DIR}
 
 Click on Login
     Click               NomeUsuario.PNG
