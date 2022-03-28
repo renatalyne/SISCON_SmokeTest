@@ -10,7 +10,7 @@ Resource    ${EXECDIR}\\resources\\bases\\base.robot
 Library     ${EXECDIR}\\resources\\libraries\\nova.py
 
 *** Variables ***
-${USERS_IMAGE_DIR}          ${EXECDIR}\\resources\\elements\\users
+${USERS_IMAGE_DIR}          ${EXECDIR}\\resources\\elements\\Usuario
 
 *** Keywords ***
 
@@ -19,56 +19,55 @@ Add Users Image Path
     Add Image Path      ${USERS_IMAGE_DIR}
 
 Go to Users Management
-    Dado que estou logado no sistema
-    Click     SQR4-Sistema.png
-    Click     SQR4-Sistema-Usuarios.png
-    Wait Until Screen Contain     users-management-page.png       ${TEMPO}
-    Click     propriedades-de-usuario.png
-    Wait Until Screen Contain     pg-propriedades-de-usuario.png  ${TEMPO}
+    Click     Sistema.png
+    Click     Sistema-Usuarios.png
+    Wait Until Screen Contain     UsuarioWindow.png       ${TEMPO}
+    Click     PropriedadeDoUsuario.png
+    Wait Until Screen Contain     PropriedadeDoUsuarioWindow.png  ${TEMPO}
     Sleep     1
-    Click     novo-usuario.png
-    Wait Until Screen Contain     criar-novo-usuario.png          ${TEMPO}
+    Click     NovoUsuario.png
+    Wait Until Screen Contain     CriaNovoUsuario.png          ${TEMPO}
 
 Empty User
-    Click     confirm-user.png
-    Wait Until Screen Contain   aviso-1-usuario-invalido.png      ${TEMPO}
+    Click     ConfirmUser.png
+    Wait Until Screen Contain   Error1UsuarioInvalido.png      ${TEMPO}
    
 
 Empty Details
-    Input Text                  input-username.png              teste
+    Input Text                  InputUsuario.png              teste
     Press Special Key           TAB
     Input Text                  ${EMPTY}                        teste
     Press Special Key           TAB
     Input Text                  ${EMPTY}                        teste
-    Click     confirm-user.png
-    Wait Until Screen Contain   empty-authority.png             ${TEMPO}
+    Click     ConfirmUser.png
+    Wait Until Screen Contain   Error2EmptyAuthority.png         ${TEMPO}
 
-    Click     authority-box.png
+    Click     AuthorityBox.png
     Sleep     1
     Press Special Key           DOWN   
     Press Special Key           ENTER
     Press Special Key           TAB
-    Click     confirm-user.png
-    Wait Until Screen Contain   empty-function.png             ${TEMPO}
+    Click     ConfirmUser.png
+    Wait Until Screen Contain   Error3EmptyFunction.png             ${TEMPO}
 
-    Click     function1-box.png
+    Click     Function1Box.png
     Sleep     1
     Press Special Key           DOWN
     Press Special Key           ENTER
     Press Special Key           TAB
-    Click     confirm-user.png
-    Wait Until Screen Contain   empty-class.png             ${TEMPO}
+    Click     ConfirmUser.png
+    Wait Until Screen Contain   Error4EmptyClass.png             ${TEMPO}
 
-    Click     function2-box.png
+    Click     Function2Box.png
     Sleep     1
     Press Special Key           DOWN
     Press Special Key           ENTER
     Press Special Key           TAB
-    Click     confirm-user.png
+    Click     ConfirmUser.png
 
 Close Users Proprieties
-    Right Click                 pg-propriedades-de-usuario.png
-    Click                       fechar-propriedades-de-usuario.png
+    Right Click                 PropriedadeDoUsuarioWindow.png
+    Click                       PropriedadeDoUsuarioWindowClose.png
 
     
     

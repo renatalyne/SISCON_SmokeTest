@@ -9,6 +9,7 @@ Library     ${EXECDIR}\\resources\\libraries\\nova.py
 *** Variables ***
 
 ${IMAGE_DIR}       ${EXECDIR}\\resources\\elements\\BaSiDi
+${IMAGE_DIR2}      ${EXECDIR}\\resources\\elements\\Windows
 ${PATH}            C:\\Program Files\\Siemens\\SpectrumPower7\\odvlauncher
 ${EXEC_SPECTRUM}   odvlauncher.exe -admin
 ${TEMPLATE_DIR}    C:\\temp\\template.txt
@@ -29,6 +30,7 @@ ${TA}                      US-S3/13/Bay7
 
 Add Base Image Path
     Add Image Path         ${IMAGE_DIR}
+    Add Image Path         ${IMAGE_DIR2}
 
 Close All Windows
     FOR     ${i}    IN RANGE   1   10
@@ -86,6 +88,41 @@ While logged into BasiDi
 
 Click on Trocar Usuário
     Click                            TrocarUsuário.PNG
+
+Close BaSiDi
+    Click                            Fechar.PNG     10      0 
+    Wait Until Screen Contain        FecharWarning.PNG      ${TEMPO}
+    Click                            FecharWarning.PNG      100     130
+
+Open BaSiDi     
+    [Arguments]         ${Login}            ${Password}
+    Click               BarraDeBusca.PNG
+    Sleep               0.5
+    Input Text          ${Empty}            cmd
+    Click               CMD.png
+    Sleep               0.5
+    Paste Text          ${Empty}            cd ${PATH}
+    Press Special Key   ENTER
+    Paste Text         ${Empty}             ${EXEC_SPECTRUM}
+    Press Special Key   ENTER
+    Click               CMDWindows1.PNG     850     0
+    Click               RuntimeSetting.PNG
+    Press Special Key   ENTER
+    Wait Until Screen Contain               LoginFechar.PNG     ${TEMPO}
+    Click               LoginFechar.PNG     15
+    Sleep               0.5
+    Input Text          LoginUsuario.PNG    ${Login} 
+    Press Special Key   TAB
+    Input Text          ${EMPTY}            ${Password}
+    Press Special Key   ENTER
+    Wait Until Screen Contain               LoginError1.PNG     ${TEMPO}
+    Paste Text         ${Empty}             Teste123!
+    Press Special Key   TAB
+    Sleep               0.5
+    Paste Text         ${Empty}             Teste123!
+    Press Special Key   ENTER
+    Sleep               3
+
 
 # E estou na aba "DISTRIBUIÇÃO"
 
