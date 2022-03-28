@@ -8,7 +8,7 @@ Library     ${EXECDIR}/resources/libraries/nova.py
 
 *** Variables ***
 
-${IMAGE_DIR}       ${EXECDIR}\\resources\\elements
+${IMAGE_DIR}       ${EXECDIR}\\resources\\elements\\general
 ${PATH}            C:\\Program Files\\Siemens\\SpectrumPower7\\odvlauncher
 ${EXEC_SPECTRUM}   odvlauncher.exe -admin
 ${TEMPLATE_DIR}    C:\\temp\\template.txt
@@ -303,6 +303,7 @@ Quando gero a ocorrência via bau
     Sleep                           5
     Input Text                      putty-comando-ta.png                sta on tra
     Press Special Key               ENTER
+
 E verifico as ocorrências emergenciais 
 
     Click                        sp7-dist-ocorrencias-botao.png
