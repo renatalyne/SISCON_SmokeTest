@@ -1,8 +1,9 @@
 *** Settings ***
 
-Resource          ${EXECDIR}/resources/base.robot
-Resource          ${EXECDIR}/resources/usersBase.robot
+Resource          ${EXECDIR}/resources/bases/base.robot
+Resource          ${EXECDIR}/resources/bases/usersBase.robot
 Test Setup        Add All Image Path
+
 Test Teardown     Stop Remote Server
 
 
@@ -13,3 +14,6 @@ Cenário 1 : Validar Criação de novo usuário
         log     "Este teste tem como objetivo validar a criação de usuário"
         Dado que estou logado no sistema
         Go to Users Management
+        Empty User
+        Empty Details
+        Close Users Proprieties
