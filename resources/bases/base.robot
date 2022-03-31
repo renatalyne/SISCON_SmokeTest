@@ -81,21 +81,23 @@ Close All Windows
 #     Screen Should Contain           spectrum-conectado.png
 #     Capture Screen
 
-While logged into BasiDi
+Given that I'm in BaSiDi
     Screen Should Contain            Conectado.PNG
 # Dado que estou logado no sistema
 #     Screen Should Contain            spectrum-conectado.png
 
-Click on Trocar Usuário
+And Click on "Trocar Usuário"
     Click                            TrocarUsuário.PNG
 
-Close BaSiDi
+And try to close BasiDi
     Click                            Fechar.PNG     10      0 
     Wait Until Screen Contain        FecharWarning.PNG      ${TEMPO}
     Click                            FecharWarning.PNG      100     130
 
-Open BaSiDi     
-    [Arguments]         ${Login}            ${Password}
+Then BasiDi should be closed sucessfully
+    Wait Until Screen Not Contain    FecharWarning.PNG      ${TEMPO}
+
+When BaSiDi Login screen is reopened
     Click               BarraDeBusca.PNG
     Sleep               0.5
     Input Text          ${Empty}            cmd
@@ -108,20 +110,38 @@ Open BaSiDi
     Click               CMDWindows1.PNG     850     0
     Click               RuntimeSetting.PNG
     Press Special Key   ENTER
+
+Then an security message should appeared
     Wait Until Screen Contain               LoginFechar.PNG     ${TEMPO}
+
+When the BaSiDi Login screen is filled 
+    [Arguments]     ${Login}        ${Password}
     Click               LoginFechar.PNG     15
     Sleep               0.5
     Input Text          LoginUsuario.PNG    ${Login} 
     Press Special Key   TAB
     Input Text          ${EMPTY}            ${Password}
     Press Special Key   ENTER
+
+Then an expered password message should appeared
     Wait Until Screen Contain               LoginError1.PNG     ${TEMPO}
-    Paste Text         ${Empty}             Teste123!
+
+When the BaSiDi new password field is filled
+    [Arguments]     ${Password}
+    Paste Text         ${Empty}             ${Password}
     Press Special Key   TAB
     Sleep               0.5
-    Paste Text         ${Empty}             Teste123!
+    Paste Text         ${Empty}             ${Password}
     Press Special Key   ENTER
-    Sleep               3
+
+Then and short password message should appeared
+    Wait Until Screen Contain               LoginError2.PNG     ${TEMPO}
+
+Then and no numeric in password message should appeared
+    Wait Until Screen Contain               LoginError3.PNG     ${TEMPO}
+
+Then the sucesfull login message should appeared
+    Wait Until Screen Contain               LoginSucess.PNG     ${TEMPO}
 
 
 # E estou na aba "DISTRIBUIÇÃO"
