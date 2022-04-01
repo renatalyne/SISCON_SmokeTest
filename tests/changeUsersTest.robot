@@ -6,6 +6,8 @@ Test Teardown     Stop Remote Server
 
 *** Test Cases ***
 
+#Cenário 1 - 2: Tentar trocar de usúario para Teste (esperado falha por acabar de ter sido criado)
+
 Cenário 1: Abrir tela de Troca Usuário
     [Tags]   Cenário 1
         log     "Abrir tela de Troca Usuário"
@@ -22,6 +24,9 @@ Cenário 2: Fill in the data
         When the data is filled     ${Login}     ${Password}
         Then an expected error should appeared
     [Teardown]
+
+
+#Cenário 3 - 12: Fecha o BaSiDi, e abre ele novamente tentando logar com o usuário teste
 
 Cenário 3: Close BaSiDi
     [Tags]      Cenário 3
@@ -118,6 +123,8 @@ Cenário 12: New password sucess
         Then the sucesfull login message should appeared
 
     [Teardown]
+
+#Cenário 13 - 14: Trocam para o Usuário SPECTRUM
 
 Cenário 13: Abrir tela de Troca Usuário
     [Tags]      Cenário 13

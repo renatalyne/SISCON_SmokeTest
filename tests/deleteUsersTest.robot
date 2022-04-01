@@ -8,6 +8,9 @@ Test Teardown     Stop Remote Server
 
 *** Test Cases ***
 
+
+#Cenário 1 - 3: Realiza o processo de deletar um novo usuário do SP7
+
 Cenário 1: Abrir tela Usuário em Sistemas
     [Tags]      Cenário 1
         log     "Abrir tela Usuário em Sistemas"

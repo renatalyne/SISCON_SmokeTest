@@ -13,6 +13,8 @@ Test Teardown     Stop Remote Server
 #When
 #Then
 
+#Cenário 1 - 8: Realiza o processo de criar um novo usuário do SP7
+
 Cenário 1: Abrir tela Usuário em Sistemas
     [Tags]      Cenário 1
         log     "Abrir tela Usuário em Sistemas"
