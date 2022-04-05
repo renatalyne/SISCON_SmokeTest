@@ -1,26 +1,13 @@
 *** Settings ***
 
-<<<<<<< HEAD
-Resource          ${EXECDIR}/resources/base.robot
-Resource          ${EXECDIR}/resources/usersBase.robot
-Test Setup        Add All Image Path
-=======
 Resource          ${EXECDIR}/resources/bases/usersBase.robot
 Test Setup        Add Users Image Path
 
->>>>>>> format
 Test Teardown     Stop Remote Server
 
 
 *** Test Cases ***
 
-<<<<<<< HEAD
-Cenário 1 : Validar Criação de novo usuário
-    [Tags]      ""
-        log     "Este teste tem como objetivo validar a criação de usuário"
-        Dado que estou logado no sistema
-        Go to Users Management
-=======
 #Given
 #And
 #When
@@ -32,8 +19,8 @@ Cenário 1: Abrir tela Usuário em Sistemas
     [Tags]      Cenário 1
         log     "Abrir tela Usuário em Sistemas"
         Given that I'm in BaSiDi
-        And Clicked on "Sistemas" 
-        And Clicked on "Usuários"
+        And clicked on "Sistemas" 
+        And clicked on "Usuários"
         Then the Users Management should appeared
     [Teardown]
 
@@ -48,7 +35,7 @@ Cenário 2: Ir até a tela de propriedades de Usuário
 Cenário 3: Clicar em criar novo usuário
     [Tags]  Cenário 3
         log     "Clicar em criar novo usuário"
-        And Clicked on "Criar novo Usuário"
+        And clicked on "Criar novo Usuário"
         Then the create new user should appeared
     [Teardown]
 
@@ -92,4 +79,3 @@ Cenário 8: Criar novo usuário com sucesso
         Close Users Proprieties
     [Teardown]
 
->>>>>>> format

@@ -12,7 +12,7 @@ Cenário 1: Abrir tela de Troca Usuário
     [Tags]   Cenário 1
         log     "Abrir tela de Troca Usuário"
         Given that I'm in BaSiDi
-        And Click on "Trocar Usuário"
+        And Clicked on "Trocar Usuário"
         Then the change user windows should appeared
     [Teardown]
 
@@ -130,7 +130,7 @@ Cenário 13: Abrir tela de Troca Usuário
     [Tags]      Cenário 13
         log     "Abrir tela de Troca Usuário"
         Given that I'm in BaSiDi
-        And Click on "Trocar Usuário"
+        And Clicked on "Trocar Usuário"
         Then the change user windows should appeared
     [Teardown]
 

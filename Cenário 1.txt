@@ -1,0 +1,202 @@
+==============================================================================
+20220404 16:42:52.835 - INFO - + START SUITE: cardsTest [ ]
+==============================================================================
+20220404 16:42:52.836 - INFO - +- START TEST: Cenário 1: Open the "Geral" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:42:52.837 - INFO - +-- START SETUP: cardsBase.Add Cards Image Path [ ]
+20220404 16:42:52.837 - INFO - +--- START KEYWORD: base.Add Base Image Path [ ]
+20220404 16:42:52.838 - INFO - +---- START KEYWORD: SikuliLibrary.Add Image Path [ ${IMAGE_DIR} ]
+20220404 16:42:52.857 - INFO - +---- END KEYWORD: SikuliLibrary.Add Image Path (19)
+20220404 16:42:52.857 - INFO - +---- START KEYWORD: SikuliLibrary.Add Image Path [ ${IMAGE_DIR2} ]
+20220404 16:42:52.861 - INFO - +---- END KEYWORD: SikuliLibrary.Add Image Path (4)
+20220404 16:42:52.861 - INFO - +--- END KEYWORD: base.Add Base Image Path (24)
+20220404 16:42:52.861 - INFO - +--- START KEYWORD: SikuliLibrary.Add Image Path [ ${CARDS_IMAGE_DIR} ]
+20220404 16:42:52.866 - INFO - +--- END KEYWORD: SikuliLibrary.Add Image Path (5)
+20220404 16:42:52.867 - INFO - +--- START KEYWORD: SikuliLibrary.Add Image Path [ ${CARDS_IMAGE_DIR2} ]
+20220404 16:42:52.871 - INFO - [error] ImagePath: add: folder does not exist (C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\resources\elements\ListaDeTelas)
+[error] ImagePath: add: not valid: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\resources\elements\ListaDeTelas
+20220404 16:42:52.871 - INFO - +--- END KEYWORD: SikuliLibrary.Add Image Path (4)
+20220404 16:42:52.872 - INFO - +-- END SETUP: cardsBase.Add Cards Image Path (34)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:42:52.872 - INFO - +-- START KEYWORD: BuiltIn.Log [ "Abrir tela Geral em Cartões" ]
+20220404 16:42:52.872 - INFO - "Abrir tela Geral em Cartões"
+20220404 16:42:52.872 - INFO - +-- END KEYWORD: BuiltIn.Log (0)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:42:52.873 - INFO - +-- START KEYWORD: base.Given that I'm in BaSiDi [ ]
+20220404 16:42:52.873 - INFO - +--- START KEYWORD: SikuliLibrary.Screen Should Contain [ Conectado.PNG ]
+20220404 16:42:53.452 - DEBUG - Saved path: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\sikuli_captured\sikuliximage-1649101373425.png
+20220404 16:42:53.452 - INFO - <img src='sikuli_captured/sikuliximage-1649101373425.png'/>
+20220404 16:42:53.452 - INFO - +--- END KEYWORD: SikuliLibrary.Screen Should Contain (579)
+20220404 16:42:53.453 - INFO - +-- END KEYWORD: base.Given that I'm in BaSiDi (580)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:42:53.454 - INFO - +-- START KEYWORD: base.And clicked on "Cartões" [ ]
+20220404 16:42:53.455 - INFO - +--- START KEYWORD: SikuliLibrary.Click [ Cartoes.PNG ]
+20220404 16:42:54.729 - DEBUG - Saved path: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\sikuli_captured\sikuliximage-1649101373799.png
+20220404 16:42:54.729 - INFO - <img src='sikuli_captured/sikuliximage-1649101373799.png'/>
+[log] CLICK on L[1471,141]@S(0) (576 msec)
+20220404 16:42:54.730 - INFO - +--- END KEYWORD: SikuliLibrary.Click (1275)
+20220404 16:42:54.733 - INFO - +-- END KEYWORD: base.And clicked on "Cartões" (1277)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:42:54.733 - INFO - +-- START KEYWORD: base.And clicked on "Cartões-Geral" [ ]
+20220404 16:42:54.734 - INFO - +--- START KEYWORD: SikuliLibrary.Click [ Cartoes-Geral.PNG ]
+20220404 16:42:56.302 - DEBUG - Saved path: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\sikuli_captured\sikuliximage-1649101375248.png
+20220404 16:42:56.303 - INFO - <img src='sikuli_captured/sikuliximage-1649101375248.png'/>
+[log] CLICK on L[1333,164]@S(0) (564 msec)
+20220404 16:42:56.304 - INFO - +--- END KEYWORD: SikuliLibrary.Click (1569)
+20220404 16:42:56.305 - INFO - +-- END KEYWORD: base.And clicked on "Cartões-Geral" (1571)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:42:56.306 - INFO - +-- START KEYWORD: cardsBase.Then the Cards screen should appeared [ ]
+20220404 16:42:56.308 - INFO - +--- START KEYWORD: SikuliLibrary.Wait Until Screen Contain [ CartoesWindow.PNG | 30 ]
+20220404 16:43:27.139 - DEBUG - Saved path: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\sikuli_captured\sikuliximage-1649101406742.png
+20220404 16:43:27.139 - INFO - <img src='sikuli_captured/sikuliximage-1649101406742.png'/>
+20220404 16:43:27.141 - FAIL - com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(CartoesWindow.PNG) S: 0.7
+20220404 16:43:27.141 - DEBUG - com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(CartoesWindow.PNG) S: 0.7
+	at com.github.rainmanwy.robotframework.sikulilib.keywords.ScreenKeywords.wait(ScreenKeywords.java:329)
+	at com.github.rainmanwy.robotframework.sikulilib.keywords.ScreenKeywords.waitUntilScreenContain(ScreenKeywords.java:348)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.robotframework.javalib.reflection.KeywordInvoker.invoke(KeywordInvoker.java:63)
+	at org.robotframework.javalib.beans.annotation.AnnotationKeywordExtractor$1.execute(AnnotationKeywordExtractor.java:66)
+	at org.robotframework.javalib.library.KeywordFactoryBasedLibrary.runKeyword(KeywordFactoryBasedLibrary.java:40)
+	at org.robotframework.javalib.library.AnnotationLibrary.runKeyword(AnnotationLibrary.java:129)
+	at com.github.rainmanwy.robotframework.sikulilib.SikuliLibrary.runKeyword(SikuliLibrary.java:42)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.robotframework.remoteserver.library.DynamicApiRemoteLibrary.runKeyword(DynamicApiRemoteLibrary.java:70)
+	at org.robotframework.remoteserver.servlet.ServerMethods.run_keyword(ServerMethods.java:86)
+	at org.robotframework.remoteserver.servlet.ServerMethods.run_keyword(ServerMethods.java:148)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.invoke(ReflectiveXmlRpcHandler.java:115)
+	at org.apache.xmlrpc.server.ReflectiveXmlRpcHandler.execute(ReflectiveXmlRpcHandler.java:106)
+	at org.apache.xmlrpc.server.XmlRpcServerWorker.execute(XmlRpcServerWorker.java:46)
+	at org.apache.xmlrpc.server.XmlRpcServer.execute(XmlRpcServer.java:86)
+	at org.apache.xmlrpc.server.XmlRpcStreamServer.execute(XmlRpcStreamServer.java:200)
+	at org.apache.xmlrpc.webserver.XmlRpcServletServer.execute(XmlRpcServletServer.java:112)
+	at org.apache.xmlrpc.webserver.XmlRpcServlet.doPost(XmlRpcServlet.java:196)
+	at org.robotframework.remoteserver.servlet.RemoteServerServlet.doPost(RemoteServerServlet.java:122)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.robotframework.remoteserver.servlet.RemoteServerServlet.service(RemoteServerServlet.java:102)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:763)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:569)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1377)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:507)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1292)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:501)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:556)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: FindFailed: CartoesWindow.PNG: (271x27) in R[0,0 1920x1080]@S(0)
+  Line 2222, in file Region.java
+
+	at org.sikuli.script.Region.wait(Region.java:2222)
+	at com.github.rainmanwy.robotframework.sikulilib.keywords.ScreenKeywords.wait(ScreenKeywords.java:323)
+	... 58 more
+20220404 16:43:27.142 - INFO - +--- END KEYWORD: SikuliLibrary.Wait Until Screen Contain (30834)
+20220404 16:43:27.145 - INFO - +-- END KEYWORD: cardsBase.Then the Cards screen should appeared (30838)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:43:27.146 - INFO - +-- START KEYWORD: cardsBase.Close card window [ ]
+20220404 16:43:27.146 - INFO - +-- END KEYWORD: cardsBase.Close card window (1)
+------------------------------------------------------------------------------
+20220404 16:43:27.149 - INFO - +- END TEST: Cenário 1: Open the "Geral" screen in "Cartões" (34311)
+------------------------------------------------------------------------------
+20220404 16:43:27.150 - INFO - +- START TEST: Cenário 2: Open the "Objeto em Teste" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:43:27.150 - INFO - +-- START SETUP: cardsBase.Add Cards Image Path [ ]
+20220404 16:43:27.152 - INFO - +--- START KEYWORD: base.Add Base Image Path [ ]
+20220404 16:43:27.152 - INFO - +---- START KEYWORD: SikuliLibrary.Add Image Path [ ${IMAGE_DIR} ]
+20220404 16:43:27.161 - INFO - +---- END KEYWORD: SikuliLibrary.Add Image Path (9)
+20220404 16:43:27.161 - INFO - +---- START KEYWORD: SikuliLibrary.Add Image Path [ ${IMAGE_DIR2} ]
+20220404 16:43:27.171 - INFO - +---- END KEYWORD: SikuliLibrary.Add Image Path (9)
+20220404 16:43:27.171 - INFO - +--- END KEYWORD: base.Add Base Image Path (19)
+20220404 16:43:27.171 - INFO - +--- START KEYWORD: SikuliLibrary.Add Image Path [ ${CARDS_IMAGE_DIR} ]
+20220404 16:43:27.180 - INFO - +--- END KEYWORD: SikuliLibrary.Add Image Path (9)
+20220404 16:43:27.180 - INFO - +--- START KEYWORD: SikuliLibrary.Add Image Path [ ${CARDS_IMAGE_DIR2} ]
+20220404 16:43:27.187 - INFO - [error] ImagePath: add: folder does not exist (C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\resources\elements\ListaDeTelas)
+[error] ImagePath: add: not valid: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\resources\elements\ListaDeTelas
+20220404 16:43:27.188 - INFO - +--- END KEYWORD: SikuliLibrary.Add Image Path (8)
+20220404 16:43:27.189 - INFO - +-- END SETUP: cardsBase.Add Cards Image Path (38)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:43:27.189 - INFO - +-- START KEYWORD: BuiltIn.Log [ "Abrir tela Objeto em Teste em Cartões" ]
+20220404 16:43:27.189 - INFO - "Abrir tela Objeto em Teste em Cartões"
+20220404 16:43:27.190 - INFO - +-- END KEYWORD: BuiltIn.Log (1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:43:27.190 - INFO - +-- START KEYWORD: base.Given that I'm in BaSiDi [ ]
+20220404 16:43:27.191 - INFO - +--- START KEYWORD: SikuliLibrary.Screen Should Contain [ Conectado.PNG ]
+20220404 16:43:27.802 - DEBUG - Saved path: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\sikuli_captured\sikuliximage-1649101407797.png
+20220404 16:43:27.802 - INFO - <img src='sikuli_captured/sikuliximage-1649101407797.png'/>
+20220404 16:43:27.803 - INFO - +--- END KEYWORD: SikuliLibrary.Screen Should Contain (612)
+20220404 16:43:27.804 - INFO - +-- END KEYWORD: base.Given that I'm in BaSiDi (613)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:43:27.804 - INFO - +-- START KEYWORD: base.And clicked on "ObjetoEmTeste" [ ]
+20220404 16:43:27.805 - INFO - +--- START KEYWORD: SikuliLibrary.Click [ Cartoes-ObjetoEmTeste.PNG ]
+20220404 16:43:29.531 - DEBUG - Saved path: C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\sikuli_captured\sikuliximage-1649101408344.png
+20220404 16:43:29.532 - INFO - <img src='sikuli_captured/sikuliximage-1649101408344.png'/>
+[log] CLICK on L[1427,165]@S(0) (570 msec)
+20220404 16:43:29.532 - INFO - +--- END KEYWORD: SikuliLibrary.Click (1727)
+20220404 16:43:29.534 - INFO - +-- END KEYWORD: base.And clicked on "ObjetoEmTeste" (1729)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:43:29.534 - INFO - +-- START KEYWORD: cardsBase.Then the Cards screen should appeared [ ]
+20220404 16:43:29.535 - INFO - +--- START KEYWORD: SikuliLibrary.Wait Until Screen Contain [ CartoesWindow.PNG | 30 ]
+20220404 16:44:00.243 - INFO - +--- END KEYWORD: SikuliLibrary.Wait Until Screen Contain (30708)
+20220404 16:44:00.244 - INFO - +-- END KEYWORD: cardsBase.Then the Cards screen should appeared (30710)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20220404 16:44:00.244 - INFO - +-- START KEYWORD: cardsBase.Close card window [ ]
+20220404 16:44:00.245 - INFO - +-- END KEYWORD: cardsBase.Close card window (1)
+------------------------------------------------------------------------------
+20220404 16:44:00.248 - INFO - +- END TEST: Cenário 2: Open the "Objeto em Teste" screen in "Cartões" (33096)
+------------------------------------------------------------------------------
+20220404 16:44:00.250 - INFO - +- START TEST: Cenário 3: Open the "Cartão de Informação" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.253 - INFO - +- END TEST: Cenário 3: Open the "Cartão de Informação" screen in "Cartões" (4)
+------------------------------------------------------------------------------
+20220404 16:44:00.254 - INFO - +- START TEST: Cenário 4: Open the "Removido de Operação" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.257 - INFO - +- END TEST: Cenário 4: Open the "Removido de Operação" screen in "Cartões" (1)
+------------------------------------------------------------------------------
+20220404 16:44:00.258 - INFO - +- START TEST: Cenário 5: Open the "Alarme Inibido" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.262 - INFO - +- END TEST: Cenário 5: Open the "Alarme Inibido" screen in "Cartões" (1)
+------------------------------------------------------------------------------
+20220404 16:44:00.263 - INFO - +- START TEST: Cenário 6: Open the "Cartão Atenção" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.265 - INFO - +- END TEST: Cenário 6: Open the "Cartão Atenção" screen in "Cartões" (1)
+------------------------------------------------------------------------------
+20220404 16:44:00.265 - INFO - +- START TEST: Cenário 7: Open the "Controle Inibido" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.269 - INFO - +- END TEST: Cenário 7: Open the "Controle Inibido" screen in "Cartões" (2)
+------------------------------------------------------------------------------
+20220404 16:44:00.269 - INFO - +- START TEST: Cenário 8: Open the "Cartão AGR" screen in "Cartões" [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.273 - INFO - +- END TEST: Cenário 8: Open the "Cartão AGR" screen in "Cartões" (2)
+------------------------------------------------------------------------------
+20220404 16:44:00.274 - INFO - +- START TEST: Cenário 9: Open US-S3/13/Bay7 [ ]
+------------------------------------------------------------------------------
+20220404 16:44:00.277 - INFO - +- END TEST: Cenário 9: Open US-S3/13/Bay7 (1)
+------------------------------------------------------------------------------
+20220404 16:44:00.282 - INFO - + END SUITE: cardsTest (71039)
+==============================================================================

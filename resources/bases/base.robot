@@ -34,16 +34,16 @@ Add Base Image Path
 
 Close All Windows
     FOR     ${i}    IN RANGE   1   10
-        ${score} =	    Get Match Score        FecharDiferente.PNG
+        ${score} =	    Get Match Score        Fechar2.PNG
         log     ${score}
         IF      ${score} > .90      
-            Click           FecharDiferente.PNG
+            Click           Fechar2.PNG
             log     Cliquei no X 
         END
     END
 
     # WHILE    TRUE
-    #     Click           FecharDiferente.PNG
+    #     Click           Fechar2.PNG
     # END 
 
 
@@ -86,8 +86,43 @@ Given that I'm in BaSiDi
 # Dado que estou logado no sistema
 #     Screen Should Contain            spectrum-conectado.png
 
-And Click on "Trocar Usuário"
+And clicked on "Trocar Usuário"
     Click                            TrocarUsuário.PNG
+
+And clicked on "Cartões"
+    Click                            Cartoes.PNG
+
+# And clicked on "Cartões-Geral"
+#     Click                            Cartoes-Geral.PNG
+
+# And clicked on "ObjetoEmTeste"
+#     Click                            Cartoes-ObjetoEmTeste.PNG
+
+# And clicked on "Cartão de Informações"
+#     Click                            Cartoes-CartaoDeInformacao.PNG
+
+# And clicked on "RemovidoDeOperação"
+#     Click                            Cartoes-RemovidoDeOperacao.PNG
+
+# And clicked on "AlarmeInibido"
+#     Click                            AlarmeInibido.PNG
+
+And clicked on Cartoes-Custom
+    [Arguments]                      ${Cartoes_Custom}        
+    Click                            ${Cartoes_Custom}
+
+And clicked on "CartaoAtencao"
+    Click                            CartaoAtencao.PNG
+
+And clicked on "ControleInibido"
+    Click                            ControleInibido.PNG
+
+And clicked on "CartaoAGR"
+    Click                            CartaoAGR.PNG
+
+And clicked on "Lista de Telas"
+    Click                            ListaDeTelas.PNG
+
 
 And try to close BasiDi
     Click                            Fechar.PNG     10      0 
@@ -113,6 +148,7 @@ When BaSiDi Login screen is reopened
 
 Then an security message should appeared
     Wait Until Screen Contain               LoginFechar.PNG     ${TEMPO}
+
 
 When the BaSiDi Login screen is filled 
     [Arguments]     ${Login}        ${Password}

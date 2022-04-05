@@ -16,11 +16,9 @@ Add Change Users Image Path
     Add Base Image Path
     Add Image Path      ${CHANGE_USERS_IMAGE_DIR}
 
-Click on Login
+And clicked on "Trocar Usuário" Login
     Click               MudarUsuarioWindow.png
 
-Then the change user windows should appeared
-    Wait Until Screen Contain   MudarUsuarioWindow.png     ${TEMPO}
 
 When the data is filled 
     [Arguments]         ${Login}            ${Password}
