@@ -29,12 +29,13 @@ Go to Users Management
     Wait Until Screen Contain     pg-propriedades-de-usuario.png  ${TEMPO}
     Sleep     1
     Click     novo-usuario.png
+
+Screen Verification 
     Wait Until Screen Contain     criar-novo-usuario.png          ${TEMPO}
 
 Empty User
     Click     confirm-user.png
     Wait Until Screen Contain   aviso-1-usuario-invalido.png      ${TEMPO}
-   
 
 Empty Details
     Input Text                  input-username.png              teste
@@ -51,7 +52,7 @@ Empty Details
     Press Special Key           ENTER
     Press Special Key           TAB
     Click     confirm-user.png
-    Wait Until Screen Contain   empty-function.png             ${TEMPO}
+    Wait Until Screen Contain   empty-function-teste.png             ${TEMPO}
 
     Click     function1-box.png
     Sleep     1

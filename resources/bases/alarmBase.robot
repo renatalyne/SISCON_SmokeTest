@@ -8,17 +8,26 @@ Library     OperatingSystem
 Library     ScreenCapLibrary
 Resource    ${EXECDIR}/resources/bases/base.robot
 Library     ${EXECDIR}/resources/libraries/nova.py
+Library           ${EXECDIR}\\resources\\libraries\\sshClient.py
 
 *** Variables ***
-${ALARM_IMAGE_DIR}          ${EXECDIR}\\resources\\elements\\alarmes
+${ALARM_IMAGE_DIR}         ${EXECDIR}\\resources\\elements\\alarmes
+${SPSY}                    sudo su - spsy\n
+${BAU}                     bau\n
+${DISJ}                    ta /BVG/69/12Z3/DJ/Status\n
+${ON}                      sta on tra\n
+${OPEN}                    sta off tra\n
+${MEDIDA}                  ta /BVG/13/01BP)1/Ua/MvMoment\n
+${VAL12}                   val 12 tra\n
+
 
 *** Keywords ***
-Add Needed Users Image Path
+Add Needed Alarm Image Path
     Add Image Path      ${ALARM_IMAGE_DIR}
 
 Add All Image Path
-    Add Needed Users Image Path
-    Add Needed Image Path
+    Add Needed Alarm Image Path
+    Add Base Image Path
 
 And Clicked on "Geral" in "Sumário de Alarmes"
     Click                               SA-Geral.png
@@ -83,3 +92,23 @@ Then Comunicação Alarm List should be appeared
     Wait Until Screen Contain           Comunicacao.png    ${TEMPO}
     Right Click                         Comunicacao.png
     Click                               fechar.png
+
+Then Disj - Protecao Alarm is created
+    Exec Command                        ${SPSY}
+    Exec Command                        ${BAU}
+    Exec Command                        ${DISJ}
+    Exec Command                        ${ON}
+    Exec Command                        ${OPEN}
+
+Then I confirm Disj in General and Disj Alarmes
+    Click                               SA-Geral.png
+    Wait Until Screen Contain           created-disj.png     ${TEMPO}
+    Right Click                         Geral.png
+    Click                               fechar.png
+    Click                               SA-Disj-Protecao.png
+    Wait Until Screen Contain           created-disj.png     ${TEMPO}
+    Right Click                         Disj-Protecao.png
+    Click                               fechar.png
+
+
+
