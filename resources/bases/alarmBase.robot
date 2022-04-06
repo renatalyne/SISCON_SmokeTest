@@ -9,10 +9,12 @@ Library     ScreenCapLibrary
 Resource    ${EXECDIR}/resources/bases/base.robot
 Library     ${EXECDIR}/resources/libraries/nova.py
 Library           ${EXECDIR}\\resources\\libraries\\sshClient.py
+Library           ${EXECDIR}\\resources\\libraries\\ssh.py
+
 
 *** Variables ***
 ${ALARM_IMAGE_DIR}         ${EXECDIR}\\resources\\elements\\alarmes
-${SPSY}                    sudo su - spsy\n
+${SPSY}                    /usr/bin/sudo su - spsy\n
 ${BAU}                     bau\n
 ${DISJ}                    ta /BVG/69/12Z3/DJ/Status\n
 ${ON}                      sta on tra\n
@@ -94,11 +96,17 @@ Then Comunicação Alarm List should be appeared
     Click                               fechar.png
 
 Then Disj - Protecao Alarm is created
-    Exec Command                        ${SPSY}
-    Exec Command                        ${BAU}
-    Exec Command                        ${DISJ}
-    Exec Command                        ${ON}
-    Exec Command                        ${OPEN}
+    # Exec Command                        ${SPSY}
+    # Sleep   3
+    # Exec Command                        ${BAU}
+    # Sleep   3
+    # Exec Command                        ${DISJ}
+    # Sleep   3
+    # Exec Command                        ${ON}
+    # Sleep   3
+    # Exec Command                        ${OPEN}
+    # Disconnect
+    Send Command
 
 Then I confirm Disj in General and Disj Alarmes
     Click                               SA-Geral.png
