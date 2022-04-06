@@ -78,4 +78,3 @@ Cenário 8: Criar novo usuário com sucesso
         Then the successful new user creation message appeared 
         Close Users Proprieties
     [Teardown]
-

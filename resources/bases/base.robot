@@ -153,7 +153,6 @@ When BaSiDi Login screen is reopened
 Then an security message should appeared
     Wait Until Screen Contain               LoginFechar.PNG     ${TEMPO}
 
-
 When the BaSiDi Login screen is filled 
     [Arguments]     ${Login}        ${Password}
     Click               LoginFechar.PNG     15

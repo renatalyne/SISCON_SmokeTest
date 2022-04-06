@@ -13,6 +13,10 @@ Test Teardown     Stop Remote Server
 #When
 #Then
 
+###########################################################################
+# Cenário 1-10: Abre cada uma das telas dos cartões e verifica se elas carregam
+###########################################################################
+
 Cenário 1: Open the "Geral" screen in "Cartões"
     [Tags]      Cenário 1
         ${Cartoes_Custom}   set Variable    Cartoes-Geral.PNG
@@ -262,4 +266,3 @@ Cenário 23: Close Windows
         Close non-BaSiDi window
         Close non-BaSiDi window
     [Teardown]teste
-    

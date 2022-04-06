@@ -1,6 +1,6 @@
 *** Settings ***
 
-Resource          ${EXECDIR}/resources/base.robot
+Resource          ${EXECDIR}/resources/bases/base.robot
 Test Setup        Add Needed Image Path
 Test Teardown     Stop Remote Server
 
