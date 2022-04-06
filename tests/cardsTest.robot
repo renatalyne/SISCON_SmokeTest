@@ -265,4 +265,4 @@ Cenário 23: Close Windows
     [Tags]      Cenário 23
         Close non-BaSiDi window
         Close non-BaSiDi window
-    [Teardown]teste
+    [Teardown]
