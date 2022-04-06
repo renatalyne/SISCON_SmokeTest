@@ -32,15 +32,19 @@ Add Base Image Path
     Add Image Path         ${IMAGE_DIR}
     Add Image Path         ${IMAGE_DIR2}
 
-Close All Windows
-    FOR     ${i}    IN RANGE   1   10
-        ${score} =	    Get Match Score        Fechar2.PNG
-        log     ${score}
-        IF      ${score} > .90      
-            Click           Fechar2.PNG
-            log     Cliquei no X 
-        END
-    END
+Close non-BaSiDi window
+    Click                   Fechar3.PNG     15      0 
+    Sleep                   5
+
+# Close All Windows
+#     FOR     ${i}    IN RANGE   1   10
+#         ${score} =	    Get Match Score        Fechar2.PNG
+#         log     ${score}
+#         IF      ${score} > .90      
+#             Click           Fechar2.PNG
+#             log     Cliquei no X 
+#         END
+#     END
 
     # WHILE    TRUE
     #     Click           Fechar2.PNG

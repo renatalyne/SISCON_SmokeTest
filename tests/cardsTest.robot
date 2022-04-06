@@ -56,7 +56,7 @@ Cenário 4: Open the "Removido de Operação" screen in "Cartões"
 
 Cenário 5: Open the "Alarme Inibido" screen in "Cartões"
     [Tags]      Cenário 5
-        ${Cartoes_Custom}   set Variable    AlarmeInibido.PNG
+        ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
         log     "Abrir tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
@@ -66,7 +66,7 @@ Cenário 5: Open the "Alarme Inibido" screen in "Cartões"
 
 Cenário 6: Open the "Cartão Atenção" screen in "Cartões"
     [Tags]      Cenário 6
-        ${Cartoes_Custom}   set Variable    CartaoAtencao.PNG
+        ${Cartoes_Custom}   set Variable    Cartoes-CartaoAtencao.PNG
         log     "Abrir tela Cartão Atenção em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
@@ -76,7 +76,7 @@ Cenário 6: Open the "Cartão Atenção" screen in "Cartões"
 
 Cenário 7: Open the "Controle Inibido" screen in "Cartões"
     [Tags]      Cenário 7
-        ${Cartoes_Custom}   set Variable    ControleInibido.PNG
+        ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
         log     "Abrir tela Controle Inibido em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
@@ -86,7 +86,7 @@ Cenário 7: Open the "Controle Inibido" screen in "Cartões"
 
 Cenário 8: Open the "Cartão AGR" screen in "Cartões"
     [Tags]      Cenário 8
-        ${Cartoes_Custom}   set Variable    ControleInibido.PNG
+        ${Cartoes_Custom}   set Variable    Cartoes-CartaoAGR.PNG
         log     "Abrir tela Cartão AGR em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
@@ -111,8 +111,109 @@ Cenário 10: Input US-S3/13/Bay7
         Then the US-S3/13/Bay7 screen should appeared
     [Teardown]
 
-Cenário 11: Add "Alarme Inibido" card to CB
+###########################################################################
+# Cenário 11 - 14: Teste Removido de Operação
+###########################################################################
+Cenário 11: Add "Removido de Operação" card to CB
     [Tags]      Cenário 11
+        ${Cartao}           set Variable     CB-Cartoes-DefinirRemovidoDeOperacao.png
+        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirRemovidoDeOperacao.png
+        log   "Definir Removido de Operação em um CB"
+        When the CB is selected
+        And clicked on CB-Cartoes
+        And clicked on CB-Cartoes-Custom     ${Cartao}
+        And filled the TAInformation card
+        Then the card should be applied      ${ExcluirCartao}
+    [Teardown]
+
+Cenário 12: Verify "Removido de Operação" screen in "Cartões"
+    [Tags]      Cenário 12
+        ${Cartoes_Custom}   set Variable    Cartoes-RemovidoDeOperacao.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
+        log     "Verificar tela Removido de Operação em Cartões"
+        Given that I'm in BaSiDi
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}
+        Then the screen should contain the Custom card      ${Cartoes_Report}
+        Close card window
+    [Teardown]
+
+Cenário 13: Delete "Removido de Operação" card from the CB
+    [Tags]      Cenário 13
+        ${Cartao}           set Variable     CB-Cartoes-DefinirRemovidoDeOperacao.png
+        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirRemovidoDeOperacao.png
+        log     "Exclui Removido de Operação em Cartões"
+        When the CB is selected
+        And clicked on CB-Cartoes
+        And clicked on CB-Cartoes-ExcluirCustom      ${ExcluirCartao}  
+        Then the card should be removed                     ${Cartao} 
+    [Teardown]
+
+Cenário 14: Verify "Removido de Operação" screen in "Cartões"
+    [Tags]      Cenário 14
+        ${Cartoes_Custom}   set Variable    Cartoes-RemovidoDeOperacao.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
+        log     "Verificar tela Removido de Operação em Cartões"
+        Given that I'm in BaSiDi
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}
+        Then the screen should not contain the Custom card  ${Cartoes_Report}
+        Close card window
+    [Teardown]
+
+###########################################################################
+# Cenário 15 - 18: Teste Controle Inibido
+###########################################################################
+
+Cenário 15: Add "Controle Inibido" card to CB
+    [Tags]      Cenário 15
+        ${Cartao}           set Variable     CB-Cartoes-DefinirControleInibido.png
+        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirControleInibido.png
+        log   "Definir Controle Inibido em um CB"
+        When the CB is selected
+        And clicked on CB-Cartoes
+        And clicked on CB-Cartoes-Custom     ${Cartao}
+        And filled the TAInformation card
+        Then the card should be applied      ${ExcluirCartao}
+    [Teardown]
+
+Cenário 16: Verify "Controle Inibido" screen in "Cartões"
+    [Tags]      Cenário 16
+        ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteControleInibido.PNG
+        log     "Verificar tela Controle Inibido em Cartões"
+        Given that I'm in BaSiDi
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}
+        Then the screen should contain the Custom card      ${Cartoes_Report}
+        Close card window
+    [Teardown]
+
+Cenário 17: Delete "Controle Inibido" card from the CB
+    [Tags]      Cenário 17
+        ${Cartao}           set Variable     CB-Cartoes-DefinirControleInibido.png
+        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirControleInibido.png       
+        log     "Exclui Controle Inibido em Cartões"
+        When the CB is selected
+        And clicked on CB-Cartoes
+        And clicked on CB-Cartoes-ExcluirCustom      ${ExcluirCartao}  
+        Then the card should be removed                     ${Cartao} 
+    [Teardown]
+
+Cenário 18: Verify "Controle Inibido" screen in "Cartões"
+    [Tags]      Cenário 18
+        ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteControleInibido.PNG
+        log     "Verificar tela Controle Inibido em Cartões"
+        Given that I'm in BaSiDi
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}
+        Then the screen should not contain the Custom card      ${Cartoes_Report}
+        Close card window
+    [Teardown]
+
+###########################################################################
+# Cenário 19 - 22: Teste Alarme Inibido
+###########################################################################
+
+Cenário 19: Add "Alarme Inibido" card to CB
+    [Tags]      Cenário 19
         ${Cartao}           set Variable     CB-Cartoes-DefinirAlarmeInibido.png
         ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirAlarmeInibido.png
         log   "Definir Alarme Inibido em um CB"
@@ -123,18 +224,19 @@ Cenário 11: Add "Alarme Inibido" card to CB
         Then the card should be applied             ${ExcluirCartao}
     [Teardown]
 
-Cenário 12: Verify "Alarme Inibido" screen in "Cartões"
-    [Tags]      Cenário 12
-        ${Cartoes_Custom}   set Variable    AlarmeInibido.PNG
+Cenário 20: Verify "Alarme Inibido" screen in "Cartões"
+    [Tags]      Cenário 20
+        ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
         log     "Verificar tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should contain the AlarmeInibido card
+        Then the screen should contain the Custom card      ${Cartoes_Report}
         Close card window
     [Teardown]
 
-Cenário 13: Delete "Alarme Inibido" card from the CB
-    [Tags]      Cenário 13
+Cenário 21: Delete "Alarme Inibido" card from the CB
+    [Tags]      Cenário 21
         ${Cartao}           set Variable     CB-Cartoes-DefinirAlarmeInibido.png
         ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirAlarmeInibido.png
         log     "Exclui Alarme Inibido em Cartões"
@@ -144,12 +246,20 @@ Cenário 13: Delete "Alarme Inibido" card from the CB
         Then the card should be removed                     ${Cartao} 
     [Teardown]
 
-Cenário 14: Verify "Alarme Inibido" screen in "Cartões"
-    [Tags]      Cenário 14
-        ${Cartoes_Custom}   set Variable    AlarmeInibido.PNG
+Cenário 22: Verify "Alarme Inibido" screen in "Cartões"
+    [Tags]      Cenário 22
+        ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
         log     "Verificar tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should not contain the AlarmeInibido card
+        Then the screen should not contain the Custom card      ${Cartoes_Report}
         Close card window
     [Teardown]
+
+Cenário 23: Close Windows
+    [Tags]      Cenário 23
+        Close non-BaSiDi window
+        Close non-BaSiDi window
+    [Teardown]teste
+    

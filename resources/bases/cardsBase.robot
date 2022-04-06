@@ -50,7 +50,7 @@ And clicked on CB-Cartoes-Custom
     Click                       ${Cartao} 
 
 And filled the TAInformation card
-    Input Text          DefinirInformaçõesTA-Comentario.PNG       Automaçao
+    Input Text          DefinirInformaçõesTA-Comentario.PNG       Automacao
     Click                       DefinirInformaçõesTA-Aplicar.PNG
     
 And clicked on CB-Cartoes-ExcluirCustom
@@ -82,18 +82,21 @@ Then the card should be removed
     And clicked on CB-Cartoes
     Wait Until Screen Contain   ${Cartao}        ${TEMPO} 
 
-Then the screen should contain the AlarmeInibido card
+Then the screen should contain the Custom card
+    [Arguments]                 ${Cartoes_Report}
     Then the cards screen should appeared
-    Wait Until Screen Contain   TesteAlarmeInibido.PNG     30
+    Wait Until Screen Contain   ${Cartoes_Report}     30
 
-Then the screen should not contain the AlarmeInibido card
+Then the screen should not contain the Custom card
+    [Arguments]                 ${Cartoes_Report}
     Then the cards screen should appeared
     Sleep                           5
-    Wait Until Screen Not Contain   TesteAlarmeInibido.PNG     ${TEMPO}
+    Wait Until Screen Not Contain   ${Cartoes_Report}     ${TEMPO}
 
 Close card window 
     Click                       CartoesWindow.PNG
     Key Down                    ALT
     Press Special Key           F4
     Key Up                      ALT 
-    Wait Until Screen Not Contain      CartoesWindow.PNG       ${TEMPO}
+    Sleep                       3
+    # Wait Until Screen Not Contain      CartoesWindow.PNG       ${TEMPO}
