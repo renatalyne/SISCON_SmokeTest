@@ -61,11 +61,12 @@ Then the invalid user message should appeared
     Wait Until Screen Contain   Error1UsuarioInvalido.png      ${TEMPO}
    
 And fill the login and password field
-    Input Text                  InputUsuario.png        teste
+    [Arguments]                 ${Login}             ${Senha}
+    Input Text                  InputUsuario.png        ${Login}
     Press Special Key           TAB
-    Input Text                  ${EMPTY}                teste
+    Input Text                  ${EMPTY}                ${Senha}
     Press Special Key           TAB
-    Input Text                  ${EMPTY}                teste
+    Input Text                  ${EMPTY}                ${Senha}
 
 Then the invalid authority message should appeared
     Wait Until Screen Contain   Error2EmptyAuthority.png         ${TEMPO}

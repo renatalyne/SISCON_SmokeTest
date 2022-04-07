@@ -131,7 +131,7 @@ And clicked on "Lista de Telas"
 And try to close BasiDi
     Click                            Fechar.PNG     10      0 
     Wait Until Screen Contain        FecharWarning.PNG      ${TEMPO}
-    Click                            FecharWarning.PNG      100     130
+    Click                            FecharWarning.PNG      100     140
 
 Then BasiDi should be closed sucessfully
     Wait Until Screen Not Contain    FecharWarning.PNG      ${TEMPO}
@@ -147,7 +147,7 @@ When BaSiDi Login screen is reopened
     Paste Text         ${Empty}             ${EXEC_SPECTRUM}
     Press Special Key   ENTER
     Click               CMDWindows1.PNG     850     0
-    Click               RuntimeSetting.PNG
+    Click               RuntimeSetting2.PNG     -50     0
     Press Special Key   ENTER
 
 Then an security message should appeared

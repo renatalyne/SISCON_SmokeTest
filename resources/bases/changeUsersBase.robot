@@ -30,6 +30,10 @@ When the data is filled
 Then an expected error should appeared
     Wait Until Screen Contain   Error1SenhaExpirada.PNG     ${TEMPO}
 
+
+Then the change user windows should appeared
+    Wait Until Screen Contain   MudarUsuarioWindow.png      ${TEMPO}
+
 # Expected Sucess
 #     Wait Until Screen Contain   Sucess.PNG     ${TEMPO}
 #     Click                       Sucess.PNG
