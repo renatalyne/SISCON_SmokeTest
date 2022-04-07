@@ -1,268 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.5 on win32)" generated="20220406 08:16:04.834" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.9.5 on win32)" generated="20220406 10:12:56.093" rpa="false" schemaversion="2">
 <suite id="s1" name="Cenario1" source="C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\tests\cenario1.robot">
 <test id="s1-t1" name="Cenário 1 : Validar criação de outages por Tcall">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:10.694" endtime="20220406 08:16:10.716"/>
+<status status="PASS" starttime="20220406 10:13:01.437" endtime="20220406 10:13:01.456"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:10.693" endtime="20220406 08:16:10.716"/>
+<status status="PASS" starttime="20220406 10:13:01.437" endtime="20220406 10:13:01.457"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220406 08:16:10.717" level="INFO">Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador</msg>
-<status status="PASS" starttime="20220406 08:16:10.717" endtime="20220406 08:16:10.717"/>
+<msg timestamp="20220406 10:13:01.457" level="INFO">Objetivo do teste é criar uma nova ocorrência por chamada de cliente morador</msg>
+<status status="PASS" starttime="20220406 10:13:01.457" endtime="20220406 10:13:01.457"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:11.273" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243771254.png'/&gt;</msg>
-<status status="PASS" starttime="20220406 08:16:10.718" endtime="20220406 08:16:11.273"/>
+<msg timestamp="20220406 10:13:02.085" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250782045.png'/&gt;</msg>
+<status status="PASS" starttime="20220406 10:13:01.458" endtime="20220406 10:13:02.085"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:10.718" endtime="20220406 08:16:11.273"/>
+<status status="PASS" starttime="20220406 10:13:01.458" endtime="20220406 10:13:02.086"/>
 </kw>
 <kw name="E estou na aba &quot;DISTRIBUIÇÃO&quot;" library="base">
 <kw name="Get Image Coordinates" library="SikuliLibrary">
 <var>${imageCoordinates}</var>
 <arg>spectrum-distribuição.png</arg>
 <doc>Get Image Coordinates</doc>
-<msg timestamp="20220406 08:16:11.510" level="INFO">${imageCoordinates} = [467, 116, 115, 25]</msg>
-<status status="PASS" starttime="20220406 08:16:11.275" endtime="20220406 08:16:11.510"/>
+<msg timestamp="20220406 10:13:02.352" level="INFO">${imageCoordinates} = [500, 120, 115, 25]</msg>
+<status status="PASS" starttime="20220406 10:13:02.087" endtime="20220406 10:13:02.352"/>
 </kw>
 <kw name="Click Region" library="SikuliLibrary">
 <arg>${imageCoordinates}</arg>
 <doc>Click region</doc>
-<msg timestamp="20220406 08:16:15.170" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243771538.png'/&gt;
-[log] CLICK on L[524,128]@S(0) (575 msec)</msg>
-<msg timestamp="20220406 08:16:15.170" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243775156.png'/&gt;</msg>
-<status status="PASS" starttime="20220406 08:16:11.510" endtime="20220406 08:16:15.170"/>
+<msg timestamp="20220406 10:13:06.084" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250782375.png'/&gt;
+[log] CLICK on L[557,132]@S(0) (611 msec)</msg>
+<msg timestamp="20220406 10:13:06.084" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250786056.png'/&gt;</msg>
+<status status="PASS" starttime="20220406 10:13:02.352" endtime="20220406 10:13:06.084"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>spectrum-distribuição-interno.png</arg>
 <arg>${TEMPO}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20220406 08:16:15.406" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243775390.png'/&gt;</msg>
-<status status="PASS" starttime="20220406 08:16:15.171" endtime="20220406 08:16:15.407"/>
+<msg timestamp="20220406 10:13:06.538" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250786495.png'/&gt;</msg>
+<status status="PASS" starttime="20220406 10:13:06.085" endtime="20220406 10:13:06.539"/>
 </kw>
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-distribuição-chamada.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:15.679" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243775654.png'/&gt;</msg>
-<status status="PASS" starttime="20220406 08:16:15.407" endtime="20220406 08:16:15.680"/>
+<msg timestamp="20220406 10:13:07.050" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250787040.png'/&gt;</msg>
+<status status="PASS" starttime="20220406 10:13:06.539" endtime="20220406 10:13:07.050"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:11.274" endtime="20220406 08:16:15.680"/>
+<status status="PASS" starttime="20220406 10:13:02.087" endtime="20220406 10:13:07.051"/>
 </kw>
 <kw name="Quando gero um nova &quot;CHAMADA&quot;" library="base">
 <kw name="Click" library="SikuliLibrary">
 <arg>spectrum-distribuição-chamada.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220406 08:16:16.753" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243775950.png'/&gt;
-[log] CLICK on L[566,153]@S(0) (562 msec)</msg>
-<status status="PASS" starttime="20220406 08:16:15.682" endtime="20220406 08:16:16.753"/>
+<msg timestamp="20220406 10:13:08.623" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250787568.png'/&gt;
+[log] CLICK on L[599,157]@S(0) (575 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:07.053" endtime="20220406 10:13:08.623"/>
 </kw>
 <kw name="Right Click" library="SikuliLibrary">
 <arg>titulo.png</arg>
 <doc>Right click</doc>
-<msg timestamp="20220406 08:16:17.768" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243777012.png'/&gt;
-[log] RIGHT CLICK on L[290,15]@S(0) (559 msec)</msg>
-<status status="PASS" starttime="20220406 08:16:16.753" endtime="20220406 08:16:17.768"/>
+<msg timestamp="20220406 10:13:10.181" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250789047.png'/&gt;
+[log] RIGHT CLICK on L[323,19]@S(0) (588 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:08.623" endtime="20220406 10:13:10.182"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>minimizar.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220406 08:16:19.583" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243778605.png'/&gt;
-[log] CLICK on L[343,70]@S(0) (577 msec)</msg>
-<status status="PASS" starttime="20220406 08:16:17.768" endtime="20220406 08:16:19.583"/>
+<msg timestamp="20220406 10:13:12.355" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250791237.png'/&gt;
+[log] CLICK on L[376,74]@S(0) (581 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:10.182" endtime="20220406 10:13:12.355"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>sp7-dist-chamada-titulo.png</arg>
 <arg>${TEMPO}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20220406 08:16:30.117" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243789870.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:30.118" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(sp7-dist-chamada-titulo.png) S: 0.699999988079071</msg>
-<status status="FAIL" starttime="20220406 08:16:19.584" endtime="20220406 08:16:30.118"/>
+<msg timestamp="20220406 10:13:22.899" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250802735.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:22.900" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(sp7-dist-chamada-titulo.png) S: 0.699999988079071</msg>
+<status status="FAIL" starttime="20220406 10:13:12.356" endtime="20220406 10:13:22.900"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>sp7-dist-chamada-novo.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.119" endtime="20220406 08:16:30.119"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.901" endtime="20220406 10:13:22.901"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>sp7-dist-chamada-nova-detalhes.png</arg>
 <arg>${TEMPO}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.119" endtime="20220406 08:16:30.119"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.901" endtime="20220406 10:13:22.901"/>
 </kw>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
 <arg>sp7-dist-chamada-nova-dadosReclamante.png</arg>
 <arg>${TEMPO}</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.119" endtime="20220406 08:16:30.119"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.901" endtime="20220406 10:13:22.901"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>sp7-dist-chamada-nova-tipo.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.120" endtime="20220406 08:16:30.120"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.901" endtime="20220406 10:13:22.901"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>sp7-dist-chamada-nova-tipo-1.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.120" endtime="20220406 08:16:30.120"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.901" endtime="20220406 10:13:22.902"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>maximiza.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.120" endtime="20220406 08:16:30.120"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.902" endtime="20220406 10:13:22.902"/>
 </kw>
 <kw name="Input Text" library="SikuliLibrary">
 <arg>sp7-dist-chamada-nova-obs.png</arg>
 <arg>Automacao</arg>
 <doc>Input text.
  Image could be empty</doc>
-<status status="NOT RUN" starttime="20220406 08:16:30.120" endtime="20220406 08:16:30.120"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.902" endtime="20220406 10:13:22.902"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:15.681" endtime="20220406 08:16:30.121"/>
+<status status="FAIL" starttime="20220406 10:13:07.052" endtime="20220406 10:13:22.902"/>
 </kw>
 <kw name="E busca cliente" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.123" endtime="20220406 08:16:30.123"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.903" endtime="20220406 10:13:22.903"/>
 </kw>
 <kw name="E preenche estado" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.123" endtime="20220406 08:16:30.124"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.904" endtime="20220406 10:13:22.904"/>
 </kw>
 <kw name="Então aparece a nova CHAMADA no grid" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.124" endtime="20220406 08:16:30.124"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.904" endtime="20220406 10:13:22.904"/>
 </kw>
 <kw name="E valida tipo de ocorrência diferente de &quot;Ocorrência indefinida&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.125" endtime="20220406 08:16:30.125"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.905" endtime="20220406 10:13:22.905"/>
 </kw>
 <kw name="E Fecha página Chamadas detalhes" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.126" endtime="20220406 08:16:30.126"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.906" endtime="20220406 10:13:22.906"/>
 </kw>
 <kw name="E realiza pesquisa na listagem" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.126" endtime="20220406 08:16:30.126"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.906" endtime="20220406 10:13:22.906"/>
 </kw>
 <kw name="E Fecha página de listagem de chamadas" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.127" endtime="20220406 08:16:30.127"/>
+<status status="NOT RUN" starttime="20220406 10:13:22.906" endtime="20220406 10:13:22.907"/>
 </kw>
 <tag>Teste1</tag>
-<status status="FAIL" starttime="20220406 08:16:10.691" endtime="20220406 08:16:30.127">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(sp7-dist-chamada-titulo.png) S: 0.699999988079071</status>
+<status status="FAIL" starttime="20220406 10:13:01.436" endtime="20220406 10:13:22.908">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(sp7-dist-chamada-titulo.png) S: 0.699999988079071</status>
 </test>
 <test id="s1-t2" name="Cenário 2 : Validar fuzzy outage">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:30.132" endtime="20220406 08:16:30.140"/>
+<status status="PASS" starttime="20220406 10:13:22.911" endtime="20220406 10:13:22.917"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:30.131" endtime="20220406 08:16:30.141"/>
+<status status="PASS" starttime="20220406 10:13:22.911" endtime="20220406 10:13:22.917"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Objetivo do teste é criar uma nova ocorrência por chamada de cliente não morador</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220406 08:16:30.142" level="INFO">Objetivo do teste é criar uma nova ocorrência por chamada de cliente não morador</msg>
-<status status="PASS" starttime="20220406 08:16:30.141" endtime="20220406 08:16:30.142"/>
+<msg timestamp="20220406 10:13:22.918" level="INFO">Objetivo do teste é criar uma nova ocorrência por chamada de cliente não morador</msg>
+<status status="PASS" starttime="20220406 10:13:22.918" endtime="20220406 10:13:22.918"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:30.835" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
-<msg timestamp="20220406 08:16:30.835" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243790558.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:30.836" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
-<status status="FAIL" starttime="20220406 08:16:30.143" endtime="20220406 08:16:30.836"/>
+<msg timestamp="20220406 10:13:23.417" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
+<msg timestamp="20220406 10:13:23.417" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250803262.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:23.417" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
+<status status="FAIL" starttime="20220406 10:13:22.919" endtime="20220406 10:13:23.417"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:30.142" endtime="20220406 08:16:30.837"/>
+<status status="FAIL" starttime="20220406 10:13:22.919" endtime="20220406 10:13:23.418"/>
 </kw>
 <kw name="E estou na aba &quot;DISTRIBUIÇÃO&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.838" endtime="20220406 08:16:30.838"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.419" endtime="20220406 10:13:23.419"/>
 </kw>
 <kw name="Quando gero um nova &quot;CHAMADA&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.839" endtime="20220406 08:16:30.839"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.419" endtime="20220406 10:13:23.419"/>
 </kw>
 <kw name="E preenche estado" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.839" endtime="20220406 08:16:30.839"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.420" endtime="20220406 10:13:23.420"/>
 </kw>
 <kw name="Então aparece a nova CHAMADA no grid" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.840" endtime="20220406 08:16:30.840"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.420" endtime="20220406 10:13:23.420"/>
 </kw>
 <kw name="E valida tipo de ocorrência igual a &quot;Ocorrência indefinida&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.841" endtime="20220406 08:16:30.841"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.421" endtime="20220406 10:13:23.421"/>
 </kw>
 <kw name="E Fecha página Chamadas detalhes" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.842" endtime="20220406 08:16:30.842"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.421" endtime="20220406 10:13:23.421"/>
 </kw>
 <kw name="E realiza pesquisa na listagem" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.843" endtime="20220406 08:16:30.843"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.422" endtime="20220406 10:13:23.422"/>
 </kw>
 <kw name="E Fecha página de listagem de chamadas" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:30.843" endtime="20220406 08:16:30.844"/>
+<status status="NOT RUN" starttime="20220406 10:13:23.422" endtime="20220406 10:13:23.422"/>
 </kw>
 <tag>Teste2</tag>
-<status status="FAIL" starttime="20220406 08:16:30.130" endtime="20220406 08:16:30.844">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
+<status status="FAIL" starttime="20220406 10:13:22.910" endtime="20220406 10:13:23.423">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
 </test>
 <test id="s1-t3" name="Cenário 3: Validar criação outage com abertura manual de chave">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:30.850" endtime="20220406 08:16:30.859"/>
+<status status="PASS" starttime="20220406 10:13:23.425" endtime="20220406 10:13:23.430"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:30.849" endtime="20220406 08:16:30.859"/>
+<status status="PASS" starttime="20220406 10:13:23.425" endtime="20220406 10:13:23.430"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220406 08:16:30.860" level="INFO">Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela</msg>
-<status status="PASS" starttime="20220406 08:16:30.860" endtime="20220406 08:16:30.860"/>
+<msg timestamp="20220406 10:13:23.432" level="INFO">Objetivo deste teste é validar abertura manual de chave e a criaçaõ de ocorrência na tabela</msg>
+<status status="PASS" starttime="20220406 10:13:23.431" endtime="20220406 10:13:23.432"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:31.562" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
-<msg timestamp="20220406 08:16:31.562" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243791351.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:31.563" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
-<status status="FAIL" starttime="20220406 08:16:30.861" endtime="20220406 08:16:31.563"/>
+<msg timestamp="20220406 10:13:23.821" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250803787.png'/&gt;</msg>
+<status status="PASS" starttime="20220406 10:13:23.434" endtime="20220406 10:13:23.821"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:30.860" endtime="20220406 08:16:31.564"/>
+<status status="PASS" starttime="20220406 10:13:23.433" endtime="20220406 10:13:23.821"/>
 </kw>
 <kw name="E estou na tela &quot;Lista de Telas&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.565" endtime="20220406 08:16:31.565"/>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-listaTelas.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220406 10:13:24.973" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250804126.png'/&gt;
+[log] CLICK on L[591,65]@S(0) (558 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:23.823" endtime="20220406 10:13:24.973"/>
+</kw>
+<status status="PASS" starttime="20220406 10:13:23.822" endtime="20220406 10:13:24.974"/>
 </kw>
 <kw name="Minimiza sp7" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.566" endtime="20220406 08:16:31.566"/>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>titulo.png</arg>
+<doc>Right click</doc>
+<msg timestamp="20220406 10:13:26.320" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250805357.png'/&gt;
+[log] RIGHT CLICK on L[323,19]@S(0) (583 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:24.975" endtime="20220406 10:13:26.320"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>minimizar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220406 10:13:28.225" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250807413.png'/&gt;
+[log] CLICK on L[372,79]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:26.320" endtime="20220406 10:13:28.226"/>
+</kw>
+<status status="PASS" starttime="20220406 10:13:24.974" endtime="20220406 10:13:28.226"/>
 </kw>
 <kw name="Quando realizo a pesquisa" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.566" endtime="20220406 08:16:31.566"/>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>sp7-listaTelas-NomeB2.png</arg>
+<arg>13TRF</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<msg timestamp="20220406 10:13:30.198" level="INFO">Input Text:
+13TRF</msg>
+<msg timestamp="20220406 10:13:30.198" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250808615.png'/&gt;
+[log] CLICK on L[702,495]@S(0) (586 msec)
+[log]  TYPE "13TRF"</msg>
+<status status="PASS" starttime="20220406 10:13:28.229" endtime="20220406 10:13:30.199"/>
+</kw>
+<kw name="Press Special Key" library="SikuliLibrary">
+<arg>TAB</arg>
+<doc>Press special key
+ Presses a special keyboard key.</doc>
+<msg timestamp="20220406 10:13:30.319" level="INFO">[log]  TYPE "#TAB."</msg>
+<status status="PASS" starttime="20220406 10:13:30.201" endtime="20220406 10:13:30.319"/>
+</kw>
+<kw name="Paste Text" library="SikuliLibrary">
+<arg>sp7-listaTelas-NomeB3.png</arg>
+<arg>C00704</arg>
+<doc>Paste text. Image could be empty</doc>
+<msg timestamp="20220406 10:13:31.626" level="INFO">Paste Text:
+C00704</msg>
+<msg timestamp="20220406 10:13:31.626" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250810615.png'/&gt;
+[log] CLICK on L[639,488]@S(0) (570 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:30.320" endtime="20220406 10:13:31.627"/>
+</kw>
+<kw name="Press Special Key" library="SikuliLibrary">
+<arg>ENTER</arg>
+<doc>Press special key
+ Presses a special keyboard key.</doc>
+<msg timestamp="20220406 10:13:31.737" level="INFO">[log]  TYPE "#ENTER."</msg>
+<status status="PASS" starttime="20220406 10:13:31.627" endtime="20220406 10:13:31.738"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220406 10:13:32.765" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220406 10:13:31.738" endtime="20220406 10:13:32.766"/>
+</kw>
+<status status="PASS" starttime="20220406 10:13:28.227" endtime="20220406 10:13:32.766"/>
 </kw>
 <kw name="E clico em chamar" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.567" endtime="20220406 08:16:31.567"/>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220406 10:13:33.849" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250813023.png'/&gt;
+[log] CLICK on L[1182,525]@S(0) (576 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:32.770" endtime="20220406 10:13:33.850"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220406 10:13:36.853" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220406 10:13:33.850" endtime="20220406 10:13:36.854"/>
+</kw>
+<status status="PASS" starttime="20220406 10:13:32.768" endtime="20220406 10:13:36.855"/>
 </kw>
 <kw name="E abro chave escolhida" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.567" endtime="20220406 08:16:31.567"/>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde.png</arg>
+<doc>Right click</doc>
+<msg timestamp="20220406 10:13:39.973" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250818992.png'/&gt;
+[log] RIGHT CLICK on L[1378,580]@S(0) (557 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:36.857" endtime="20220406 10:13:39.973"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220406 10:13:41.546" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250820680.png'/&gt;
+[log] CLICK on L[1549,776]@S(0) (564 msec)</msg>
+<status status="PASS" starttime="20220406 10:13:39.973" endtime="20220406 10:13:41.547"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-hist.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220406 10:13:45.320" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250825110.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:45.321" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-hist.png) S: 0.699999988079071</msg>
+<status status="FAIL" starttime="20220406 10:13:41.547" endtime="20220406 10:13:45.321"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.321" endtime="20220406 10:13:45.321"/>
+</kw>
+<kw name="Wait Until Screen Contain" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr-name.png</arg>
+<arg>100</arg>
+<doc>Wait until screen contain
+ Wait until image shown in screen</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.322" endtime="20220406 10:13:45.322"/>
+</kw>
+<kw name="Set Screenshot Directory" library="ScreenCapLibrary">
+<arg>${IMAGE_DIR}</arg>
+<doc>Sets the directory where screenshots are saved.</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.322" endtime="20220406 10:13:45.322"/>
+</kw>
+<kw name="Take Partial Screenshot" library="ScreenCapLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png</arg>
+<arg>none</arg>
+<arg>none</arg>
+<arg>912</arg>
+<arg>450</arg>
+<arg>100</arg>
+<arg>400</arg>
+<arg>true</arg>
+<arg>800px</arg>
+<arg>1</arg>
+<doc>Takes a partial screenshot in the specified format and dimensions at
+library import and embeds it into the log file (PNG by default).</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.322" endtime="20220406 10:13:45.322"/>
+</kw>
+<kw name="Get Text" library="SikuliLibrary">
+<var>${TEXTO}</var>
+<arg>sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-idOcorr.png</arg>
+<doc>Get text</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.323" endtime="20220406 10:13:45.323"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${TEXTO}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.323" endtime="20220406 10:13:45.323"/>
+</kw>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-gerenciamento-historico-titulo.png</arg>
+<doc>Right click</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.323" endtime="20220406 10:13:45.324"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>fechar.png</arg>
+<doc>Click</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.324" endtime="20220406 10:13:45.324"/>
+</kw>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde.png</arg>
+<doc>Right click</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.324" endtime="20220406 10:13:45.324"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-abrir.png</arg>
+<doc>Click</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.324" endtime="20220406 10:13:45.324"/>
+</kw>
+<kw name="Input Text" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-abrir-cometario.png</arg>
+<arg>Automacao</arg>
+<doc>Input text.
+ Image could be empty</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.324" endtime="20220406 10:13:45.325"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>sp7-listaTelas-chamar-simboloVerde-abrir-executar.png</arg>
+<doc>Click</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.325" endtime="20220406 10:13:45.325"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220406 10:13:45.325" endtime="20220406 10:13:45.325"/>
+</kw>
+<status status="FAIL" starttime="20220406 10:13:36.856" endtime="20220406 10:13:45.326"/>
 </kw>
 <kw name="Então a ocorrência é gerada" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.568" endtime="20220406 08:16:31.568"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.327" endtime="20220406 10:13:45.327"/>
 </kw>
 <kw name="E fecha &quot;histórico de ocorrência&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.569" endtime="20220406 08:16:31.569"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.328" endtime="20220406 10:13:45.329"/>
 </kw>
 <kw name="E fecha chave aberta" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.570" endtime="20220406 08:16:31.570"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.329" endtime="20220406 10:13:45.329"/>
 </kw>
 <kw name="E fecha tela &quot;Processo/TempoReal&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.570" endtime="20220406 08:16:31.570"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.330" endtime="20220406 10:13:45.330"/>
 </kw>
 <kw name="E fecha tela &quot;TA nomes&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:31.571" endtime="20220406 08:16:31.571"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.331" endtime="20220406 10:13:45.331"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -270,71 +445,71 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:31.571" endtime="20220406 08:16:31.571"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.332" endtime="20220406 10:13:45.332"/>
 </kw>
 <tag>Teste3</tag>
-<status status="FAIL" starttime="20220406 08:16:30.847" endtime="20220406 08:16:31.572">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
+<status status="FAIL" starttime="20220406 10:13:23.424" endtime="20220406 10:13:45.333">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(sp7-listaTelas-chamar-simboloVerde-gerOcorrencia-hist.png) S: 0.699999988079071</status>
 </test>
 <test id="s1-t4" name="Cenario 4 : Criar Outage planejado">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:31.576" endtime="20220406 08:16:31.585"/>
+<status status="PASS" starttime="20220406 10:13:45.339" endtime="20220406 10:13:45.349"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:31.576" endtime="20220406 08:16:31.586"/>
+<status status="PASS" starttime="20220406 10:13:45.338" endtime="20220406 10:13:45.349"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Objetivo do teste é criar uma ocorrência planejada</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220406 08:16:31.587" level="INFO">Objetivo do teste é criar uma ocorrência planejada</msg>
-<status status="PASS" starttime="20220406 08:16:31.586" endtime="20220406 08:16:31.587"/>
+<msg timestamp="20220406 10:13:45.351" level="INFO">Objetivo do teste é criar uma ocorrência planejada</msg>
+<status status="PASS" starttime="20220406 10:13:45.350" endtime="20220406 10:13:45.351"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:32.368" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
-<msg timestamp="20220406 08:16:32.368" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243792085.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:32.368" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
-<status status="FAIL" starttime="20220406 08:16:31.589" endtime="20220406 08:16:32.368"/>
+<msg timestamp="20220406 10:13:45.905" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
+<msg timestamp="20220406 10:13:45.905" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250825749.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:45.905" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
+<status status="FAIL" starttime="20220406 10:13:45.352" endtime="20220406 10:13:45.905"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:31.588" endtime="20220406 08:16:32.370"/>
+<status status="FAIL" starttime="20220406 10:13:45.351" endtime="20220406 10:13:45.906"/>
 </kw>
 <kw name="E estou na aba &quot;DISTRIBUIÇÃO&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.371" endtime="20220406 08:16:32.371"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.906" endtime="20220406 10:13:45.906"/>
 </kw>
 <kw name="E Estou na tela &quot;Ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.372" endtime="20220406 08:16:32.372"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.907" endtime="20220406 10:13:45.907"/>
 </kw>
 <kw name="Minimiza sp7" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.372" endtime="20220406 08:16:32.372"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.907" endtime="20220406 10:13:45.907"/>
 </kw>
 <kw name="E estou na aba &quot;Ocorrências Planejadas&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.373" endtime="20220406 08:16:32.373"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.908" endtime="20220406 10:13:45.908"/>
 </kw>
 <kw name="Quando gero uma nova ocorrência Planejadas" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.373" endtime="20220406 08:16:32.374"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.908" endtime="20220406 10:13:45.908"/>
 </kw>
 <kw name="E preencho &quot;Tipo Serviço&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.374" endtime="20220406 08:16:32.374"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.909" endtime="20220406 10:13:45.909"/>
 </kw>
 <kw name="E clico em &quot;Salvar&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.375" endtime="20220406 08:16:32.375"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.909" endtime="20220406 10:13:45.909"/>
 </kw>
 <kw name="Então gera uma nova ocorrência planejada" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.375" endtime="20220406 08:16:32.375"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.910" endtime="20220406 10:13:45.910"/>
 </kw>
 <kw name="E fecha &quot;trabalho planejado&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.376" endtime="20220406 08:16:32.376"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.910" endtime="20220406 10:13:45.910"/>
 </kw>
 <kw name="E fecha &quot;gerenciamento de ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:32.376" endtime="20220406 08:16:32.376"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.910" endtime="20220406 10:13:45.910"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:32.377" endtime="20220406 08:16:32.377"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.911" endtime="20220406 10:13:45.911"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -342,45 +517,45 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:32.377" endtime="20220406 08:16:32.378"/>
+<status status="NOT RUN" starttime="20220406 10:13:45.911" endtime="20220406 10:13:45.911"/>
 </kw>
 <tag>Teste4</tag>
-<status status="FAIL" starttime="20220406 08:16:31.575" endtime="20220406 08:16:32.378">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
+<status status="FAIL" starttime="20220406 10:13:45.337" endtime="20220406 10:13:45.912">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
 </test>
 <test id="s1-t5" name="Cenário 5: Criar Outage pelo Bau">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:32.383" endtime="20220406 08:16:32.391"/>
+<status status="PASS" starttime="20220406 10:13:45.926" endtime="20220406 10:13:45.943"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:32.382" endtime="20220406 08:16:32.392"/>
+<status status="PASS" starttime="20220406 10:13:45.922" endtime="20220406 10:13:45.944"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Objetivo deste teste é criar uma ocorrência utilizando o simulador bau, não funciona em sistema distribuido.</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220406 08:16:32.393" level="INFO">Objetivo deste teste é criar uma ocorrência utilizando o simulador bau, não funciona em sistema distribuido.</msg>
-<status status="PASS" starttime="20220406 08:16:32.393" endtime="20220406 08:16:32.393"/>
+<msg timestamp="20220406 10:13:45.947" level="INFO">Objetivo deste teste é criar uma ocorrência utilizando o simulador bau, não funciona em sistema distribuido.</msg>
+<status status="PASS" starttime="20220406 10:13:45.946" endtime="20220406 10:13:45.947"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:33.118" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
-<msg timestamp="20220406 08:16:33.118" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243792836.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:33.118" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
-<status status="FAIL" starttime="20220406 08:16:32.394" endtime="20220406 08:16:33.118"/>
+<msg timestamp="20220406 10:13:46.579" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
+<msg timestamp="20220406 10:13:46.579" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250826402.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:46.579" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
+<status status="FAIL" starttime="20220406 10:13:45.950" endtime="20220406 10:13:46.579"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:32.393" endtime="20220406 08:16:33.120"/>
+<status status="FAIL" starttime="20220406 10:13:45.948" endtime="20220406 10:13:46.579"/>
 </kw>
 <kw name="E estou na aba &quot;DISTRIBUIÇÃO&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.121" endtime="20220406 08:16:33.121"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.580" endtime="20220406 10:13:46.580"/>
 </kw>
 <kw name="E verifico as ocorrências emergenciais" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.122" endtime="20220406 08:16:33.122"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.581" endtime="20220406 10:13:46.581"/>
 </kw>
 <kw name="Quando gero a ocorrência via bau" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.122" endtime="20220406 08:16:33.122"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.582" endtime="20220406 10:13:46.582"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -388,16 +563,16 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:33.123" endtime="20220406 08:16:33.123"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.582" endtime="20220406 10:13:46.583"/>
 </kw>
 <kw name="E verifico as ocorrências emergenciais após ocorrência" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.124" endtime="20220406 08:16:33.124"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.583" endtime="20220406 10:13:46.583"/>
 </kw>
 <kw name="Então uma nova ocorrência é gerado no relatório" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.125" endtime="20220406 08:16:33.125"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.583" endtime="20220406 10:13:46.583"/>
 </kw>
 <kw name="E fecha &quot;gerenciamento de ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.125" endtime="20220406 08:16:33.125"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.584" endtime="20220406 10:13:46.584"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -405,123 +580,123 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:33.125" endtime="20220406 08:16:33.126"/>
+<status status="NOT RUN" starttime="20220406 10:13:46.585" endtime="20220406 10:13:46.585"/>
 </kw>
 <tag>Teste5</tag>
-<status status="FAIL" starttime="20220406 08:16:32.380" endtime="20220406 08:16:33.126">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
+<status status="FAIL" starttime="20220406 10:13:45.916" endtime="20220406 10:13:46.585">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
 </test>
 <test id="s1-t6" name="Cenário 6: Validar criação de Tarefa">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:33.131" endtime="20220406 08:16:33.140"/>
+<status status="PASS" starttime="20220406 10:13:46.588" endtime="20220406 10:13:46.593"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:33.130" endtime="20220406 08:16:33.141"/>
+<status status="PASS" starttime="20220406 10:13:46.588" endtime="20220406 10:13:46.594"/>
 </kw>
 <kw name="Dado que estou logado no sistema" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>spectrum-conectado.png</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220406 08:16:33.886" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
-<msg timestamp="20220406 08:16:33.886" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243793599.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:33.887" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
-<status status="FAIL" starttime="20220406 08:16:33.142" endtime="20220406 08:16:33.887"/>
+<msg timestamp="20220406 10:13:47.136" level="INFO">Could not find P(spectrum-conectado.png) S: 0.699999988079071</msg>
+<msg timestamp="20220406 10:13:47.136" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250827005.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:47.137" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</msg>
+<status status="FAIL" starttime="20220406 10:13:46.594" endtime="20220406 10:13:47.137"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:33.141" endtime="20220406 08:16:33.888"/>
+<status status="FAIL" starttime="20220406 10:13:46.594" endtime="20220406 10:13:47.137"/>
 </kw>
 <kw name="E estou na aba &quot;DISTRIBUIÇÃO&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.889" endtime="20220406 08:16:33.889"/>
+<status status="NOT RUN" starttime="20220406 10:13:47.138" endtime="20220406 10:13:47.138"/>
 </kw>
 <kw name="E Estou na tela &quot;Ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.890" endtime="20220406 08:16:33.890"/>
+<status status="NOT RUN" starttime="20220406 10:13:47.138" endtime="20220406 10:13:47.138"/>
 </kw>
 <kw name="Minimiza sp7" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.891" endtime="20220406 08:16:33.891"/>
+<status status="NOT RUN" starttime="20220406 10:13:47.139" endtime="20220406 10:13:47.139"/>
 </kw>
 <kw name="E estou na aba &quot;Ocorrências Emergênciais&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.891" endtime="20220406 08:16:33.891"/>
+<status status="NOT RUN" starttime="20220406 10:13:47.139" endtime="20220406 10:13:47.139"/>
 </kw>
 <kw name="E seleciono ocorrência" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.892" endtime="20220406 08:16:33.892"/>
+<status status="NOT RUN" starttime="20220406 10:13:47.140" endtime="20220406 10:13:47.140"/>
 </kw>
 <kw name="Quando crio uma nova tarefa" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:33.892" endtime="20220406 08:16:33.892"/>
+<status status="NOT RUN" starttime="20220406 10:13:47.140" endtime="20220406 10:13:47.140"/>
 </kw>
 <tag>Teste6</tag>
-<status status="FAIL" starttime="20220406 08:16:33.128" endtime="20220406 08:16:33.893">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
+<status status="FAIL" starttime="20220406 10:13:46.587" endtime="20220406 10:13:47.141">com.github.rainmanwy.robotframework.sikulilib.exceptions.ScreenOperationException: Screen should contain spectrum-conectado.png</status>
 </test>
 <test id="s1-t7" name="Cenário 7: Completar o fluxo da tarefa">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:33.897" endtime="20220406 08:16:33.905"/>
+<status status="PASS" starttime="20220406 10:13:47.154" endtime="20220406 10:13:47.187"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:33.896" endtime="20220406 08:16:33.905"/>
+<status status="PASS" starttime="20220406 10:13:47.152" endtime="20220406 10:13:47.190"/>
 </kw>
 <kw name="Quando associo uma equipe disponivel" library="base">
 <kw name="Click" library="SikuliLibrary">
 <arg>refresh.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220406 08:16:37.391" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243797167.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:37.391" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(refresh.png) S: 0.699999988079071</msg>
-<status status="FAIL" starttime="20220406 08:16:33.906" endtime="20220406 08:16:37.391"/>
+<msg timestamp="20220406 10:13:50.782" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250830587.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:50.783" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(refresh.png) S: 0.699999988079071</msg>
+<status status="FAIL" starttime="20220406 10:13:47.195" endtime="20220406 10:13:50.783"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.393" endtime="20220406 08:16:37.393"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.783" endtime="20220406 10:13:50.783"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>taferas-nome-despachoViaVoz.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.393" endtime="20220406 08:16:37.393"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.783" endtime="20220406 10:13:50.783"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>sp7-dist-ocorrencias-aba-ocorrenciaPlanejada-salvar.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.394" endtime="20220406 08:16:37.394"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.783" endtime="20220406 10:13:50.783"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>maximiza.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.394" endtime="20220406 08:16:37.394"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.784" endtime="20220406 10:13:50.784"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>taferas-nome-equipeDisponivel.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.394" endtime="20220406 08:16:37.394"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.784" endtime="20220406 10:13:50.784"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>taferas-nome-equipeDisponivel- botaoAtribuir.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.394" endtime="20220406 08:16:37.394"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.784" endtime="20220406 10:13:50.784"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.394" endtime="20220406 08:16:37.394"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.784" endtime="20220406 10:13:50.784"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:33.906" endtime="20220406 08:16:37.394"/>
+<status status="FAIL" starttime="20220406 10:13:47.193" endtime="20220406 10:13:50.785"/>
 </kw>
 <kw name="E evoluo os status da tarefa" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:37.394" endtime="20220406 08:16:37.394"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.786" endtime="20220406 10:13:50.786"/>
 </kw>
 <kw name="Então as datas de realizado são preechida" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:37.395" endtime="20220406 08:16:37.395"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.786" endtime="20220406 10:13:50.786"/>
 </kw>
 <kw name="E fecha detalhes da tarefa" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:37.397" endtime="20220406 08:16:37.397"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.787" endtime="20220406 10:13:50.787"/>
 </kw>
 <kw name="Então tarefa é apresentada no grid de tarefas" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:37.397" endtime="20220406 08:16:37.397"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.787" endtime="20220406 10:13:50.788"/>
 </kw>
 <kw name="E fecha tarefas" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:37.399" endtime="20220406 08:16:37.399"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.788" endtime="20220406 10:13:50.788"/>
 </kw>
 <kw name="E fecha &quot;gerenciamento de ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:37.399" endtime="20220406 08:16:37.399"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.789" endtime="20220406 10:13:50.789"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -529,28 +704,28 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:37.400" endtime="20220406 08:16:37.400"/>
+<status status="NOT RUN" starttime="20220406 10:13:50.789" endtime="20220406 10:13:50.789"/>
 </kw>
 <tag>Teste7</tag>
-<status status="FAIL" starttime="20220406 08:16:33.895" endtime="20220406 08:16:37.401">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(refresh.png) S: 0.699999988079071</status>
+<status status="FAIL" starttime="20220406 10:13:47.147" endtime="20220406 10:13:50.790">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(refresh.png) S: 0.699999988079071</status>
 </test>
 <test id="s1-t8" name="Cenário 8: Editar alguma info do outage;">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:37.405" endtime="20220406 08:16:37.414"/>
+<status status="PASS" starttime="20220406 10:13:50.793" endtime="20220406 10:13:50.804"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:37.404" endtime="20220406 08:16:37.415"/>
+<status status="PASS" starttime="20220406 10:13:50.793" endtime="20220406 10:13:50.805"/>
 </kw>
 <kw name="E seleciono ocorrência condicional" library="base">
 <kw name="Get Match Score" library="SikuliLibrary">
 <var>${score}</var>
 <arg>ocorrenciasEmergenciais-listagem-numero.png</arg>
 <doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</doc>
-<msg timestamp="20220406 08:16:37.868" level="INFO">Could not find P(ocorrenciasEmergenciais-listagem-numero.png) S: 0.699999988079071</msg>
-<msg timestamp="20220406 08:16:37.868" level="INFO">${score} = 0.0</msg>
-<status status="PASS" starttime="20220406 08:16:37.415" endtime="20220406 08:16:37.868"/>
+<msg timestamp="20220406 10:13:51.243" level="INFO">Could not find P(ocorrenciasEmergenciais-listagem-numero.png) S: 0.699999988079071</msg>
+<msg timestamp="20220406 10:13:51.243" level="INFO">${score} = 0.0</msg>
+<status status="PASS" starttime="20220406 10:13:50.806" endtime="20220406 10:13:51.243"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.85</arg>
@@ -562,41 +737,41 @@
 <kw name="Click" library="SikuliLibrary">
 <arg>ocorrenciasEmergenciais-listagem-numero2.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220406 08:16:41.358" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649243801195.png'/&gt;</msg>
-<msg timestamp="20220406 08:16:41.358" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(ocorrenciasEmergenciais-listagem-numero2.png) S: 0.699999988079071</msg>
-<status status="FAIL" starttime="20220406 08:16:37.889" endtime="20220406 08:16:41.358"/>
+<msg timestamp="20220406 10:13:54.747" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649250834357.png'/&gt;</msg>
+<msg timestamp="20220406 10:13:54.747" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(ocorrenciasEmergenciais-listagem-numero2.png) S: 0.699999988079071</msg>
+<status status="FAIL" starttime="20220406 10:13:51.245" endtime="20220406 10:13:54.747"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:37.888" endtime="20220406 08:16:41.360"/>
+<status status="FAIL" starttime="20220406 10:13:51.244" endtime="20220406 10:13:54.749"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:37.868" endtime="20220406 08:16:41.360"/>
+<status status="FAIL" starttime="20220406 10:13:51.243" endtime="20220406 10:13:54.749"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:37.415" endtime="20220406 08:16:41.361"/>
+<status status="FAIL" starttime="20220406 10:13:50.805" endtime="20220406 10:13:54.750"/>
 </kw>
 <kw name="Quando preencho os dados básicos" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.361" endtime="20220406 08:16:41.361"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.751" endtime="20220406 10:13:54.751"/>
 </kw>
 <kw name="E clico em &quot;Salvar&quot; condicional" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.362" endtime="20220406 08:16:41.362"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.751" endtime="20220406 10:13:54.751"/>
 </kw>
 <kw name="Então aparece a mensagem salvo com sucesso" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.362" endtime="20220406 08:16:41.362"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.753" endtime="20220406 10:13:54.753"/>
 </kw>
 <kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
 <doc>Stops the remote server.</doc>
-<msg timestamp="20220406 08:16:41.366" level="INFO">Robot Framework remote server stopping</msg>
-<status status="PASS" starttime="20220406 08:16:41.363" endtime="20220406 08:16:41.367"/>
+<msg timestamp="20220406 10:13:54.758" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20220406 10:13:54.753" endtime="20220406 10:13:54.758"/>
 </kw>
 <tag>Teste8</tag>
-<status status="FAIL" starttime="20220406 08:16:37.403" endtime="20220406 08:16:41.367">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(ocorrenciasEmergenciais-listagem-numero2.png) S: 0.699999988079071</status>
+<status status="FAIL" starttime="20220406 10:13:50.792" endtime="20220406 10:13:54.759">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happened, could not find P(ocorrenciasEmergenciais-listagem-numero2.png) S: 0.699999988079071</status>
 </test>
 <test id="s1-t9" name="Cenário 9: Completar o fluxo do outage;">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:41.369" endtime="20220406 08:16:41.373"/>
+<status status="PASS" starttime="20220406 10:13:54.762" endtime="20220406 10:13:54.770"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:41.369" endtime="20220406 08:16:41.373"/>
+<status status="PASS" starttime="20220406 10:13:54.761" endtime="20220406 10:13:54.770"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -604,74 +779,74 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<msg timestamp="20220406 08:16:41.374" level="FAIL">Variable '${score}' not found.</msg>
-<status status="FAIL" starttime="20220406 08:16:41.373" endtime="20220406 08:16:41.374"/>
+<msg timestamp="20220406 10:13:54.773" level="FAIL">Variable '${score}' not found.</msg>
+<status status="FAIL" starttime="20220406 10:13:54.771" endtime="20220406 10:13:54.773"/>
 </kw>
 <kw name="E Estou na tela &quot;Ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.374" endtime="20220406 08:16:41.374"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.774" endtime="20220406 10:13:54.774"/>
 </kw>
 <kw name="Minimiza sp7" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.375" endtime="20220406 08:16:41.375"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.774" endtime="20220406 10:13:54.774"/>
 </kw>
 <kw name="E estou na aba &quot;Ocorrências Emergênciais&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.375" endtime="20220406 08:16:41.375"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.775" endtime="20220406 10:13:54.775"/>
 </kw>
 <kw name="Completar Ocorrencia" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:41.375" endtime="20220406 08:16:41.375"/>
+<status status="NOT RUN" starttime="20220406 10:13:54.775" endtime="20220406 10:13:54.775"/>
 </kw>
 <kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
 <doc>Stops the remote server.</doc>
-<msg timestamp="20220406 08:16:41.378" level="INFO">Robot Framework remote server stopping</msg>
-<status status="PASS" starttime="20220406 08:16:41.376" endtime="20220406 08:16:41.379"/>
+<msg timestamp="20220406 10:13:54.782" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20220406 10:13:54.777" endtime="20220406 10:13:54.782"/>
 </kw>
 <tag>Teste9</tag>
-<status status="FAIL" starttime="20220406 08:16:41.368" endtime="20220406 08:16:41.379">Variable '${score}' not found.</status>
+<status status="FAIL" starttime="20220406 10:13:54.760" endtime="20220406 10:13:54.783">Variable '${score}' not found.</status>
 </test>
 <test id="s1-t10" name="Cenário 10: Arquivar Outage">
 <kw name="Add Needed Image Path" library="base" type="SETUP">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220406 08:16:41.380" endtime="20220406 08:16:41.384"/>
+<status status="PASS" starttime="20220406 10:13:54.786" endtime="20220406 10:13:54.792"/>
 </kw>
-<status status="PASS" starttime="20220406 08:16:41.380" endtime="20220406 08:16:41.384"/>
+<status status="PASS" starttime="20220406 10:13:54.785" endtime="20220406 10:13:54.793"/>
 </kw>
 <kw name="Arquivar Ocorrencia" library="base">
 <kw name="Right Click" library="SikuliLibrary">
 <arg>US-S313Bay7CB.png</arg>
 <doc>Right click</doc>
-<msg timestamp="20220406 08:16:45.007" level="FAIL">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</msg>
-<status status="FAIL" starttime="20220406 08:16:41.385" endtime="20220406 08:16:45.007"/>
+<msg timestamp="20220406 10:13:58.351" level="FAIL">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</msg>
+<status status="FAIL" starttime="20220406 10:13:54.794" endtime="20220406 10:13:58.351"/>
 </kw>
 <kw name="Mouse Move" library="SikuliLibrary">
 <arg>alter-status-ocorr.png</arg>
 <doc>Mouse moveMove the mouse pointer to the target</doc>
-<status status="NOT RUN" starttime="20220406 08:16:45.009" endtime="20220406 08:16:45.009"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.352" endtime="20220406 10:13:58.352"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>status-ocorr-fechado.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:45.009" endtime="20220406 08:16:45.009"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.352" endtime="20220406 10:13:58.352"/>
 </kw>
 <kw name="Right Click" library="SikuliLibrary">
 <arg>US-S313Bay7CB.png</arg>
 <doc>Right click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:45.009" endtime="20220406 08:16:45.009"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.352" endtime="20220406 10:13:58.352"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
 <arg>arquivar-ocorr.png</arg>
 <doc>Click</doc>
-<status status="NOT RUN" starttime="20220406 08:16:45.010" endtime="20220406 08:16:45.010"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.352" endtime="20220406 10:13:58.352"/>
 </kw>
-<status status="FAIL" starttime="20220406 08:16:41.385" endtime="20220406 08:16:45.011"/>
+<status status="FAIL" starttime="20220406 10:13:54.793" endtime="20220406 10:13:58.353"/>
 </kw>
 <kw name="E fecha &quot;gerenciamento de ocorrências&quot;" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:45.013" endtime="20220406 08:16:45.013"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.354" endtime="20220406 10:13:58.354"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:45.013" endtime="20220406 08:16:45.014"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.355" endtime="20220406 10:13:58.355"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${score} &gt; 0.95</arg>
@@ -679,23 +854,23 @@
 <arg>ELSE</arg>
 <arg>E abre sp7</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20220406 08:16:45.015" endtime="20220406 08:16:45.015"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.355" endtime="20220406 10:13:58.356"/>
 </kw>
 <kw name="E Verifico Historico de ocorrencias" library="base">
-<status status="NOT RUN" starttime="20220406 08:16:45.015" endtime="20220406 08:16:45.015"/>
+<status status="NOT RUN" starttime="20220406 10:13:58.357" endtime="20220406 10:13:58.357"/>
 </kw>
 <kw name="Stop Remote Server" library="SikuliLibrary" type="TEARDOWN">
 <doc>Stops the remote server.</doc>
-<msg timestamp="20220406 08:16:47.058" level="FAIL">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</msg>
-<status status="FAIL" starttime="20220406 08:16:45.016" endtime="20220406 08:16:47.058">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</status>
+<msg timestamp="20220406 10:14:00.384" level="FAIL">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</msg>
+<status status="FAIL" starttime="20220406 10:13:58.357" endtime="20220406 10:14:00.384">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</status>
 </kw>
 <tag>Teste10</tag>
-<status status="FAIL" starttime="20220406 08:16:41.380" endtime="20220406 08:16:47.059">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+<status status="FAIL" starttime="20220406 10:13:54.785" endtime="20220406 10:14:00.386">Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
 
 Also teardown failed:
 Connection to remote server broken: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente</status>
 </test>
-<status status="FAIL" starttime="20220406 08:16:04.835" endtime="20220406 08:16:47.066"/>
+<status status="FAIL" starttime="20220406 10:12:56.095" endtime="20220406 10:14:00.391"/>
 </suite>
 <statistics>
 <total>
