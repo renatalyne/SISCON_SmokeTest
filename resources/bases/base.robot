@@ -115,17 +115,17 @@ And clicked on Cartoes-Custom
     [Arguments]                      ${Cartoes_Custom}        
     Click                            ${Cartoes_Custom}
 
-And clicked on "CartaoAtencao"
-    Click                            CartaoAtencao.PNG
+# And clicked on "CartaoAtencao"
+#     Click                            CartaoAtencao.PNG
 
-And clicked on "ControleInibido"
-    Click                            ControleInibido.PNG
+# And clicked on "ControleInibido"
+#     Click                            ControleInibido.PNG
 
-And clicked on "CartaoAGR"
-    Click                            CartaoAGR.PNG
+# And clicked on "CartaoAGR"
+#     Click                            CartaoAGR.PNG
 
-And clicked on "Lista de Telas"
-    Click                            ListaDeTelas.PNG
+# And clicked on "Lista de Telas"
+#     Click                            ListaDeTelas.PNG
 
 
 And try to close BasiDi
