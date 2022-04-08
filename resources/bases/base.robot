@@ -136,7 +136,7 @@ And try to close BasiDi
 Then BasiDi should be closed sucessfully
     Wait Until Screen Not Contain    FecharWarning.PNG      ${TEMPO}
 
-When BaSiDi Login screen is reopened
+When BaSiDi Login screen is opened
     Click               BarraDeBusca.PNG
     Sleep               0.5
     Input Text          ${Empty}            cmd

@@ -35,10 +35,10 @@ Cenário 03: Close BaSiDi
         Then BasiDi should be closed sucessfully
     [Teardown]
 
-Cenário 04: Reopen BaSiDi
+Cenário 04: Open BaSiDi
     [Tags]      Cenário 4
         log      "Reabre o BaSiDi"
-        When BaSiDi Login screen is reopened
+        When BaSiDi Login screen is opened
         Then an security message should appeared
 
     [Teardown]
