@@ -13,3 +13,20 @@
 > git commit
 > git rebase origin/master
 > git push -f (--force)
+```
+
+## Dependências
+
+Alguns pacotes são necessários para rodar todos os testes até o fim:
+ - Python 3.10.2
+ - Robot Framework 4.1.3
+ - paramiko==2.10.3 (python)
+ - clipboard==0.0.4 (python)
+ - robotframework-imagehorizonlibrary==1.0
+ - robotframework-pythonlibcore==3.0.0
+ - robotframework-screencaplibrary==1.6.0
+ - robotframework-seleniumlibrary==6.0.0
+ - robotframework-SikuliLibrary==2.0.3
+
+**Pacotes do RobotFramework podem ser instalados através do pip
+ !pip install (package-name).**
