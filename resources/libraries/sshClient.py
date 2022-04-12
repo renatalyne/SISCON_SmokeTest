@@ -1,7 +1,6 @@
 from paramiko import SSHClient
 import paramiko
 import time
-import traceback
 
 try:
     from robot.libraries.BuiltIn import BuiltIn
@@ -23,7 +22,7 @@ class sshClient:
                 self.client = SSHClient()
                 self.client.load_system_host_keys()
                 self.client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                self.client.connect('dvl81ibd',username='psene',password='jS4BvgnjmCXtgnTs')
+                self.client.connect('admmtst',username='spsy',password='Iberdrola1!')
             except AuthenticationException as error:
                 print('Authentication Failed: Please check your system')
             finally:

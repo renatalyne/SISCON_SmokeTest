@@ -21,6 +21,7 @@ ${ON}                      sta on tra\n
 ${OPEN}                    sta off tra\n
 ${MEDIDA}                  ta /BVG/13/01BP)1/Ua/MvMoment\n
 ${VAL12}                   val 12 tra\n
+${TEST}                    touch teste\n
 
 
 *** Keywords ***
@@ -106,7 +107,9 @@ Then Disj - Protecao Alarm is created
     # Sleep   3
     # Exec Command                        ${OPEN}
     # Disconnect
-    Send Command
+    #Send Command
+    Exec Command                         ${TEST}
+    Disconnect 
 
 Then I confirm Disj in General and Disj Alarmes
     Click                               SA-Geral.png

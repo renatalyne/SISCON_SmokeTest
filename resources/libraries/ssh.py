@@ -15,7 +15,7 @@ def Send_Command():
     client = SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect('dvl81ibd',username='psene',password='jS4BvgnjmCXtgnTs')
+    client.connect('admmtst',username='spsy',password='Iberdrola1!')
     print('Connection stable')
 
     channel = client.invoke_shell()
