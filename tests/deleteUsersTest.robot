@@ -30,8 +30,9 @@ Cenário 2: Ir até a tela de propriedades de Usuário
 
 Cenário 3: Deletar Usuário
     [Tags]     Cenário 3
+        ${Usuario_Teste}     set Variable    UsuarioTeste.PNG
         log     "Deleta usuário criado"
-        When user test is selected
+        When user test is selected          ${Usuario_Teste}
         And the delete button is clicked
         Then user this should desapear 
         Close Users Proprieties

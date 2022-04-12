@@ -43,7 +43,8 @@ Then the create new user should appeared
     Wait Until Screen Contain     CriaNovoUsuario.png          ${TEMPO}
 
 When user test is selected
-    Click     UsuarioTeste.PNG
+    [Arguments]                 ${Usuario_Teste}
+    Click     ${Usuario_Teste}
     
 And the delete button is clicked
     Click     DeletarUsuario.PNG

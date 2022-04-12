@@ -137,9 +137,12 @@ Then BasiDi should be closed sucessfully
     Wait Until Screen Not Contain    FecharWarning.PNG      ${TEMPO}
 
 When BaSiDi Login screen is opened
+
+    # Click               BarraDeBusca.PNG    1695
     Click               BarraDeBusca.PNG
     Sleep               0.5
     Input Text          ${Empty}            cmd
+    Wait Until Screen Contain               CMD.png         ${TEMPO}
     Click               CMD.png
     Sleep               0.5
     Paste Text          ${Empty}            cd ${PATH}
