@@ -107,7 +107,7 @@ Then the successful new user creation message appeared
 
 Close Users Proprieties
     Right Click                 PropriedadeDoUsuarioWindow.png
-    Click                       PropriedadeDoUsuarioWindowClose.png
+    Click                       Fechar4.png
 
     
     

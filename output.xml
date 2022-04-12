@@ -1,2265 +1,436 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.9.5 on win32)" generated="20220412 08:39:51.194" rpa="false" schemaversion="2">
-<suite id="s1" name="usersTest &amp; changeUsersTest &amp; deleteUsersTest">
-<suite id="s1-s1" name="usersTest" source="C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\tests\usersTest.robot">
-<test id="s1-s1-t1" name="Cenário 01: Abrir tela Usuário em Sistemas">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
+<robot generator="Robot 4.1.3 (Python 3.9.5 on win32)" generated="20220412 17:00:18.713" rpa="false" schemaversion="2">
+<suite id="s1" name="cardsTest" source="C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\tests\cardsTest.robot">
+<test id="s1-t1" name="Cenário 1: Open the &quot;Geral&quot; screen in &quot;Cartões&quot;">
+<kw name="Add Cards Image Path" library="cardsBase" type="SETUP">
 <kw name="Add Base Image Path" library="base">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:39:54.609" endtime="20220412 08:39:54.624"/>
+<status status="PASS" starttime="20220412 17:00:22.332" endtime="20220412 17:00:22.344"/>
 </kw>
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR2}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:39:54.625" endtime="20220412 08:39:54.629"/>
+<status status="PASS" starttime="20220412 17:00:22.344" endtime="20220412 17:00:22.349"/>
 </kw>
-<status status="PASS" starttime="20220412 08:39:54.609" endtime="20220412 08:39:54.629"/>
+<status status="PASS" starttime="20220412 17:00:22.331" endtime="20220412 17:00:22.349"/>
 </kw>
 <kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
+<arg>${CARDS_IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:39:54.629" endtime="20220412 08:39:54.633"/>
+<status status="PASS" starttime="20220412 17:00:22.349" endtime="20220412 17:00:22.354"/>
 </kw>
-<status status="PASS" starttime="20220412 08:39:54.609" endtime="20220412 08:39:54.633"/>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${CARDS_IMAGE_DIR2}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220412 17:00:22.354" endtime="20220412 17:00:22.359"/>
+</kw>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${CARDS_IMAGE_DIR3}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220412 17:00:22.360" endtime="20220412 17:00:22.365"/>
+</kw>
+<status status="PASS" starttime="20220412 17:00:22.331" endtime="20220412 17:00:22.365"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cartoes_Custom}</var>
+<arg>Cartoes-Geral.PNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220412 17:00:22.366" level="INFO">${Cartoes_Custom} = Cartoes-Geral.PNG</msg>
+<status status="PASS" starttime="20220412 17:00:22.366" endtime="20220412 17:00:22.366"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cartoes_Custom_Window}</var>
+<arg>CartoesWindow-Geral.PNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220412 17:00:22.367" level="INFO">${Cartoes_Custom_Window} = CartoesWindow-Geral.PNG</msg>
+<status status="PASS" starttime="20220412 17:00:22.367" endtime="20220412 17:00:22.367"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>"Abrir tela Usuário em Sistemas"</arg>
+<arg>"Abrir tela Geral em Cartões"</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:39:54.633" level="INFO">"Abrir tela Usuário em Sistemas"</msg>
-<status status="PASS" starttime="20220412 08:39:54.633" endtime="20220412 08:39:54.633"/>
+<msg timestamp="20220412 17:00:22.367" level="INFO">"Abrir tela Geral em Cartões"</msg>
+<status status="PASS" starttime="20220412 17:00:22.367" endtime="20220412 17:00:22.367"/>
 </kw>
 <kw name="Given that I'm in BaSiDi" library="base">
 <kw name="Screen Should Contain" library="SikuliLibrary">
 <arg>Conectado.PNG</arg>
 <doc>Screen should contain</doc>
-<msg timestamp="20220412 08:39:55.141" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763595122.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:39:54.634" endtime="20220412 08:39:55.141"/>
+<msg timestamp="20220412 17:00:22.815" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793622785.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:22.368" endtime="20220412 17:00:22.815"/>
 </kw>
-<status status="PASS" starttime="20220412 08:39:54.634" endtime="20220412 08:39:55.141"/>
+<status status="PASS" starttime="20220412 17:00:22.368" endtime="20220412 17:00:22.815"/>
 </kw>
-<kw name="And Clicked on &quot;Sistemas&quot;" library="usersBase">
+<kw name="And clicked on &quot;Cartões&quot;" library="base">
 <kw name="Click" library="SikuliLibrary">
-<arg>Sistema.png</arg>
+<arg>Cartoes.PNG</arg>
 <doc>Click</doc>
-<msg timestamp="20220412 08:39:56.333" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763595454.png'/&gt;
-[log] CLICK on L[1549,127]@S(0) (574 msec)</msg>
-<status status="PASS" starttime="20220412 08:39:55.143" endtime="20220412 08:39:56.333"/>
+<msg timestamp="20220412 17:00:23.973" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793623102.png'/&gt;
+[log] CLICK on L[1331,128]@S(0) (565 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:22.817" endtime="20220412 17:00:23.973"/>
 </kw>
-<status status="PASS" starttime="20220412 08:39:55.142" endtime="20220412 08:39:56.333"/>
+<status status="PASS" starttime="20220412 17:00:22.816" endtime="20220412 17:00:23.973"/>
 </kw>
-<kw name="And Clicked on &quot;Usuários&quot;" library="usersBase">
+<kw name="And clicked on Cartoes-Custom" library="base">
+<arg>${Cartoes_Custom}</arg>
 <kw name="Click" library="SikuliLibrary">
-<arg>Sistema-Usuarios.png</arg>
+<arg>${Cartoes_Custom}</arg>
 <doc>Click</doc>
-<msg timestamp="20220412 08:39:57.872" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763596845.png'/&gt;
-[log] CLICK on L[563,152]@S(0) (587 msec)</msg>
-<status status="PASS" starttime="20220412 08:39:56.335" endtime="20220412 08:39:57.872"/>
+<msg timestamp="20220412 17:00:25.042" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793624231.png'/&gt;
+[log] CLICK on L[1193,151]@S(0) (576 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:23.974" endtime="20220412 17:00:25.042"/>
 </kw>
-<status status="PASS" starttime="20220412 08:39:56.334" endtime="20220412 08:39:57.872"/>
+<status status="PASS" starttime="20220412 17:00:23.973" endtime="20220412 17:00:25.042"/>
 </kw>
-<kw name="Then the Users Management should appeared" library="usersBase">
+<kw name="Then the Cards screen should appeared" library="cardsBase">
+<arg>${Cartoes_Custom_Window}</arg>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>UsuarioWindow.png</arg>
-<arg>${TEMPO}</arg>
+<arg>Carregamento.png</arg>
+<arg>30</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:39:59.216" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763599200.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:39:57.875" endtime="20220412 08:39:59.216"/>
-</kw>
-<status status="PASS" starttime="20220412 08:39:57.874" endtime="20220412 08:39:59.216"/>
-</kw>
-<tag>Cenário 1</tag>
-<status status="PASS" starttime="20220412 08:39:54.608" endtime="20220412 08:39:59.217"/>
-</test>
-<test id="s1-s1-t2" name="Cenário 02: Ir até a tela de propriedades de Usuário">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:39:59.223" endtime="20220412 08:39:59.232"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:39:59.233" endtime="20220412 08:39:59.243"/>
-</kw>
-<status status="PASS" starttime="20220412 08:39:59.222" endtime="20220412 08:39:59.244"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:39:59.244" endtime="20220412 08:39:59.253"/>
-</kw>
-<status status="PASS" starttime="20220412 08:39:59.221" endtime="20220412 08:39:59.253"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Ir até a tela de propriedades de Usuário"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:39:59.256" level="INFO">"Ir até a tela de propriedades de Usuário"</msg>
-<status status="PASS" starttime="20220412 08:39:59.255" endtime="20220412 08:39:59.256"/>
-</kw>
-<kw name="When &quot;Propriedades do usuário&quot; is clicked" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>PropriedadeDoUsuario.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:00.715" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763599696.png'/&gt;
-[log] CLICK on L[639,347]@S(0) (576 msec)</msg>
-<status status="PASS" starttime="20220412 08:39:59.258" endtime="20220412 08:40:00.715"/>
-</kw>
-<status status="PASS" starttime="20220412 08:39:59.257" endtime="20220412 08:40:00.716"/>
-</kw>
-<kw name="Then the Users Proprieties should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>PropriedadeDoUsuarioWindow.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:01.119" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763601098.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:00.718" endtime="20220412 08:40:01.120"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:00.717" endtime="20220412 08:40:01.120"/>
-</kw>
-<tag>Cenário 2</tag>
-<status status="PASS" starttime="20220412 08:39:59.220" endtime="20220412 08:40:01.121"/>
-</test>
-<test id="s1-s1-t3" name="Cenário 03: Clicar em criar novo usuário">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:01.126" endtime="20220412 08:40:01.136"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:01.136" endtime="20220412 08:40:01.144"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:01.126" endtime="20220412 08:40:01.145"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:01.145" endtime="20220412 08:40:01.151"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:01.125" endtime="20220412 08:40:01.151"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Clicar em criar novo usuário"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:01.151" level="INFO">"Clicar em criar novo usuário"</msg>
-<status status="PASS" starttime="20220412 08:40:01.151" endtime="20220412 08:40:01.152"/>
-</kw>
-<kw name="And Clicked on &quot;Criar novo Usuário&quot;" library="usersBase">
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:02.166" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220412 08:40:01.152" endtime="20220412 08:40:02.166"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>NovoUsuario.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:03.608" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763602636.png'/&gt;
-[log] CLICK on L[600,456]@S(0) (567 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:02.167" endtime="20220412 08:40:03.608"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:01.152" endtime="20220412 08:40:03.609"/>
-</kw>
-<kw name="Then the create new user should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>CriaNovoUsuario.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:04.423" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763604401.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:03.611" endtime="20220412 08:40:04.423"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:03.610" endtime="20220412 08:40:04.424"/>
-</kw>
-<tag>Cenário 3</tag>
-<status status="PASS" starttime="20220412 08:40:01.124" endtime="20220412 08:40:04.425"/>
-</test>
-<test id="s1-s1-t4" name="Cenário 04: Verificar Mensagem de Erro 1">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:04.430" endtime="20220412 08:40:04.438"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:04.438" endtime="20220412 08:40:04.446"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:04.429" endtime="20220412 08:40:04.446"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:04.446" endtime="20220412 08:40:04.456"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:04.428" endtime="20220412 08:40:04.457"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Verificar Mensagem de Erro 1"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:04.458" level="INFO">"Verificar Mensagem de Erro 1"</msg>
-<status status="PASS" starttime="20220412 08:40:04.458" endtime="20220412 08:40:04.458"/>
-</kw>
-<kw name="And try to create user" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>ConfirmUser.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:05.864" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763604827.png'/&gt;
-[log] CLICK on L[1116,870]@S(0) (569 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:04.460" endtime="20220412 08:40:05.864"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:04.459" endtime="20220412 08:40:05.864"/>
-</kw>
-<kw name="Then the invalid user message should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>Error1UsuarioInvalido.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:06.425" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763606406.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:05.866" endtime="20220412 08:40:06.425"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:05.865" endtime="20220412 08:40:06.426"/>
-</kw>
-<tag>Cenário 4</tag>
-<status status="PASS" starttime="20220412 08:40:04.427" endtime="20220412 08:40:06.427"/>
-</test>
-<test id="s1-s1-t5" name="Cenário 05: Verificar Mensagem de Erro 2">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:06.432" endtime="20220412 08:40:06.442"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:06.442" endtime="20220412 08:40:06.450"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:06.431" endtime="20220412 08:40:06.451"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:06.451" endtime="20220412 08:40:06.460"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:06.430" endtime="20220412 08:40:06.460"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:06.462" level="INFO">${Login} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:06.462" endtime="20220412 08:40:06.463"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Senha}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:06.464" level="INFO">${Senha} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:06.464" endtime="20220412 08:40:06.464"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Verificar Mensagem de Erro 2"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:06.465" level="INFO">"Verificar Mensagem de Erro 2"</msg>
-<status status="PASS" starttime="20220412 08:40:06.465" endtime="20220412 08:40:06.465"/>
-</kw>
-<kw name="And fill the login and password field" library="usersBase">
-<arg>${Login}</arg>
-<arg>${Senha}</arg>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>InputUsuario.png</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:08.858" level="INFO">Input Text:
-testeQA</msg>
-<msg timestamp="20220412 08:40:08.859" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763606907.png'/&gt;
-[log] CLICK on L[1134,440]@S(0) (579 msec)
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:06.467" endtime="20220412 08:40:08.859"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:08.972" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:08.859" endtime="20220412 08:40:08.972"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Senha}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:09.719" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:08.972" endtime="20220412 08:40:09.720"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:09.843" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:09.720" endtime="20220412 08:40:09.843"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Senha}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:10.589" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:09.844" endtime="20220412 08:40:10.589"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:06.466" endtime="20220412 08:40:10.590"/>
-</kw>
-<kw name="And try to create user" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>ConfirmUser.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:11.978" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763611038.png'/&gt;
-[log] CLICK on L[1116,870]@S(0) (574 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:10.593" endtime="20220412 08:40:11.978"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:10.592" endtime="20220412 08:40:11.979"/>
-</kw>
-<kw name="Then the invalid authority message should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>Error2EmptyAuthority.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:12.345" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763612338.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:11.980" endtime="20220412 08:40:12.345"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:11.980" endtime="20220412 08:40:12.345"/>
-</kw>
-<tag>Cenário 5</tag>
-<status status="PASS" starttime="20220412 08:40:06.429" endtime="20220412 08:40:12.346"/>
-</test>
-<test id="s1-s1-t6" name="Cenário 06: Verificar Mensagem de Erro 3">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:12.353" endtime="20220412 08:40:12.364"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:12.364" endtime="20220412 08:40:12.375"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:12.352" endtime="20220412 08:40:12.376"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:12.377" endtime="20220412 08:40:12.388"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:12.350" endtime="20220412 08:40:12.389"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Verificar Mensagem de Erro 3"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:12.391" level="INFO">"Verificar Mensagem de Erro 3"</msg>
-<status status="PASS" starttime="20220412 08:40:12.390" endtime="20220412 08:40:12.391"/>
-</kw>
-<kw name="And fill the authority field" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>AuthorityBox.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:13.723" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763612804.png'/&gt;
-[log] CLICK on L[1145,749]@S(0) (567 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:12.393" endtime="20220412 08:40:13.723"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:14.728" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220412 08:40:13.724" endtime="20220412 08:40:14.728"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>DOWN</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:14.854" level="INFO">[log]  TYPE "#DOWN."</msg>
-<status status="PASS" starttime="20220412 08:40:14.729" endtime="20220412 08:40:14.855"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:14.981" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:14.855" endtime="20220412 08:40:14.981"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:15.103" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:14.982" endtime="20220412 08:40:15.104"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:12.392" endtime="20220412 08:40:15.104"/>
-</kw>
-<kw name="And try to create user" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>ConfirmUser.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:16.509" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763615567.png'/&gt;
-[log] CLICK on L[1116,870]@S(0) (579 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:15.108" endtime="20220412 08:40:16.510"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:15.106" endtime="20220412 08:40:16.511"/>
-</kw>
-<kw name="Then the invalid function message should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>Error3EmptyFunction.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:16.873" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763616848.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:16.514" endtime="20220412 08:40:16.873"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:16.512" endtime="20220412 08:40:16.873"/>
-</kw>
-<tag>Cenário 6</tag>
-<status status="PASS" starttime="20220412 08:40:12.349" endtime="20220412 08:40:16.874"/>
-</test>
-<test id="s1-s1-t7" name="Cenário 07: Verificar Mensagem de Erro 4">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:16.879" endtime="20220412 08:40:16.887"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:16.887" endtime="20220412 08:40:16.896"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:16.878" endtime="20220412 08:40:16.896"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:16.897" endtime="20220412 08:40:16.906"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:16.878" endtime="20220412 08:40:16.907"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Verificar Mensagem de Erro 4"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:16.908" level="INFO">"Verificar Mensagem de Erro 4"</msg>
-<status status="PASS" starttime="20220412 08:40:16.908" endtime="20220412 08:40:16.908"/>
-</kw>
-<kw name="And fill the function field" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>Function1Box.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:18.333" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763617319.png'/&gt;
-[log] CLICK on L[1137,775]@S(0) (565 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:16.910" endtime="20220412 08:40:18.334"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:19.340" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220412 08:40:18.334" endtime="20220412 08:40:19.340"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>DOWN</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:19.449" level="INFO">[log]  TYPE "#DOWN."</msg>
-<status status="PASS" starttime="20220412 08:40:19.340" endtime="20220412 08:40:19.449"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:19.571" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:19.449" endtime="20220412 08:40:19.571"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:19.681" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:19.572" endtime="20220412 08:40:19.682"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:16.909" endtime="20220412 08:40:19.682"/>
-</kw>
-<kw name="And try to create user" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>ConfirmUser.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:21.097" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763620161.png'/&gt;
-[log] CLICK on L[1116,870]@S(0) (558 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:19.685" endtime="20220412 08:40:21.098"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:19.684" endtime="20220412 08:40:21.098"/>
-</kw>
-<kw name="Then the invalid class message should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>Error4EmptyClass.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:21.496" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763621491.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:21.098" endtime="20220412 08:40:21.496"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:21.098" endtime="20220412 08:40:21.496"/>
-</kw>
-<tag>Cenário 7</tag>
-<status status="PASS" starttime="20220412 08:40:16.877" endtime="20220412 08:40:21.496"/>
-</test>
-<test id="s1-s1-t8" name="Cenário 08: Criar novo usuário com sucesso">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:21.499" endtime="20220412 08:40:21.503"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:21.503" endtime="20220412 08:40:21.506"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:21.498" endtime="20220412 08:40:21.506"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:21.506" endtime="20220412 08:40:21.511"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:21.498" endtime="20220412 08:40:21.511"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Criar novo usuário com sucesso"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:21.513" level="INFO">"Criar novo usuário com sucesso"</msg>
-<status status="PASS" starttime="20220412 08:40:21.513" endtime="20220412 08:40:21.513"/>
-</kw>
-<kw name="And fill the class field" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>Function2Box.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:22.975" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763621903.png'/&gt;
-[log] CLICK on L[1135,797]@S(0) (559 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:21.513" endtime="20220412 08:40:22.975"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:23.978" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220412 08:40:22.976" endtime="20220412 08:40:23.978"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>DOWN</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:24.103" level="INFO">[log]  TYPE "#DOWN."</msg>
-<status status="PASS" starttime="20220412 08:40:23.979" endtime="20220412 08:40:24.103"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:24.228" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:24.104" endtime="20220412 08:40:24.229"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:24.347" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:24.229" endtime="20220412 08:40:24.347"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:21.513" endtime="20220412 08:40:24.348"/>
-</kw>
-<kw name="And try to create user" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>ConfirmUser.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:25.793" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763624787.png'/&gt;
-[log] CLICK on L[1116,870]@S(0) (581 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:24.348" endtime="20220412 08:40:25.794"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:24.348" endtime="20220412 08:40:25.794"/>
-</kw>
-<kw name="Then the successful new user creation message appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>CriaNovoUsuarioSucesso.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:26.532" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763626509.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:25.797" endtime="20220412 08:40:26.533"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:25.796" endtime="20220412 08:40:26.533"/>
-</kw>
-<kw name="Close Users Proprieties" library="usersBase">
+<msg timestamp="20220412 17:00:28.326" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793628321.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:25.044" endtime="20220412 17:00:28.326"/>
+</kw>
+<kw name="Wait Until Screen Not Contain" library="SikuliLibrary">
+<arg>Carregamento.png</arg>
+<arg>30</arg>
+<doc>Wait until screen not contain
+ Wait until image not in screen</doc>
+<msg timestamp="20220412 17:00:28.684" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793628556.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:28.326" endtime="20220412 17:00:28.684"/>
+</kw>
+<kw name="Get Match Score" library="SikuliLibrary">
+<var>${score}</var>
+<arg>${Cartoes_Custom_Window}</arg>
+<doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</doc>
+<msg timestamp="20220412 17:00:28.918" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793628904.png'/&gt;</msg>
+<msg timestamp="20220412 17:00:28.918" level="INFO">${score} = 1.0</msg>
+<status status="PASS" starttime="20220412 17:00:28.684" endtime="20220412 17:00:28.918"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>"Achei a imagem com um score de</arg>
+<arg>${score} "</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220412 17:00:28.918" level="INFO">"Achei a imagem com um score de</msg>
+<msg timestamp="20220412 17:00:28.919" level="INFO">1.0 "</msg>
+<status status="PASS" starttime="20220412 17:00:28.918" endtime="20220412 17:00:28.919"/>
+</kw>
+<if>
+<branch type="IF" condition="${score} &lt; 0.9">
+<kw name="Fail" library="BuiltIn">
+<arg>Given image did not achieve the ${score} score.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20220412 17:00:28.919" endtime="20220412 17:00:28.919"/>
+</kw>
+<status status="NOT RUN" starttime="20220412 17:00:28.919" endtime="20220412 17:00:28.919"/>
+</branch>
+<status status="PASS" starttime="20220412 17:00:28.919" endtime="20220412 17:00:28.919"/>
+</if>
+<status status="PASS" starttime="20220412 17:00:25.043" endtime="20220412 17:00:28.919"/>
+</kw>
+<kw name="Close card window" library="cardsBase">
+<arg>${Cartoes_Custom_Window}</arg>
 <kw name="Right Click" library="SikuliLibrary">
-<arg>PropriedadeDoUsuarioWindow.png</arg>
+<arg>${Cartoes_Custom_Window}</arg>
 <doc>Right click</doc>
-<msg timestamp="20220412 08:40:27.930" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763626944.png'/&gt;
-[log] RIGHT CLICK on L[787,255]@S(0) (559 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:26.537" endtime="20220412 08:40:27.931"/>
+<msg timestamp="20220412 17:00:29.958" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793629172.png'/&gt;
+[log] RIGHT CLICK on L[554,263]@S(0) (570 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:28.920" endtime="20220412 17:00:29.959"/>
 </kw>
 <kw name="Click" library="SikuliLibrary">
-<arg>PropriedadeDoUsuarioWindowClose.png</arg>
+<arg>fechar4.png</arg>
 <doc>Click</doc>
-<msg timestamp="20220412 08:40:29.339" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763628369.png'/&gt;
-[log] CLICK on L[853,358]@S(0) (570 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:27.931" endtime="20220412 08:40:29.339"/>
+<msg timestamp="20220412 17:00:30.944" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793630180.png'/&gt;
+[log] CLICK on L[620,366]@S(0) (577 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:29.959" endtime="20220412 17:00:30.944"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:26.535" endtime="20220412 08:40:29.340"/>
-</kw>
-<tag>Cenário 8</tag>
-<status status="PASS" starttime="20220412 08:40:21.498" endtime="20220412 08:40:29.343"/>
-</test>
-<status status="PASS" starttime="20220412 08:39:51.219" endtime="20220412 08:40:29.347"/>
-</suite>
-<suite id="s1-s2" name="changeUsersTest" source="C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\tests\changeUsersTest.robot">
-<test id="s1-s2-t1" name="Cenário 01: Abrir tela de Troca Usuário">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:29.387" endtime="20220412 08:40:29.396"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:29.396" endtime="20220412 08:40:29.403"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:29.386" endtime="20220412 08:40:29.404"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:29.404" endtime="20220412 08:40:29.411"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:29.385" endtime="20220412 08:40:29.411"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Abrir tela de Troca Usuário"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:29.412" level="INFO">"Abrir tela de Troca Usuário"</msg>
-<status status="PASS" starttime="20220412 08:40:29.412" endtime="20220412 08:40:29.412"/>
-</kw>
-<kw name="Given that I'm in BaSiDi" library="base">
-<kw name="Screen Should Contain" library="SikuliLibrary">
-<arg>Conectado.PNG</arg>
-<doc>Screen should contain</doc>
-<msg timestamp="20220412 08:40:29.966" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763629944.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:29.413" endtime="20220412 08:40:29.966"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:29.413" endtime="20220412 08:40:29.966"/>
-</kw>
-<kw name="And clicked on &quot;Trocar Usuário&quot;" library="base">
-<kw name="Click" library="SikuliLibrary">
-<arg>TrocarUsuário.PNG</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:31.487" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763630475.png'/&gt;
-[log] CLICK on L[321,177]@S(0) (564 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:29.968" endtime="20220412 08:40:31.487"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:29.967" endtime="20220412 08:40:31.488"/>
-</kw>
-<kw name="Then the change user windows should appeared" library="changeUsersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>MudarUsuarioWindow.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:32.570" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763632549.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:31.493" endtime="20220412 08:40:32.570"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:31.490" endtime="20220412 08:40:32.570"/>
+<status status="PASS" starttime="20220412 17:00:28.920" endtime="20220412 17:00:30.944"/>
 </kw>
 <tag>Cenário 01</tag>
-<status status="PASS" starttime="20220412 08:40:29.384" endtime="20220412 08:40:32.572"/>
+<status status="PASS" starttime="20220412 17:00:22.331" endtime="20220412 17:00:30.946"/>
 </test>
-<test id="s1-s2-t2" name="Cenário 02: Fill in the data">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
+<test id="s1-t2" name="Cenário 2: Open the &quot;Objeto em Teste&quot; screen in &quot;Cartões&quot;">
+<kw name="Add Cards Image Path" library="cardsBase" type="SETUP">
 <kw name="Add Base Image Path" library="base">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:32.576" endtime="20220412 08:40:32.584"/>
+<status status="PASS" starttime="20220412 17:00:30.951" endtime="20220412 17:00:30.957"/>
 </kw>
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR2}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:32.585" endtime="20220412 08:40:32.593"/>
+<status status="PASS" starttime="20220412 17:00:30.957" endtime="20220412 17:00:30.963"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:32.576" endtime="20220412 08:40:32.593"/>
+<status status="PASS" starttime="20220412 17:00:30.950" endtime="20220412 17:00:30.963"/>
 </kw>
 <kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
+<arg>${CARDS_IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:32.593" endtime="20220412 08:40:32.600"/>
+<status status="PASS" starttime="20220412 17:00:30.963" endtime="20220412 17:00:30.968"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:32.575" endtime="20220412 08:40:32.600"/>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${CARDS_IMAGE_DIR2}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220412 17:00:30.969" endtime="20220412 17:00:30.973"/>
+</kw>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${CARDS_IMAGE_DIR3}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220412 17:00:30.973" endtime="20220412 17:00:30.977"/>
+</kw>
+<status status="PASS" starttime="20220412 17:00:30.950" endtime="20220412 17:00:30.977"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cartoes_Custom}</var>
+<arg>Cartoes-ObjetoEmTeste.PNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220412 17:00:30.978" level="INFO">${Cartoes_Custom} = Cartoes-ObjetoEmTeste.PNG</msg>
+<status status="PASS" starttime="20220412 17:00:30.978" endtime="20220412 17:00:30.978"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cartoes_Custom_Window}</var>
+<arg>CartoesWindow-ObjetoEmTeste.PNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220412 17:00:30.979" level="INFO">${Cartoes_Custom_Window} = CartoesWindow-ObjetoEmTeste.PNG</msg>
+<status status="PASS" starttime="20220412 17:00:30.979" endtime="20220412 17:00:30.979"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>"Preenche formulário de troca de usuário"</arg>
+<arg>"Abrir tela Objeto em Teste em Cartões"</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:32.601" level="INFO">"Preenche formulário de troca de usuário"</msg>
-<status status="PASS" starttime="20220412 08:40:32.601" endtime="20220412 08:40:32.601"/>
+<msg timestamp="20220412 17:00:30.980" level="INFO">"Abrir tela Objeto em Teste em Cartões"</msg>
+<status status="PASS" starttime="20220412 17:00:30.980" endtime="20220412 17:00:30.980"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:32.603" level="INFO">${Login} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:32.602" endtime="20220412 08:40:32.603"/>
+<kw name="Given that I'm in BaSiDi" library="base">
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>Conectado.PNG</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220412 17:00:31.271" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793631268.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:30.981" endtime="20220412 17:00:31.271"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:32.605" level="INFO">${Password} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:32.605" endtime="20220412 08:40:32.605"/>
+<status status="PASS" starttime="20220412 17:00:30.980" endtime="20220412 17:00:31.271"/>
 </kw>
-<kw name="When the data is filled" library="changeUsersBase">
-<arg>${Login}</arg>
-<arg>${Password}</arg>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>NomeUsuario.PNG</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:34.720" level="INFO">Input Text:
-testeQA</msg>
-<msg timestamp="20220412 08:40:34.720" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763632954.png'/&gt;
-[log] CLICK on L[202,314]@S(0) (569 msec)
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:32.606" endtime="20220412 08:40:34.720"/>
+<kw name="And clicked on Cartoes-Custom" library="base">
+<arg>${Cartoes_Custom}</arg>
+<kw name="Click" library="SikuliLibrary">
+<arg>${Cartoes_Custom}</arg>
+<doc>Click</doc>
+<msg timestamp="20220412 17:00:32.358" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793631535.png'/&gt;
+[log] CLICK on L[1287,152]@S(0) (580 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:31.272" endtime="20220412 17:00:32.359"/>
 </kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:34.843" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:34.721" endtime="20220412 08:40:34.843"/>
+<status status="PASS" starttime="20220412 17:00:31.272" endtime="20220412 17:00:32.359"/>
 </kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Password}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:35.589" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:34.843" endtime="20220412 08:40:35.590"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:35.712" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:35.590" endtime="20220412 08:40:35.713"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:32.605" endtime="20220412 08:40:35.713"/>
-</kw>
-<kw name="Then an expected error should appeared" library="changeUsersBase">
+<kw name="Then the Cards screen should appeared" library="cardsBase">
+<arg>${Cartoes_Custom_Window}</arg>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>Error1SenhaExpirada.PNG</arg>
-<arg>${TEMPO}</arg>
+<arg>Carregamento.png</arg>
+<arg>30</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:36.130" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763636120.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:35.715" endtime="20220412 08:40:36.130"/>
+<msg timestamp="20220412 17:00:34.611" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793634605.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:32.363" endtime="20220412 17:00:34.611"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:35.714" endtime="20220412 08:40:36.130"/>
+<kw name="Wait Until Screen Not Contain" library="SikuliLibrary">
+<arg>Carregamento.png</arg>
+<arg>30</arg>
+<doc>Wait until screen not contain
+ Wait until image not in screen</doc>
+<msg timestamp="20220412 17:00:35.627" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793635532.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:34.611" endtime="20220412 17:00:35.627"/>
+</kw>
+<kw name="Get Match Score" library="SikuliLibrary">
+<var>${score}</var>
+<arg>${Cartoes_Custom_Window}</arg>
+<doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</doc>
+<msg timestamp="20220412 17:00:35.871" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793635865.png'/&gt;</msg>
+<msg timestamp="20220412 17:00:35.871" level="INFO">${score} = 1.0</msg>
+<status status="PASS" starttime="20220412 17:00:35.627" endtime="20220412 17:00:35.871"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>"Achei a imagem com um score de</arg>
+<arg>${score} "</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220412 17:00:35.872" level="INFO">"Achei a imagem com um score de</msg>
+<msg timestamp="20220412 17:00:35.872" level="INFO">1.0 "</msg>
+<status status="PASS" starttime="20220412 17:00:35.872" endtime="20220412 17:00:35.872"/>
+</kw>
+<if>
+<branch type="IF" condition="${score} &lt; 0.9">
+<kw name="Fail" library="BuiltIn">
+<arg>Given image did not achieve the ${score} score.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" starttime="20220412 17:00:35.872" endtime="20220412 17:00:35.872"/>
+</kw>
+<status status="NOT RUN" starttime="20220412 17:00:35.872" endtime="20220412 17:00:35.872"/>
+</branch>
+<status status="PASS" starttime="20220412 17:00:35.872" endtime="20220412 17:00:35.872"/>
+</if>
+<status status="PASS" starttime="20220412 17:00:32.361" endtime="20220412 17:00:35.873"/>
+</kw>
+<kw name="Close card window" library="cardsBase">
+<arg>${Cartoes_Custom_Window}</arg>
+<kw name="Right Click" library="SikuliLibrary">
+<arg>${Cartoes_Custom_Window}</arg>
+<doc>Right click</doc>
+<msg timestamp="20220412 17:00:36.923" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793636116.png'/&gt;
+[log] RIGHT CLICK on L[458,257]@S(0) (574 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:35.874" endtime="20220412 17:00:36.923"/>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<arg>fechar4.png</arg>
+<doc>Click</doc>
+<msg timestamp="20220412 17:00:37.927" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793637153.png'/&gt;
+[log] CLICK on L[524,360]@S(0) (580 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:36.923" endtime="20220412 17:00:37.927"/>
+</kw>
+<status status="PASS" starttime="20220412 17:00:35.873" endtime="20220412 17:00:37.927"/>
 </kw>
 <tag>Cenário 02</tag>
-<status status="PASS" starttime="20220412 08:40:32.574" endtime="20220412 08:40:36.131"/>
+<status status="PASS" starttime="20220412 17:00:30.948" endtime="20220412 17:00:37.929"/>
 </test>
-<test id="s1-s2-t3" name="Cenário 03: Close BaSiDi">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
+<test id="s1-t3" name="Cenário 3: Open the &quot;Cartão de Informação&quot; screen in &quot;Cartões&quot;">
+<kw name="Add Cards Image Path" library="cardsBase" type="SETUP">
 <kw name="Add Base Image Path" library="base">
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:36.136" endtime="20220412 08:40:36.145"/>
+<status status="PASS" starttime="20220412 17:00:37.934" endtime="20220412 17:00:37.941"/>
 </kw>
 <kw name="Add Image Path" library="SikuliLibrary">
 <arg>${IMAGE_DIR2}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:36.145" endtime="20220412 08:40:36.154"/>
+<status status="PASS" starttime="20220412 17:00:37.941" endtime="20220412 17:00:37.947"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:36.135" endtime="20220412 08:40:36.154"/>
+<status status="PASS" starttime="20220412 17:00:37.934" endtime="20220412 17:00:37.947"/>
 </kw>
 <kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
+<arg>${CARDS_IMAGE_DIR}</arg>
 <doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:36.155" endtime="20220412 08:40:36.162"/>
+<status status="PASS" starttime="20220412 17:00:37.947" endtime="20220412 17:00:37.951"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:36.134" endtime="20220412 08:40:36.162"/>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${CARDS_IMAGE_DIR2}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220412 17:00:37.951" endtime="20220412 17:00:37.957"/>
+</kw>
+<kw name="Add Image Path" library="SikuliLibrary">
+<arg>${CARDS_IMAGE_DIR3}</arg>
+<doc>Add image path</doc>
+<status status="PASS" starttime="20220412 17:00:37.957" endtime="20220412 17:00:37.961"/>
+</kw>
+<status status="PASS" starttime="20220412 17:00:37.933" endtime="20220412 17:00:37.962"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cartoes_Custom}</var>
+<arg>Cartoes-CartaoDeInformacao.PNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220412 17:00:37.963" level="INFO">${Cartoes_Custom} = Cartoes-CartaoDeInformacao.PNG</msg>
+<status status="PASS" starttime="20220412 17:00:37.962" endtime="20220412 17:00:37.963"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Cartoes_Custom_Window}</var>
+<arg>CartoesWindow-ObjetoEmTeste.PNG</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220412 17:00:37.963" level="INFO">${Cartoes_Custom_Window} = CartoesWindow-ObjetoEmTeste.PNG</msg>
+<status status="PASS" starttime="20220412 17:00:37.963" endtime="20220412 17:00:37.963"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>"Fechar BaSiDi"</arg>
+<arg>"Abrir tela Cartão de Informação em Cartões"</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:36.164" level="INFO">"Fechar BaSiDi"</msg>
-<status status="PASS" starttime="20220412 08:40:36.163" endtime="20220412 08:40:36.164"/>
+<msg timestamp="20220412 17:00:37.964" level="INFO">"Abrir tela Cartão de Informação em Cartões"</msg>
+<status status="PASS" starttime="20220412 17:00:37.964" endtime="20220412 17:00:37.964"/>
 </kw>
-<kw name="And try to close BasiDi" library="base">
+<kw name="Given that I'm in BaSiDi" library="base">
+<kw name="Screen Should Contain" library="SikuliLibrary">
+<arg>Conectado.PNG</arg>
+<doc>Screen should contain</doc>
+<msg timestamp="20220412 17:00:38.244" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793638237.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:37.964" endtime="20220412 17:00:38.244"/>
+</kw>
+<status status="PASS" starttime="20220412 17:00:37.964" endtime="20220412 17:00:38.244"/>
+</kw>
+<kw name="And clicked on Cartoes-Custom" library="base">
+<arg>${Cartoes_Custom}</arg>
 <kw name="Click" library="SikuliLibrary">
-<arg>Fechar.PNG</arg>
-<arg>10</arg>
-<arg>0</arg>
+<arg>${Cartoes_Custom}</arg>
 <doc>Click</doc>
-<msg timestamp="20220412 08:40:37.204" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763636631.png'/&gt;
-[log] CLICK on L[1632,14]@S(0) (565 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:36.165" endtime="20220412 08:40:37.204"/>
+<msg timestamp="20220412 17:00:39.245" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793638487.png'/&gt;
+[log] CLICK on L[1412,152]@S(0) (571 msec)</msg>
+<status status="PASS" starttime="20220412 17:00:38.245" endtime="20220412 17:00:39.245"/>
 </kw>
+<status status="PASS" starttime="20220412 17:00:38.245" endtime="20220412 17:00:39.246"/>
+</kw>
+<kw name="Then the Cards screen should appeared" library="cardsBase">
+<arg>${Cartoes_Custom_Window}</arg>
 <kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>FecharWarning.PNG</arg>
-<arg>${TEMPO}</arg>
+<arg>Carregamento.png</arg>
+<arg>30</arg>
 <doc>Wait until screen contain
  Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:38.089" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763638050.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:37.204" endtime="20220412 08:40:38.089"/>
+<msg timestamp="20220412 17:00:41.154" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793641149.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:39.247" endtime="20220412 17:00:41.154"/>
 </kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>FecharWarning.PNG</arg>
-<arg>100</arg>
-<arg>140</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:39.203" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763638580.png'/&gt;
-[log] CLICK on L[655,364]@S(0) (571 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:38.089" endtime="20220412 08:40:39.203"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:36.164" endtime="20220412 08:40:39.203"/>
-</kw>
-<kw name="Then BasiDi should be closed sucessfully" library="base">
 <kw name="Wait Until Screen Not Contain" library="SikuliLibrary">
-<arg>FecharWarning.PNG</arg>
-<arg>${TEMPO}</arg>
+<arg>Carregamento.png</arg>
+<arg>30</arg>
 <doc>Wait until screen not contain
  Wait until image not in screen</doc>
-<msg timestamp="20220412 08:40:39.845" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763639701.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:39.204" endtime="20220412 08:40:39.846"/>
+<msg timestamp="20220412 17:00:41.870" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793641776.png'/&gt;</msg>
+<status status="PASS" starttime="20220412 17:00:41.154" endtime="20220412 17:00:41.870"/>
 </kw>
-<status status="PASS" starttime="20220412 08:40:39.204" endtime="20220412 08:40:39.846"/>
+<kw name="Get Match Score" library="SikuliLibrary">
+<var>${score}</var>
+<arg>${Cartoes_Custom_Window}</arg>
+<doc>Get match scoreTries to find the image on the screen, returns accuracy score (0-1)</doc>
+<msg timestamp="20220412 17:00:42.126" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649793642122.png'/&gt;</msg>
+<msg timestamp="20220412 17:00:42.126" level="INFO">${score} = 0.8230035305023193</msg>
+<status status="PASS" starttime="20220412 17:00:41.870" endtime="20220412 17:00:42.126"/>
+</kw>
+<kw name="Log Many" library="BuiltIn">
+<arg>"Achei a imagem com um score de</arg>
+<arg>${score} "</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<msg timestamp="20220412 17:00:42.127" level="INFO">"Achei a imagem com um score de</msg>
+<msg timestamp="20220412 17:00:42.127" level="INFO">0.8230035305023193 "</msg>
+<status status="PASS" starttime="20220412 17:00:42.126" endtime="20220412 17:00:42.127"/>
+</kw>
+<if>
+<branch type="IF" condition="${score} &lt; 0.9">
+<kw name="Fail" library="BuiltIn">
+<arg>Given image did not achieve the ${score} score.</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20220412 17:00:42.128" level="FAIL">Given image did not achieve the 0.8230035305023193 score.</msg>
+<status status="FAIL" starttime="20220412 17:00:42.127" endtime="20220412 17:00:42.128"/>
+</kw>
+<status status="FAIL" starttime="20220412 17:00:42.127" endtime="20220412 17:00:42.128"/>
+</branch>
+<status status="FAIL" starttime="20220412 17:00:42.127" endtime="20220412 17:00:42.128"/>
+</if>
+<status status="FAIL" starttime="20220412 17:00:39.247" endtime="20220412 17:00:42.129"/>
+</kw>
+<kw name="Close card window" library="cardsBase">
+<arg>${Cartoes_Custom_Window}</arg>
+<status status="NOT RUN" starttime="20220412 17:00:42.130" endtime="20220412 17:00:42.130"/>
 </kw>
 <tag>Cenário 03</tag>
-<status status="PASS" starttime="20220412 08:40:36.133" endtime="20220412 08:40:39.846"/>
+<status status="FAIL" starttime="20220412 17:00:37.931" endtime="20220412 17:00:42.130">Given image did not achieve the 0.8230035305023193 score.</status>
 </test>
-<test id="s1-s2-t4" name="Cenário 04: Open BaSiDi">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:39.849" endtime="20220412 08:40:39.853"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:39.853" endtime="20220412 08:40:39.858"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:39.849" endtime="20220412 08:40:39.858"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:39.858" endtime="20220412 08:40:39.862"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:39.848" endtime="20220412 08:40:39.863"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Reabre o BaSiDi"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:39.863" level="INFO">"Reabre o BaSiDi"</msg>
-<status status="PASS" starttime="20220412 08:40:39.863" endtime="20220412 08:40:39.864"/>
-</kw>
-<kw name="When BaSiDi Login screen is opened" library="base">
-<kw name="Click" library="SikuliLibrary">
-<arg>BarraDeBusca.PNG</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:41.054" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763640189.png'/&gt;
-[log] CLICK on L[220,1059]@S(0) (578 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:39.866" endtime="20220412 08:40:41.055"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:41.561" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:40:41.056" endtime="20220412 08:40:41.561"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>cmd</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:41.834" level="INFO">Input Text:
-cmd
-[log]  TYPE "cmd"</msg>
-<status status="PASS" starttime="20220412 08:40:41.562" endtime="20220412 08:40:41.835"/>
-</kw>
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>CMD.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:42.089" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763642083.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:41.835" endtime="20220412 08:40:42.089"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>CMD.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:43.111" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763642333.png'/&gt;
-[log] CLICK on L[221,515]@S(0) (554 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:42.089" endtime="20220412 08:40:43.111"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:43.615" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:40:43.111" endtime="20220412 08:40:43.615"/>
-</kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>cd ${PATH}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:40:43.749" level="INFO">Paste Text:
-cd C:\Program Files\Siemens\SpectrumPower7\odvlauncher</msg>
-<status status="PASS" starttime="20220412 08:40:43.615" endtime="20220412 08:40:43.749"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:43.856" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:43.749" endtime="20220412 08:40:43.856"/>
-</kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${EXEC_SPECTRUM}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:40:43.927" level="INFO">Paste Text:
-odvlauncher.exe -admin</msg>
-<status status="PASS" starttime="20220412 08:40:43.856" endtime="20220412 08:40:43.927"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:44.042" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:43.928" endtime="20220412 08:40:44.042"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>CMDWindows1.PNG</arg>
-<arg>850</arg>
-<arg>0</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:45.010" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763644435.png'/&gt;
-[log] CLICK on L[1176,223]@S(0) (570 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:44.042" endtime="20220412 08:40:45.010"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>RuntimeSetting2.PNG</arg>
-<arg>-50</arg>
-<arg>0</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:45.920" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763645333.png'/&gt;
-[log] CLICK on L[770,550]@S(0) (564 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:45.010" endtime="20220412 08:40:45.920"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:46.028" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:45.920" endtime="20220412 08:40:46.029"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:39.865" endtime="20220412 08:40:46.029"/>
-</kw>
-<kw name="Then an security message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginFechar.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:50.212" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763650207.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:46.030" endtime="20220412 08:40:50.212"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:46.029" endtime="20220412 08:40:50.213"/>
-</kw>
-<tag>Cenário 04</tag>
-<status status="PASS" starttime="20220412 08:40:39.847" endtime="20220412 08:40:50.214"/>
-</test>
-<test id="s1-s2-t5" name="Cenário 05: Try Login in BaSiDi">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:50.218" endtime="20220412 08:40:50.225"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:50.226" endtime="20220412 08:40:50.232"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:50.218" endtime="20220412 08:40:50.232"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:50.233" endtime="20220412 08:40:50.240"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:50.217" endtime="20220412 08:40:50.241"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Preenche login e senha"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:50.243" level="INFO">"Preenche login e senha"</msg>
-<status status="PASS" starttime="20220412 08:40:50.242" endtime="20220412 08:40:50.243"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:50.245" level="INFO">${Login} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:50.244" endtime="20220412 08:40:50.245"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:50.246" level="INFO">${Password} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:50.245" endtime="20220412 08:40:50.246"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Tenta Logar no BaSiDi"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:50.247" level="INFO">"Tenta Logar no BaSiDi"</msg>
-<status status="PASS" starttime="20220412 08:40:50.247" endtime="20220412 08:40:50.248"/>
-</kw>
-<kw name="When the BaSiDi Login screen is filled" library="base">
-<arg>${Login}</arg>
-<arg>${Password}</arg>
-<kw name="Click" library="SikuliLibrary">
-<arg>LoginFechar.PNG</arg>
-<arg>15</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:51.104" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763650532.png'/&gt;
-[log] CLICK on L[1240,303]@S(0) (566 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:50.249" endtime="20220412 08:40:51.104"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:51.614" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:40:51.104" endtime="20220412 08:40:51.614"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>LoginUsuario.PNG</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:53.342" level="INFO">Input Text:
-testeQA</msg>
-<msg timestamp="20220412 08:40:53.342" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763651866.png'/&gt;
-[log] CLICK on L[965,320]@S(0) (562 msec)
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:51.614" endtime="20220412 08:40:53.343"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:53.447" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:53.343" endtime="20220412 08:40:53.447"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Password}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:40:54.118" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:53.448" endtime="20220412 08:40:54.118"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:54.229" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:54.119" endtime="20220412 08:40:54.231"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:50.248" endtime="20220412 08:40:54.231"/>
-</kw>
-<kw name="Then an expered password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError1.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:55.245" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763655198.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:54.234" endtime="20220412 08:40:55.245"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:54.233" endtime="20220412 08:40:55.245"/>
-</kw>
-<tag>Cenário 05</tag>
-<status status="PASS" starttime="20220412 08:40:50.216" endtime="20220412 08:40:55.248"/>
-</test>
-<test id="s1-s2-t6" name="Cenário 06: New password failure">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:55.256" endtime="20220412 08:40:55.258"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:55.260" endtime="20220412 08:40:55.264"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:55.256" endtime="20220412 08:40:55.264"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:55.264" endtime="20220412 08:40:55.268"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:55.254" endtime="20220412 08:40:55.269"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Falha em gerar uma nova senha"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:55.269" level="INFO">"Falha em gerar uma nova senha"</msg>
-<status status="PASS" starttime="20220412 08:40:55.269" endtime="20220412 08:40:55.270"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:55.270" level="INFO">${Password} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:55.270" endtime="20220412 08:40:55.270"/>
-</kw>
-<kw name="When the BaSiDi new password field is filled" library="base">
-<arg>${Password}</arg>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:40:55.349" level="INFO">Paste Text:
-testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:55.271" endtime="20220412 08:40:55.349"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:55.446" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:40:55.350" endtime="20220412 08:40:55.449"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:55.958" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:40:55.449" endtime="20220412 08:40:55.958"/>
-</kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:40:56.031" level="INFO">Paste Text:
-testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:55.958" endtime="20220412 08:40:56.033"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:40:56.149" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:40:56.033" endtime="20220412 08:40:56.152"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:55.271" endtime="20220412 08:40:56.152"/>
-</kw>
-<kw name="Then and short password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError2.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:40:57.220" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763657208.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:40:56.156" endtime="20220412 08:40:57.221"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:56.154" endtime="20220412 08:40:57.221"/>
-</kw>
-<tag>Cenário 06</tag>
-<status status="PASS" starttime="20220412 08:40:55.252" endtime="20220412 08:40:57.222"/>
-</test>
-<test id="s1-s2-t7" name="Cenário 07: Try Login in BaSiDi">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:57.225" endtime="20220412 08:40:57.230"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:57.231" endtime="20220412 08:40:57.236"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:57.225" endtime="20220412 08:40:57.236"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:40:57.236" endtime="20220412 08:40:57.241"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:57.224" endtime="20220412 08:40:57.241"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Preenche login e senha"cd C:\Program Files\Siemens\SpectrumPower7\odvlauncher</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:57.242" level="INFO">"Preenche login e senha"cd C:Program FilesSiemensSpectrumPower7odvlauncher</msg>
-<status status="PASS" starttime="20220412 08:40:57.241" endtime="20220412 08:40:57.242"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:57.243" level="INFO">${Login} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:57.243" endtime="20220412 08:40:57.243"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:40:57.244" level="INFO">${Password} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:40:57.243" endtime="20220412 08:40:57.244"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Tenta Logar no BaSiDi"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:40:57.244" level="INFO">"Tenta Logar no BaSiDi"</msg>
-<status status="PASS" starttime="20220412 08:40:57.244" endtime="20220412 08:40:57.244"/>
-</kw>
-<kw name="When the BaSiDi Login screen is filled" library="base">
-<arg>${Login}</arg>
-<arg>${Password}</arg>
-<kw name="Click" library="SikuliLibrary">
-<arg>LoginFechar.PNG</arg>
-<arg>15</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:40:58.056" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763657482.png'/&gt;
-[log] CLICK on L[1197,405]@S(0) (569 msec)</msg>
-<status status="PASS" starttime="20220412 08:40:57.245" endtime="20220412 08:40:58.056"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:40:58.557" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:40:58.056" endtime="20220412 08:40:58.558"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>LoginUsuario.PNG</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:00.321" level="INFO">Input Text:
-testeQA</msg>
-<msg timestamp="20220412 08:41:00.323" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763658819.png'/&gt;
-[log] CLICK on L[965,321]@S(0) (580 msec)
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:40:58.558" endtime="20220412 08:41:00.323"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:00.442" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:00.323" endtime="20220412 08:41:00.444"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Password}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:01.132" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:41:00.444" endtime="20220412 08:41:01.135"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:01.246" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:01.135" endtime="20220412 08:41:01.248"/>
-</kw>
-<status status="PASS" starttime="20220412 08:40:57.244" endtime="20220412 08:41:01.248"/>
-</kw>
-<kw name="Then an expered password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError1.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:02.191" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763662167.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:01.252" endtime="20220412 08:41:02.191"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:01.250" endtime="20220412 08:41:02.191"/>
-</kw>
-<tag>Cenário 07</tag>
-<status status="PASS" starttime="20220412 08:40:57.224" endtime="20220412 08:41:02.192"/>
-</test>
-<test id="s1-s2-t8" name="Cenário 08: New password failure 2">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:02.201" endtime="20220412 08:41:02.213"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:02.213" endtime="20220412 08:41:02.224"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:02.199" endtime="20220412 08:41:02.224"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:02.224" endtime="20220412 08:41:02.231"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:02.199" endtime="20220412 08:41:02.231"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Falha em gerar uma nova senha 2"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:02.232" level="INFO">"Falha em gerar uma nova senha 2"</msg>
-<status status="PASS" starttime="20220412 08:41:02.232" endtime="20220412 08:41:02.233"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeteste</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:02.234" level="INFO">${Password} = testeteste</msg>
-<status status="PASS" starttime="20220412 08:41:02.233" endtime="20220412 08:41:02.234"/>
-</kw>
-<kw name="When the BaSiDi new password field is filled" library="base">
-<arg>${Password}</arg>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:41:02.305" level="INFO">Paste Text:
-testeteste</msg>
-<status status="PASS" starttime="20220412 08:41:02.236" endtime="20220412 08:41:02.305"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:02.417" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:02.305" endtime="20220412 08:41:02.417"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:41:02.928" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:41:02.418" endtime="20220412 08:41:02.928"/>
-</kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:41:03.012" level="INFO">Paste Text:
-testeteste</msg>
-<status status="PASS" starttime="20220412 08:41:02.929" endtime="20220412 08:41:03.013"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:03.127" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:03.013" endtime="20220412 08:41:03.129"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:02.235" endtime="20220412 08:41:03.129"/>
-</kw>
-<kw name="Then and no numeric in password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError3.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:03.826" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763663784.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:03.133" endtime="20220412 08:41:03.826"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:03.131" endtime="20220412 08:41:03.827"/>
-</kw>
-<tag>Cenário 08</tag>
-<status status="PASS" starttime="20220412 08:41:02.197" endtime="20220412 08:41:03.829"/>
-</test>
-<test id="s1-s2-t9" name="Cenário 09: Try Login in BaSiDi">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:03.837" endtime="20220412 08:41:03.844"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:03.851" endtime="20220412 08:41:03.864"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:03.837" endtime="20220412 08:41:03.864"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:03.865" endtime="20220412 08:41:03.875"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:03.837" endtime="20220412 08:41:03.875"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Preenche login e senha"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:03.876" level="INFO">"Preenche login e senha"</msg>
-<status status="PASS" starttime="20220412 08:41:03.876" endtime="20220412 08:41:03.876"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:03.878" level="INFO">${Login} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:41:03.877" endtime="20220412 08:41:03.878"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:03.879" level="INFO">${Password} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:41:03.878" endtime="20220412 08:41:03.879"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Tenta Logar no BaSiDi"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:03.880" level="INFO">"Tenta Logar no BaSiDi"</msg>
-<status status="PASS" starttime="20220412 08:41:03.879" endtime="20220412 08:41:03.880"/>
-</kw>
-<kw name="When the BaSiDi Login screen is filled" library="base">
-<arg>${Login}</arg>
-<arg>${Password}</arg>
-<kw name="Click" library="SikuliLibrary">
-<arg>LoginFechar.PNG</arg>
-<arg>15</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:04.732" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763664148.png'/&gt;
-[log] CLICK on L[1197,405]@S(0) (577 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:03.882" endtime="20220412 08:41:04.732"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:41:05.234" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:41:04.733" endtime="20220412 08:41:05.234"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>LoginUsuario.PNG</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:06.954" level="INFO">Input Text:
-testeQA</msg>
-<msg timestamp="20220412 08:41:06.954" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763665464.png'/&gt;
-[log] CLICK on L[965,321]@S(0) (560 msec)
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:41:05.234" endtime="20220412 08:41:06.955"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:07.077" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:06.955" endtime="20220412 08:41:07.077"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Password}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:07.799" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:41:07.077" endtime="20220412 08:41:07.801"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:07.912" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:07.802" endtime="20220412 08:41:07.915"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:03.881" endtime="20220412 08:41:07.915"/>
-</kw>
-<kw name="Then an expered password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError1.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:08.903" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763668863.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:07.918" endtime="20220412 08:41:08.903"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:07.917" endtime="20220412 08:41:08.904"/>
-</kw>
-<tag>Cenário 09</tag>
-<status status="PASS" starttime="20220412 08:41:03.834" endtime="20220412 08:41:08.906"/>
-</test>
-<test id="s1-s2-t10" name="Cenário 10: New password failure 3">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:08.916" endtime="20220412 08:41:08.922"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:08.929" endtime="20220412 08:41:08.938"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:08.914" endtime="20220412 08:41:08.938"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:08.938" endtime="20220412 08:41:08.944"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:08.913" endtime="20220412 08:41:08.944"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Sucesso em gerar uma nova senha"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:08.945" level="INFO">"Sucesso em gerar uma nova senha"</msg>
-<status status="PASS" starttime="20220412 08:41:08.945" endtime="20220412 08:41:08.945"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeteste</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:08.946" level="INFO">${Password} = testeteste</msg>
-<status status="PASS" starttime="20220412 08:41:08.946" endtime="20220412 08:41:08.946"/>
-</kw>
-<kw name="When the BaSiDi new password field is filled" library="base">
-<arg>${Password}</arg>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:41:09.037" level="INFO">Paste Text:
-testeteste</msg>
-<status status="PASS" starttime="20220412 08:41:08.947" endtime="20220412 08:41:09.038"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:09.159" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:09.038" endtime="20220412 08:41:09.159"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:41:09.663" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:41:09.160" endtime="20220412 08:41:09.663"/>
-</kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:41:09.744" level="INFO">Paste Text:
-testeteste</msg>
-<status status="PASS" starttime="20220412 08:41:09.663" endtime="20220412 08:41:09.746"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:09.846" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:09.746" endtime="20220412 08:41:09.848"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:08.946" endtime="20220412 08:41:09.848"/>
-</kw>
-<kw name="Then and no numeric in password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError3.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:10.922" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763670883.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:09.852" endtime="20220412 08:41:10.922"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:09.850" endtime="20220412 08:41:10.923"/>
-</kw>
-<tag>Cenário 10</tag>
-<status status="PASS" starttime="20220412 08:41:08.911" endtime="20220412 08:41:10.923"/>
-</test>
-<test id="s1-s2-t11" name="Cenário 11: Try Login in BaSiDi">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:10.926" endtime="20220412 08:41:10.929"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:10.929" endtime="20220412 08:41:10.934"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:10.925" endtime="20220412 08:41:10.934"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:10.934" endtime="20220412 08:41:10.938"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:10.925" endtime="20220412 08:41:10.938"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Preenche login e senha"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:10.939" level="INFO">"Preenche login e senha"</msg>
-<status status="PASS" starttime="20220412 08:41:10.939" endtime="20220412 08:41:10.939"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:10.940" level="INFO">${Login} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:41:10.940" endtime="20220412 08:41:10.940"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>testeQA</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:10.941" level="INFO">${Password} = testeQA</msg>
-<status status="PASS" starttime="20220412 08:41:10.940" endtime="20220412 08:41:10.941"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Tenta Logar no BaSiDi"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:10.942" level="INFO">"Tenta Logar no BaSiDi"</msg>
-<status status="PASS" starttime="20220412 08:41:10.941" endtime="20220412 08:41:10.942"/>
-</kw>
-<kw name="When the BaSiDi Login screen is filled" library="base">
-<arg>${Login}</arg>
-<arg>${Password}</arg>
-<kw name="Click" library="SikuliLibrary">
-<arg>LoginFechar.PNG</arg>
-<arg>15</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:11.731" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763671167.png'/&gt;
-[log] CLICK on L[1197,405]@S(0) (561 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:10.943" endtime="20220412 08:41:11.732"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:41:12.242" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:41:11.732" endtime="20220412 08:41:12.242"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>LoginUsuario.PNG</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:14.007" level="INFO">Input Text:
-testeQA</msg>
-<msg timestamp="20220412 08:41:14.007" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763672498.png'/&gt;
-[log] CLICK on L[965,321]@S(0) (559 msec)
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:41:12.242" endtime="20220412 08:41:14.007"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:14.115" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:14.008" endtime="20220412 08:41:14.117"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Password}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:14.795" level="INFO">Input Text:
-testeQA
-[log]  TYPE "testeQA"</msg>
-<status status="PASS" starttime="20220412 08:41:14.117" endtime="20220412 08:41:14.797"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:14.912" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:14.797" endtime="20220412 08:41:14.914"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:10.942" endtime="20220412 08:41:14.914"/>
-</kw>
-<kw name="Then an expered password message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginError1.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:15.532" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763675498.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:14.917" endtime="20220412 08:41:15.532"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:14.916" endtime="20220412 08:41:15.532"/>
-</kw>
-<tag>Cenário 11</tag>
-<status status="PASS" starttime="20220412 08:41:10.925" endtime="20220412 08:41:15.534"/>
-</test>
-<test id="s1-s2-t12" name="Cenário 12: New password sucess">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:15.540" endtime="20220412 08:41:15.548"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:15.548" endtime="20220412 08:41:15.558"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:15.539" endtime="20220412 08:41:15.558"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:15.558" endtime="20220412 08:41:15.566"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:15.539" endtime="20220412 08:41:15.566"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Sucesso em gerar uma nova senha"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:15.568" level="INFO">"Sucesso em gerar uma nova senha"</msg>
-<status status="PASS" starttime="20220412 08:41:15.568" endtime="20220412 08:41:15.568"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>teste123</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:15.570" level="INFO">${Password} = teste123</msg>
-<status status="PASS" starttime="20220412 08:41:15.569" endtime="20220412 08:41:15.570"/>
-</kw>
-<kw name="When the BaSiDi new password field is filled" library="base">
-<arg>${Password}</arg>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:41:15.644" level="INFO">Paste Text:
-teste123</msg>
-<status status="PASS" starttime="20220412 08:41:15.572" endtime="20220412 08:41:15.644"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:15.754" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:15.644" endtime="20220412 08:41:15.757"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220412 08:41:16.263" level="INFO">Slept 500 milliseconds</msg>
-<status status="PASS" starttime="20220412 08:41:15.757" endtime="20220412 08:41:16.263"/>
-</kw>
-<kw name="Paste Text" library="SikuliLibrary">
-<arg>${Empty}</arg>
-<arg>${Password}</arg>
-<doc>Paste text. Image could be empty</doc>
-<msg timestamp="20220412 08:41:16.349" level="INFO">Paste Text:
-teste123</msg>
-<status status="PASS" starttime="20220412 08:41:16.263" endtime="20220412 08:41:16.349"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:16.465" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:16.349" endtime="20220412 08:41:16.465"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:15.571" endtime="20220412 08:41:16.465"/>
-</kw>
-<kw name="Then the sucesfull login message should appeared" library="base">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>LoginSucess.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:18.918" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763678884.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:16.469" endtime="20220412 08:41:18.918"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:16.467" endtime="20220412 08:41:18.918"/>
-</kw>
-<tag>Cenário 12</tag>
-<status status="PASS" starttime="20220412 08:41:15.537" endtime="20220412 08:41:18.919"/>
-</test>
-<test id="s1-s2-t13" name="Cenário 13: Abrir tela de Troca Usuário">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:18.925" endtime="20220412 08:41:18.931"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:18.932" endtime="20220412 08:41:18.940"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:18.924" endtime="20220412 08:41:18.940"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:18.941" endtime="20220412 08:41:18.947"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:18.923" endtime="20220412 08:41:18.947"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Abrir tela de Troca Usuário"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:18.949" level="INFO">"Abrir tela de Troca Usuário"</msg>
-<status status="PASS" starttime="20220412 08:41:18.949" endtime="20220412 08:41:18.949"/>
-</kw>
-<kw name="Given that I'm in BaSiDi" library="base">
-<kw name="Screen Should Contain" library="SikuliLibrary">
-<arg>Conectado.PNG</arg>
-<doc>Screen should contain</doc>
-<msg timestamp="20220412 08:41:19.291" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763679260.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:18.950" endtime="20220412 08:41:19.291"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:18.950" endtime="20220412 08:41:19.292"/>
-</kw>
-<kw name="And clicked on &quot;Trocar Usuário&quot;" library="base">
-<kw name="Click" library="SikuliLibrary">
-<arg>TrocarUsuário.PNG</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:20.458" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763679570.png'/&gt;
-[log] CLICK on L[321,177]@S(0) (580 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:19.294" endtime="20220412 08:41:20.460"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:19.293" endtime="20220412 08:41:20.461"/>
-</kw>
-<kw name="Then the change user windows should appeared" library="changeUsersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>MudarUsuarioWindow.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:21.166" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763681161.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:20.464" endtime="20220412 08:41:21.166"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:20.463" endtime="20220412 08:41:21.167"/>
-</kw>
-<tag>Cenário 13</tag>
-<status status="PASS" starttime="20220412 08:41:18.922" endtime="20220412 08:41:21.168"/>
-</test>
-<test id="s1-s2-t14" name="Cenário 14: Fill in the data">
-<kw name="Add Change Users Image Path" library="changeUsersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:21.173" endtime="20220412 08:41:21.179"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:21.179" endtime="20220412 08:41:21.186"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:21.172" endtime="20220412 08:41:21.186"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${CHANGE_USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:21.187" endtime="20220412 08:41:21.193"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:21.172" endtime="20220412 08:41:21.193"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Preenche formulário de troca de usuário"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:21.195" level="INFO">"Preenche formulário de troca de usuário"</msg>
-<status status="PASS" starttime="20220412 08:41:21.194" endtime="20220412 08:41:21.195"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Login}</var>
-<arg>spectrum</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:21.196" level="INFO">${Login} = spectrum</msg>
-<status status="PASS" starttime="20220412 08:41:21.196" endtime="20220412 08:41:21.196"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Password}</var>
-<arg>spectrum</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:21.198" level="INFO">${Password} = spectrum</msg>
-<status status="PASS" starttime="20220412 08:41:21.197" endtime="20220412 08:41:21.198"/>
-</kw>
-<kw name="When the data is filled" library="changeUsersBase">
-<arg>${Login}</arg>
-<arg>${Password}</arg>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>NomeUsuario.PNG</arg>
-<arg>${Login}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:22.967" level="INFO">Input Text:
-spectrum</msg>
-<msg timestamp="20220412 08:41:22.967" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763681425.png'/&gt;
-[log] CLICK on L[202,314]@S(0) (563 msec)
-[log]  TYPE "spectrum"</msg>
-<status status="PASS" starttime="20220412 08:41:21.200" endtime="20220412 08:41:22.968"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>TAB</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:23.091" level="INFO">[log]  TYPE "#TAB."</msg>
-<status status="PASS" starttime="20220412 08:41:22.968" endtime="20220412 08:41:23.091"/>
-</kw>
-<kw name="Input Text" library="SikuliLibrary">
-<arg>${EMPTY}</arg>
-<arg>${Password}</arg>
-<doc>Input text.
- Image could be empty</doc>
-<msg timestamp="20220412 08:41:23.866" level="INFO">Input Text:
-spectrum
-[log]  TYPE "spectrum"</msg>
-<status status="PASS" starttime="20220412 08:41:23.092" endtime="20220412 08:41:23.867"/>
-</kw>
-<kw name="Press Special Key" library="SikuliLibrary">
-<arg>ENTER</arg>
-<doc>Press special key
- Presses a special keyboard key.</doc>
-<msg timestamp="20220412 08:41:23.990" level="INFO">[log]  TYPE "#ENTER."</msg>
-<status status="PASS" starttime="20220412 08:41:23.867" endtime="20220412 08:41:23.990"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:21.198" endtime="20220412 08:41:23.991"/>
-</kw>
-<kw name="Then an sucessfull message should appeared" library="changeUsersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>MudarUsuarioSucesso.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:24.717" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763684691.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:23.993" endtime="20220412 08:41:24.718"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>MudarUsuarioSucesso.PNG</arg>
-<arg>150</arg>
-<arg>70</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:25.641" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763685038.png'/&gt;
-[log] CLICK on L[335,541]@S(0) (570 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:24.718" endtime="20220412 08:41:25.641"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:23.992" endtime="20220412 08:41:25.642"/>
-</kw>
-<tag>Cenário 14</tag>
-<status status="PASS" starttime="20220412 08:41:21.170" endtime="20220412 08:41:25.644"/>
-</test>
-<status status="PASS" starttime="20220412 08:40:29.353" endtime="20220412 08:41:25.650"/>
-</suite>
-<suite id="s1-s3" name="deleteUsersTest" source="C:\Users\radek\Documents\GitHub\SISCON_SmokeTest\tests\deleteUsersTest.robot">
-<test id="s1-s3-t1" name="Cenário 1: Abrir tela Usuário em Sistemas">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:25.676" endtime="20220412 08:41:25.680"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:25.680" endtime="20220412 08:41:25.684"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:25.676" endtime="20220412 08:41:25.684"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:25.684" endtime="20220412 08:41:25.690"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:25.676" endtime="20220412 08:41:25.690"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Abrir tela Usuário em Sistemas"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:25.691" level="INFO">"Abrir tela Usuário em Sistemas"</msg>
-<status status="PASS" starttime="20220412 08:41:25.690" endtime="20220412 08:41:25.691"/>
-</kw>
-<kw name="Given that I'm in BaSiDi" library="base">
-<kw name="Screen Should Contain" library="SikuliLibrary">
-<arg>Conectado.PNG</arg>
-<doc>Screen should contain</doc>
-<msg timestamp="20220412 08:41:26.035" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763686010.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:25.692" endtime="20220412 08:41:26.036"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:25.691" endtime="20220412 08:41:26.036"/>
-</kw>
-<kw name="And Clicked on &quot;Sistemas&quot;" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>Sistema.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:27.186" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763686354.png'/&gt;
-[log] CLICK on L[640,129]@S(0) (564 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:26.039" endtime="20220412 08:41:27.187"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:26.038" endtime="20220412 08:41:27.187"/>
-</kw>
-<kw name="And Clicked on &quot;Usuários&quot;" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>Sistema-Usuarios.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:28.256" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763687435.png'/&gt;
-[log] CLICK on L[563,152]@S(0) (562 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:27.191" endtime="20220412 08:41:28.256"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:27.189" endtime="20220412 08:41:28.256"/>
-</kw>
-<kw name="Then the Users Management should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>UsuarioWindow.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:30.196" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763690164.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:28.259" endtime="20220412 08:41:30.196"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:28.258" endtime="20220412 08:41:30.197"/>
-</kw>
-<tag>Cenário 1</tag>
-<status status="PASS" starttime="20220412 08:41:25.675" endtime="20220412 08:41:30.198"/>
-</test>
-<test id="s1-s3-t2" name="Cenário 2: Ir até a tela de propriedades de Usuário">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:30.203" endtime="20220412 08:41:30.209"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:30.210" endtime="20220412 08:41:30.217"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:30.203" endtime="20220412 08:41:30.217"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:30.217" endtime="20220412 08:41:30.222"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:30.203" endtime="20220412 08:41:30.222"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Ir até a tela de propriedades de Usuário"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:30.223" level="INFO">"Ir até a tela de propriedades de Usuário"</msg>
-<status status="PASS" starttime="20220412 08:41:30.223" endtime="20220412 08:41:30.223"/>
-</kw>
-<kw name="When &quot;Propriedades do usuário&quot; is clicked" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>PropriedadeDoUsuario.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:31.328" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763690476.png'/&gt;
-[log] CLICK on L[639,347]@S(0) (562 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:30.224" endtime="20220412 08:41:31.328"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:30.224" endtime="20220412 08:41:31.329"/>
-</kw>
-<kw name="Then the Users Proprieties should appeared" library="usersBase">
-<kw name="Wait Until Screen Contain" library="SikuliLibrary">
-<arg>PropriedadeDoUsuarioWindow.png</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen contain
- Wait until image shown in screen</doc>
-<msg timestamp="20220412 08:41:31.602" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763691565.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:31.329" endtime="20220412 08:41:31.602"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:31.329" endtime="20220412 08:41:31.603"/>
-</kw>
-<tag>Cenário 2</tag>
-<status status="PASS" starttime="20220412 08:41:30.200" endtime="20220412 08:41:31.605"/>
-</test>
-<test id="s1-s3-t3" name="Cenário 3: Deletar Usuário">
-<kw name="Add Users Image Path" library="usersBase" type="SETUP">
-<kw name="Add Base Image Path" library="base">
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:31.615" endtime="20220412 08:41:31.626"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${IMAGE_DIR2}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:31.626" endtime="20220412 08:41:31.635"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:31.614" endtime="20220412 08:41:31.635"/>
-</kw>
-<kw name="Add Image Path" library="SikuliLibrary">
-<arg>${USERS_IMAGE_DIR}</arg>
-<doc>Add image path</doc>
-<status status="PASS" starttime="20220412 08:41:31.635" endtime="20220412 08:41:31.641"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:31.612" endtime="20220412 08:41:31.642"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${Usuario_Teste}</var>
-<arg>UsuarioTeste.PNG</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20220412 08:41:31.643" level="INFO">${Usuario_Teste} = UsuarioTeste.PNG</msg>
-<status status="PASS" starttime="20220412 08:41:31.643" endtime="20220412 08:41:31.643"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>"Deleta usuário criado"</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220412 08:41:31.644" level="INFO">"Deleta usuário criado"</msg>
-<status status="PASS" starttime="20220412 08:41:31.644" endtime="20220412 08:41:31.644"/>
-</kw>
-<kw name="When user test is selected" library="usersBase">
-<arg>${Usuario_Teste}</arg>
-<kw name="Click" library="SikuliLibrary">
-<arg>${Usuario_Teste}</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:32.643" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763691893.png'/&gt;
-[log] CLICK on L[614,619]@S(0) (555 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:31.645" endtime="20220412 08:41:32.643"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:31.645" endtime="20220412 08:41:32.643"/>
-</kw>
-<kw name="And the delete button is clicked" library="usersBase">
-<kw name="Click" library="SikuliLibrary">
-<arg>DeletarUsuario.PNG</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:33.756" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763692905.png'/&gt;
-[log] CLICK on L[620,459]@S(0) (563 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:32.645" endtime="20220412 08:41:33.756"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>ConfirmarDeletarUsuario.PNG</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:34.760" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763693988.png'/&gt;
-[log] CLICK on L[1137,707]@S(0) (561 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:33.757" endtime="20220412 08:41:34.760"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:32.645" endtime="20220412 08:41:34.761"/>
-</kw>
-<kw name="Then user this should desapear" library="usersBase">
-<kw name="Wait Until Screen Not Contain" library="SikuliLibrary">
-<arg>UsuarioTeste.PNG</arg>
-<arg>${TEMPO}</arg>
-<doc>Wait until screen not contain
- Wait until image not in screen</doc>
-<msg timestamp="20220412 08:41:36.186" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763696065.png'/&gt;</msg>
-<status status="PASS" starttime="20220412 08:41:34.763" endtime="20220412 08:41:36.186"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:34.762" endtime="20220412 08:41:36.186"/>
-</kw>
-<kw name="Close Users Proprieties" library="usersBase">
-<kw name="Right Click" library="SikuliLibrary">
-<arg>PropriedadeDoUsuarioWindow.png</arg>
-<doc>Right click</doc>
-<msg timestamp="20220412 08:41:37.218" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763696409.png'/&gt;
-[log] RIGHT CLICK on L[787,255]@S(0) (561 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:36.187" endtime="20220412 08:41:37.218"/>
-</kw>
-<kw name="Click" library="SikuliLibrary">
-<arg>PropriedadeDoUsuarioWindowClose.png</arg>
-<doc>Click</doc>
-<msg timestamp="20220412 08:41:38.597" level="INFO" html="true">&lt;img src='sikuli_captured/sikuliximage-1649763697801.png'/&gt;
-[log] CLICK on L[853,358]@S(0) (564 msec)</msg>
-<status status="PASS" starttime="20220412 08:41:37.219" endtime="20220412 08:41:38.598"/>
-</kw>
-<status status="PASS" starttime="20220412 08:41:36.187" endtime="20220412 08:41:38.598"/>
-</kw>
-<tag>Cenário 3</tag>
-<status status="PASS" starttime="20220412 08:41:31.610" endtime="20220412 08:41:38.600"/>
-</test>
-<status status="PASS" starttime="20220412 08:41:25.659" endtime="20220412 08:41:38.604"/>
-</suite>
-<status status="PASS" starttime="20220412 08:39:51.196" endtime="20220412 08:41:38.612"/>
+<status status="FAIL" starttime="20220412 17:00:18.714" endtime="20220412 17:00:42.132"/>
 </suite>
 <statistics>
 <total>
-<stat pass="25" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">Cenário 01</stat>
 <stat pass="1" fail="0" skip="0">Cenário 02</stat>
-<stat pass="1" fail="0" skip="0">Cenário 03</stat>
-<stat pass="1" fail="0" skip="0">Cenário 04</stat>
-<stat pass="1" fail="0" skip="0">Cenário 05</stat>
-<stat pass="1" fail="0" skip="0">Cenário 06</stat>
-<stat pass="1" fail="0" skip="0">Cenário 07</stat>
-<stat pass="1" fail="0" skip="0">Cenário 08</stat>
-<stat pass="1" fail="0" skip="0">Cenário 09</stat>
-<stat pass="2" fail="0" skip="0">Cenário 1</stat>
-<stat pass="1" fail="0" skip="0">Cenário 10</stat>
-<stat pass="1" fail="0" skip="0">Cenário 11</stat>
-<stat pass="1" fail="0" skip="0">Cenário 12</stat>
-<stat pass="1" fail="0" skip="0">Cenário 13</stat>
-<stat pass="1" fail="0" skip="0">Cenário 14</stat>
-<stat pass="2" fail="0" skip="0">Cenário 2</stat>
-<stat pass="2" fail="0" skip="0">Cenário 3</stat>
-<stat pass="1" fail="0" skip="0">Cenário 4</stat>
-<stat pass="1" fail="0" skip="0">Cenário 5</stat>
-<stat pass="1" fail="0" skip="0">Cenário 6</stat>
-<stat pass="1" fail="0" skip="0">Cenário 7</stat>
-<stat pass="1" fail="0" skip="0">Cenário 8</stat>
+<stat pass="0" fail="1" skip="0">Cenário 03</stat>
 </tag>
 <suite>
-<stat pass="25" fail="0" skip="0" id="s1" name="usersTest &amp; changeUsersTest &amp; deleteUsersTest">usersTest &amp; changeUsersTest &amp; deleteUsersTest</stat>
-<stat pass="8" fail="0" skip="0" id="s1-s1" name="usersTest">usersTest &amp; changeUsersTest &amp; deleteUsersTest.usersTest</stat>
-<stat pass="14" fail="0" skip="0" id="s1-s2" name="changeUsersTest">usersTest &amp; changeUsersTest &amp; deleteUsersTest.changeUsersTest</stat>
-<stat pass="3" fail="0" skip="0" id="s1-s3" name="deleteUsersTest">usersTest &amp; changeUsersTest &amp; deleteUsersTest.deleteUsersTest</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="cardsTest">cardsTest</stat>
 </suite>
 </statistics>
 <errors>

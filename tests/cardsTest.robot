@@ -18,38 +18,43 @@ Test Teardown     Stop Remote Server
 ###########################################################################
 
 Cenário 1: Open the "Geral" screen in "Cartões"
-    [Tags]      Cenário 1
+    [Tags]      Cenário 01
         ${Cartoes_Custom}   set Variable    Cartoes-Geral.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-Geral.PNG
         log     "Abrir tela Geral em Cartões"
         Given that I'm in BaSiDi
         And clicked on "Cartões"
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window 
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
 Cenário 2: Open the "Objeto em Teste" screen in "Cartões"
-    [Tags]      Cenário 2
-        ${Cartoes_Custom}   set Variable    Cartoes-ObjetoEmTeste.PNG
+    [Tags]      Cenário 02
+        ${Cartoes_Custom}           set Variable    Cartoes-ObjetoEmTeste.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-ObjetoEmTeste.PNG
         log     "Abrir tela Objeto em Teste em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window 
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
+### DEU CERTO VER A IMAGEM NÃO DANDO MATCH, CONTINUAR DAQUI!
+
 Cenário 3: Open the "Cartão de Informação" screen in "Cartões"
-    [Tags]      Cenário 3
-        ${Cartoes_Custom}   set Variable    Cartoes-CartaoDeInformacao.PNG
+    [Tags]      Cenário 03
+        ${Cartoes_Custom}           set Variable    Cartoes-CartaoDeInformacao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-ObjetoEmTeste.PNG
         log     "Abrir tela Cartão de Informação em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
 Cenário 4: Open the "Removido de Operação" screen in "Cartões"
-    [Tags]      Cenário 4
+    [Tags]      Cenário 04
         ${Cartoes_Custom}   set Variable    Cartoes-RemovidoDeOperacao.PNG
         log     "Abrir tela Removido de Operação em Cartões"
         Given that I'm in BaSiDi
@@ -59,7 +64,7 @@ Cenário 4: Open the "Removido de Operação" screen in "Cartões"
     [Teardown]
 
 Cenário 5: Open the "Alarme Inibido" screen in "Cartões"
-    [Tags]      Cenário 5
+    [Tags]      Cenário 05
         ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
         log     "Abrir tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
@@ -69,7 +74,7 @@ Cenário 5: Open the "Alarme Inibido" screen in "Cartões"
     [Teardown]
 
 Cenário 6: Open the "Cartão Atenção" screen in "Cartões"
-    [Tags]      Cenário 6
+    [Tags]      Cenário 06
         ${Cartoes_Custom}   set Variable    Cartoes-CartaoAtencao.PNG
         log     "Abrir tela Cartão Atenção em Cartões"
         Given that I'm in BaSiDi
@@ -79,7 +84,7 @@ Cenário 6: Open the "Cartão Atenção" screen in "Cartões"
     [Teardown]
 
 Cenário 7: Open the "Controle Inibido" screen in "Cartões"
-    [Tags]      Cenário 7
+    [Tags]      Cenário 07
         ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
         log     "Abrir tela Controle Inibido em Cartões"
         Given that I'm in BaSiDi
@@ -89,7 +94,7 @@ Cenário 7: Open the "Controle Inibido" screen in "Cartões"
     [Teardown]
 
 Cenário 8: Open the "Cartão AGR" screen in "Cartões"
-    [Tags]      Cenário 8
+    [Tags]      Cenário 08
         ${Cartoes_Custom}   set Variable    Cartoes-CartaoAGR.PNG
         log     "Abrir tela Cartão AGR em Cartões"
         Given that I'm in BaSiDi
@@ -99,7 +104,7 @@ Cenário 8: Open the "Cartão AGR" screen in "Cartões"
     [Teardown]
 
 Cenário 9: Open Display list 
-    [Tags]      Cenário 9
+    [Tags]      Cenário 09
         log   "Abrir a Lista de Telas"
         Given that I'm in BaSiDi
         And clicked on "Lista de Telas"

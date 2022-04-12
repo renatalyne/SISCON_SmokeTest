@@ -7,13 +7,9 @@ Test Teardown     Stop Remote Server
 
 
 *** Test Cases ***
-
-#Given
-#And
-#When
-#Then
-
+###########################################################################
 #Cenário 1 - 8: Realiza o processo de criar um novo usuário do SP7
+###########################################################################
 
 Cenário 01: Abrir tela Usuário em Sistemas
     [Tags]      Cenário 1
@@ -80,3 +76,4 @@ Cenário 08: Criar novo usuário com sucesso
         Then the successful new user creation message appeared 
         Close Users Proprieties
     [Teardown]
+    

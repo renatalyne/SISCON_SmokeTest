@@ -35,7 +35,7 @@ And Clicked on "Geral" in "Sumário de Alarmes"
 Then General Alarm List should be appeared
     Wait Until Screen Contain           Geral.png        ${TEMPO}
     Right Click                         Geral.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "Disj - Proteção" in "Sumário de Alarmes"
     Click                               SA-Disj-Protecao.png
@@ -43,7 +43,7 @@ And Clicked on "Disj - Proteção" in "Sumário de Alarmes"
 Then Disj - Proteção Alarm List should be appeared
     Wait Until Screen Contain           Disj-Protecao.png  ${TEMPO}
     Right Click                         Disj-Protecao.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "Urgente" in "Sumário de Alarmes"
     Click                               SA-Urgente.png
@@ -51,7 +51,7 @@ And Clicked on "Urgente" in "Sumário de Alarmes"
 Then Urgente Alarm List should be appeared
     Wait Until Screen Contain           Urgente.png        ${TEMPO}
     Right Click                         Urgente.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "Automa - Bloq" in "Sumário de Alarmes"
     Click                               SA-Automa-Bloq.png
@@ -59,7 +59,7 @@ And Clicked on "Automa - Bloq" in "Sumário de Alarmes"
 Then Automa - Bloq Alarm List should be appeared
     Wait Until Screen Contain           Automa-Bloq.png    ${TEMPO}
     Right Click                         Automa-Bloq.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "SH.Desc" in "Sumário de Alarmes"
     Click                               SA-SH.Desc.png
@@ -67,7 +67,7 @@ And Clicked on "SH.Desc" in "Sumário de Alarmes"
 Then SH.Desc Alarm List should be appeared
     Wait Until Screen Contain           SH.Desc.png        ${TEMPO}
     Right Click                         SH.Desc.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "Não Urgente" in "Sumário de Alarmes"
     Click                               SA-NaoUrgente.png
@@ -75,7 +75,7 @@ And Clicked on "Não Urgente" in "Sumário de Alarmes"
 Then Não Urgente Alarm List should be appeared
     Wait Until Screen Contain           NaoUrgente.png    ${TEMPO}
     Right Click                         NaoUrgente.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "Medidas" in "Sumário de Alarmes"
     Click                               SA-Medidas.png
@@ -83,7 +83,7 @@ And Clicked on "Medidas" in "Sumário de Alarmes"
 Then Medidas Alarm List should be appeared
     Wait Until Screen Contain           Medidas.png        ${TEMPO}
     Right Click                         Medidas.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 And Clicked on "Comunicação" in "Sumário de Alarmes"
     Click                               SA-Comunicacao.png
@@ -91,7 +91,7 @@ And Clicked on "Comunicação" in "Sumário de Alarmes"
 Then Comunicação Alarm List should be appeared
     Wait Until Screen Contain           Comunicacao.png    ${TEMPO}
     Right Click                         Comunicacao.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 Then Disj - Protecao Alarm is created
     Exec Command                        ${SPSY}
@@ -104,11 +104,11 @@ Then I confirm Disj in General and Disj Alarmes
     Click                               SA-Geral.png
     Wait Until Screen Contain           created-disj.png     ${TEMPO}
     Right Click                         Geral.png
-    Click                               fechar.png
+    Click                               fechar4.png
     Click                               SA-Disj-Protecao.png
     Wait Until Screen Contain           created-disj.png     ${TEMPO}
     Right Click                         Disj-Protecao.png
-    Click                               fechar.png
+    Click                               fechar4.png
 
 
 

@@ -124,20 +124,26 @@ And clicked on Cartoes-Custom
 # And clicked on "CartaoAGR"
 #     Click                            CartaoAGR.PNG
 
-# And clicked on "Lista de Telas"
-#     Click                            ListaDeTelas.PNG
+ And clicked on "Lista de Telas"
+     Click                            ListaDeTelas.PNG
 
 
 And try to close BasiDi
     Click                            Fechar.PNG     10      0 
-    Wait Until Screen Contain        FecharWarning.PNG      ${TEMPO}
-    Click                            FecharWarning.PNG      100     140
+    ${exits}      Exists       FecharWarning.PNG       2
+    IF     "${exits}" == "true"
+        Click                        FecharWarning.PNG      100     140
+    ELSE
+        Click                        OK.PNG
+    END  
+    # Wait Until Screen Contain        FecharWarning.PNG      ${TEMPO}
+    # Click                            FecharWarning.PNG      100     140
 
 Then BasiDi should be closed sucessfully
     Wait Until Screen Not Contain    FecharWarning.PNG      ${TEMPO}
 
 When BaSiDi Login screen is opened
-
+    [Arguments]         ${ENVIRONMENT} 
     # Click               BarraDeBusca.PNG    1695
     Click               BarraDeBusca.PNG
     Sleep               0.5
@@ -150,8 +156,8 @@ When BaSiDi Login screen is opened
     Paste Text         ${Empty}             ${EXEC_SPECTRUM}
     Press Special Key   ENTER
     Click               CMDWindows1.PNG     850     0
-    Click               RuntimeSetting2.PNG     -50     0
-    Press Special Key   ENTER
+    Double Click               ${ENVIRONMENT}     -50     0
+    # Press Special Key   ENTER
 
 Then an security message should appeared
     Wait Until Screen Contain               LoginFechar.PNG     ${TEMPO}
@@ -182,10 +188,11 @@ Then and short password message should appeared
 Then and no numeric in password message should appeared
     Wait Until Screen Contain               LoginError3.PNG     ${TEMPO}
 
-Then the sucesfull login message should appeared
-    Wait Until Screen Contain               LoginSucess.PNG     ${TEMPO}
+Then the sucesfull password changed successfully message should appeared
+    Wait Until Screen Contain               PasswordChangedSuccessfully.PNG     ${TEMPO}
 
-
+Then the BaSiDi screen should appeared
+    Wait Until Screen Contain               ConectadoSelecionado.PNG      ${TEMPO}
 # E estou na aba "DISTRIBUIÇÃO"
 
 #   ${imageCoordinates}=    Get Image Coordinates          spectrum-distribuição.png

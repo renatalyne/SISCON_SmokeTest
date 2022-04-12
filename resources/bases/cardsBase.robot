@@ -62,7 +62,14 @@ And clicked on CB-Cartoes-ExcluirCustom
 
 
 Then the Cards screen should appeared
-    Wait Until Screen Contain   CartoesWindow.PNG     30
+    [Arguments]                 ${Cartoes_Custom_Window}
+    Wait Until Screen Contain           Carregamento.png        30
+    Wait Until Screen not Contain       Carregamento.png       30
+    ${score}        Get Match Score     ${Cartoes_Custom_Window}
+    log many  "Achei a imagem com um score de  ${score} "
+    IF      ${score} < 0.9     
+        Fail    Given image did not achieve the ${score} score.
+    END
 
 Then the Display list screen should appeared
     Wait Until Screen Contain   ListaDeTelasWindow.PNG     30
@@ -94,9 +101,11 @@ Then the screen should not contain the Custom card
     Wait Until Screen Not Contain   ${Cartoes_Report}     ${TEMPO}
 
 Close card window 
-    Click                       CartoesWindow.PNG
-    Key Down                    ALT
-    Press Special Key           F4
-    Key Up                      ALT 
-    Sleep                       3
+    [Arguments]                 ${Cartoes_Custom_Window}
+    Right Click                 ${Cartoes_Custom_Window}
+    Click                       fechar4.png
+    # Key Down                    ALT
+    # Press Special Key           F4
+    # Key Up                      ALT 
+    # Sleep                       3
     # Wait Until Screen Not Contain      CartoesWindow.PNG       ${TEMPO}
