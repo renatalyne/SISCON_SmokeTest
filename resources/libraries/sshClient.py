@@ -1,4 +1,4 @@
-from paramiko import SSHClient
+from paramiko import AuthenticationException, SSHClient
 import paramiko
 import time
 import traceback

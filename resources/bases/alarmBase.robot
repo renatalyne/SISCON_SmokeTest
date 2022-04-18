@@ -9,16 +9,19 @@ Library     ScreenCapLibrary
 Resource    ${EXECDIR}/resources/bases/base.robot
 Library     ${EXECDIR}/resources/libraries/nova.py
 Library           ${EXECDIR}\\resources\\libraries\\sshClient.py
+Library           ${EXECDIR}\\resources\\libraries\\ssh.py
+
 
 *** Variables ***
 ${ALARM_IMAGE_DIR}         ${EXECDIR}\\resources\\elements\\alarmes
-${SPSY}                    sudo su - spsy\n
+${SPSY}                    /usr/bin/sudo su - spsy\n
 ${BAU}                     bau\n
 ${DISJ}                    ta /BVG/69/12Z3/DJ/Status\n
 ${ON}                      sta on tra\n
 ${OPEN}                    sta off tra\n
 ${MEDIDA}                  ta /BVG/13/01BP)1/Ua/MvMoment\n
 ${VAL12}                   val 12 tra\n
+${TEST}                    touch teste\n
 
 
 *** Keywords ***
@@ -28,6 +31,11 @@ Add Needed Alarm Image Path
 Add All Image Path
     Add Needed Alarm Image Path
     Add Base Image Path
+
+And refresh the search bar
+    Click                       FiltroLaranja.PNG
+    Mouse Move                  conectado.png
+    Click                       FiltroAzul.PNG
 
 And Clicked on "Geral" in "Sumário de Alarmes"
     Click                               SA-Geral.png
@@ -94,18 +102,42 @@ Then Comunicação Alarm List should be appeared
     Click                               fechar4.png
 
 Then Disj - Protecao Alarm is created
-    Exec Command                        ${SPSY}
-    Exec Command                        ${BAU}
-    Exec Command                        ${DISJ}
-    Exec Command                        ${ON}
-    Exec Command                        ${OPEN}
+    # Exec Command                        ${SPSY}
+    # Sleep   3
+    # Exec Command                        ${BAU}
+    # Sleep   3
+    # Exec Command                        ${DISJ}
+    # Sleep   3
+    # Exec Command                        ${ON}
+    # Sleep   3
+    # Exec Command                        ${OPEN}
+    # Disconnect
+    #Send Command
+    Exec Command                         ${TEST}
+    Disconnect 
 
 Then I confirm Disj in General and Disj Alarmes
     Click                               SA-Geral.png
+    Sleep                               2
+    
+    And refresh the search bar
+    Click                               InputBoxAlarm.PNG
+    Input Text          ${EMPTY}        BVG_12Z3
+    Press Special Key           ENTER
+    Mouse Move                  conectado.png
+
     Wait Until Screen Contain           created-disj.png     ${TEMPO}
     Right Click                         Geral.png
     Click                               fechar4.png
     Click                               SA-Disj-Protecao.png
+
+    Sleep                               2
+    And refresh the search bar
+    Click                               InputBoxAlarm.PNG
+    Input Text          ${EMPTY}        BVG_12Z3
+    Press Special Key           ENTER
+    Mouse Move                  conectado.png
+
     Wait Until Screen Contain           created-disj.png     ${TEMPO}
     Right Click                         Disj-Protecao.png
     Click                               fechar4.png

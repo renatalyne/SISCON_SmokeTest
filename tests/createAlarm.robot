@@ -22,4 +22,4 @@ Cenário 1: Criar Alarme de Disjuntor de proteção
     Then I confirm Disj in General and Disj Alarmes
     [Teardown]
 
-Cenário 2: Criar Alarme de Medida
+# Cenário 2: Criar Alarme de Medida
