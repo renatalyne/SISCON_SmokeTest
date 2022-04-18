@@ -102,6 +102,7 @@ Then Comunicação Alarm List should be appeared
     Click                               fechar4.png
 
 Then Disj - Protecao Alarm is created
+    [Arguments]     ${Host}     ${Username}     ${Password}
     # Exec Command                        ${SPSY}
     # Sleep   3
     # Exec Command                        ${BAU}
@@ -112,9 +113,9 @@ Then Disj - Protecao Alarm is created
     # Sleep   3
     # Exec Command                        ${OPEN}
     # Disconnect
-    #Send Command
-    Exec Command                         ${TEST}
-    Disconnect 
+    Send Command                          ${Host}     ${Username}     ${Password}
+    # Exec Command                         ${TEST}
+    # Disconnect 
 
 Then I confirm Disj in General and Disj Alarmes
     Click                               SA-Geral.png

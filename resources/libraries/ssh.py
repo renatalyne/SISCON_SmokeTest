@@ -11,11 +11,13 @@ except Exception:
     ROBOT = False
 
 
-def Send_Command():
+def Send_Command(host, username, password):
     client = SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect('admmtst',username='spsy',password='Iberdrola1!')
+    client.connect(host,username=username,password=password)
+    # client.connect('dvl81ibd',username='psene',password='jS4BvgnjmCXtgnTs')
+    # client.connect('admmtst',username='spsy',password='Iberdrola1!')
     print('Connection stable')
 
     channel = client.invoke_shell()
