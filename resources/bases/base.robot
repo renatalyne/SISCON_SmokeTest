@@ -10,6 +10,8 @@ Library     ${EXECDIR}\\resources\\libraries\\nova.py
 
 ${IMAGE_DIR}       ${EXECDIR}\\resources\\elements\\BaSiDi
 ${IMAGE_DIR2}      ${EXECDIR}\\resources\\elements\\Windows
+${IMAGE_DIR3}      ${EXECDIR}\\resources\\elements\\ListaDeTelas
+${IMAGE_DIR4}      ${EXECDIR}\\resources\\elements\\Icones
 ${PATH}            C:\\Program Files\\Siemens\\SpectrumPower7\\odvlauncher
 ${EXEC_SPECTRUM}   odvlauncher.exe -admin
 ${TEMPLATE_DIR}    C:\\temp\\template.txt
@@ -31,10 +33,35 @@ ${TA}                      US-S3/13/Bay7
 Add Base Image Path
     Add Image Path         ${IMAGE_DIR}
     Add Image Path         ${IMAGE_DIR2}
+    Add Image Path         ${IMAGE_DIR3}
+    Add Image Path         ${IMAGE_DIR4}
 
-Close non-BaSiDi window
-    Click                   Fechar3.PNG     15      0 
-    Sleep                   5
+Close all non-BaSiDi windows
+    ${score}        Get Match Score     Fechar3.PNG
+    # log many  "Achei a imagem com um score de  ${score} "
+
+    FOR    ${counter}   IN RANGE    0   9999
+        ${score}        Get Match Score     Fechar3.PNG
+        Exit For Loop If  ${score} < 0.92 
+
+        Click                   Fechar3.PNG     15      0 
+        Mouse Move              BasidiWindow.PNG   
+        Sleep                   1
+
+    END
+    # WHILE    True
+    #     Break
+    #         # ${score}        Get Match Score     Fechar3.PNG
+    #         # IF  ${score} < 0.92
+    #         #     Break
+    #         # ELSE
+    #         #     Click                   Fechar3.PNG     15      0 
+    #         #     Sleep                   2
+    #         # END
+    # END
+
+    # Click                   Fechar3.PNG     15      0 
+    # Sleep                   5
 
 # Close All Windows
 #     FOR     ${i}    IN RANGE   1   10
@@ -193,6 +220,20 @@ Then the sucesfull password changed successfully message should appeared
 
 Then the BaSiDi screen should appeared
     Wait Until Screen Contain               ConectadoSelecionado.PNG      ${TEMPO}
+
+When the input box is clicked
+    Click                       InputBox.PNG        0    5
+
+And filled the input box
+    [Arguments]         ${Nome_B1}      ${Nome_B2}      ${Nome_B3}
+    Input Text          ${EMPTY}            ${Nome_B1}
+    Press Special Key           TAB
+    Input Text          ${EMPTY}            ${Nome_B2}
+    Press Special Key           TAB
+    Input Text          ${EMPTY}            ${Nome_B3}
+    Press Special Key           ENTER
+
+
 # E estou na aba "DISTRIBUIÇÃO"
 
 #   ${imageCoordinates}=    Get Image Coordinates          spectrum-distribuição.png

@@ -6,18 +6,53 @@ Test Setup        Add Cards Image Path
 Test Teardown     Stop Remote Server
 
 
-*** Test Cases ***
+*** Variables ***
+${Login}                testeQA
+${Environment}          dvl
+${Nome_B1}              US-S3
+${Nome_B2}              13
+${Nome_B3}              Bay7  
+${TA_Selecionado}       TASelecionado(Dvl).png
+${Tela_Selecionada}     USS3-13-Bay7Window.png
+${Ponto}                Point(Dvl).PNG
 
-#Given
-#And
-#When
-#Then
+*** Test Cases ***
 
 ###########################################################################
 # Cenário 1-10: Abre cada uma das telas dos cartões e verifica se elas carregam
 ###########################################################################
 
-Cenário 1: Open the "Geral" screen in "Cartões"
+Cenário 00: Setup
+    [Tags]      Cenário 00
+        IF      "${Environment}" == "dvl"     
+
+            set Global Variable      ${Nome_B1}             US-S3
+            set Global Variable      ${Nome_B2}             13
+            set Global Variable      ${Nome_B3}             Bay7
+            set Global Variable      ${TA_Selecionado}      TASelecionado(Dvl).png
+            set Global Variable      ${Tela_Selecionada}    USS3-13-Bay7Window.png
+            set Global Variable      ${Ponto}               Point(Dvl).PNG
+
+        END   
+        IF      "${Environment}" == "admmst"     
+            
+            set Global Variable      ${Nome_B1}             BVG
+            set Global Variable      ${Nome_B2}             69
+            set Global Variable      ${Nome_B3}             12Z3
+            set Global Variable      ${TA_Selecionado}      TASelecionado(admmst).png
+            set Global Variable      ${Tela_Selecionada}    BVG-69-12Z3Window.PNG
+            set Global Variable      ${Ponto}               Point(Admmst).PNG
+
+
+        END
+
+
+        Close all non-BaSiDi windows
+        And clicked on "Cartões"
+    [Teardown]
+
+
+Cenário 01: Open the "Geral" screen in "Cartões"
     [Tags]      Cenário 01
         ${Cartoes_Custom}   set Variable    Cartoes-Geral.PNG
         ${Cartoes_Custom_Window}    set Variable    CartoesWindow-Geral.PNG
@@ -29,7 +64,7 @@ Cenário 1: Open the "Geral" screen in "Cartões"
         Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 2: Open the "Objeto em Teste" screen in "Cartões"
+Cenário 02: Open the "Objeto em Teste" screen in "Cartões"
     [Tags]      Cenário 02
         ${Cartoes_Custom}           set Variable    Cartoes-ObjetoEmTeste.PNG
         ${Cartoes_Custom_Window}    set Variable    CartoesWindow-ObjetoEmTeste.PNG
@@ -40,12 +75,10 @@ Cenário 2: Open the "Objeto em Teste" screen in "Cartões"
         Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-### DEU CERTO VER A IMAGEM NÃO DANDO MATCH, CONTINUAR DAQUI!
-
-Cenário 3: Open the "Cartão de Informação" screen in "Cartões"
+Cenário 03: Open the "Cartão de Informação" screen in "Cartões"
     [Tags]      Cenário 03
         ${Cartoes_Custom}           set Variable    Cartoes-CartaoDeInformacao.PNG
-        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-ObjetoEmTeste.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-CartaoDeInformacao.PNG
         log     "Abrir tela Cartão de Informação em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom           ${Cartoes_Custom}
@@ -53,57 +86,62 @@ Cenário 3: Open the "Cartão de Informação" screen in "Cartões"
         Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 4: Open the "Removido de Operação" screen in "Cartões"
+Cenário 04: Open the "Removido de Operação" screen in "Cartões"
     [Tags]      Cenário 04
-        ${Cartoes_Custom}   set Variable    Cartoes-RemovidoDeOperacao.PNG
+        ${Cartoes_Custom}           set Variable    Cartoes-RemovidoDeOperacao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-RemovidoDeOperacao.PNG
         log     "Abrir tela Removido de Operação em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 5: Open the "Alarme Inibido" screen in "Cartões"
+Cenário 05: Open the "Alarme Inibido" screen in "Cartões"
     [Tags]      Cenário 05
-        ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
+        ${Cartoes_Custom}           set Variable    Cartoes-AlarmeInibido.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-AlarmeInibido.PNG
         log     "Abrir tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 6: Open the "Cartão Atenção" screen in "Cartões"
+Cenário 06: Open the "Cartão Atenção" screen in "Cartões"
     [Tags]      Cenário 06
-        ${Cartoes_Custom}   set Variable    Cartoes-CartaoAtencao.PNG
+        ${Cartoes_Custom}           set Variable    Cartoes-CartaoAtencao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-CartaoAtencao.PNG
         log     "Abrir tela Cartão Atenção em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 7: Open the "Controle Inibido" screen in "Cartões"
+Cenário 07: Open the "Controle Inibido" screen in "Cartões"
     [Tags]      Cenário 07
         ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
+        ${Cartoes_Custom_Window}   set Variable    CartoesWindow-ControleInibido.PNG
         log     "Abrir tela Controle Inibido em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 8: Open the "Cartão AGR" screen in "Cartões"
+Cenário 08: Open the "Cartão AGR" screen in "Cartões"
     [Tags]      Cenário 08
-        ${Cartoes_Custom}   set Variable    Cartoes-CartaoAGR.PNG
+        ${Cartoes_Custom}          set Variable    Cartoes-CartaoAGR.PNG
+        ${Cartoes_Custom_Window}   set Variable    CartoesWindow-CartaoAGR.PNG
         log     "Abrir tela Cartão AGR em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the Cards screen should appeared
-        Close card window
+        And clicked on Cartoes-Custom           ${Cartoes_Custom}
+        Then the Cards screen should appeared   ${Cartoes_Custom_Window}
+        Close card window                       ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 9: Open Display list 
+Cenário 09: Open Display list 
     [Tags]      Cenário 09
         log   "Abrir a Lista de Telas"
         Given that I'm in BaSiDi
@@ -111,163 +149,176 @@ Cenário 9: Open Display list
         Then the Display list screen should appeared
     [Teardown]
 
-Cenário 10: Input US-S3/13/Bay7
+Cenário 10: Input Desired TA
     [Tags]      Cenário 10
-        log   "Abrir tela US-S3/13/Bay7 em Lista de Telas"
+        log   "Abrir tela desejada em Lista de Telas"
         When the input box is clicked
-        And filled the input box
-        And clicked on the "Chamar" button
-        Then the US-S3/13/Bay7 screen should appeared
+        And filled the input box    ${Nome_B1}      ${Nome_B2}      ${Nome_B3}
+        And the display list finished loading 
+        And clicked on the "Chamar" button          ${TA_Selecionado}
+        Then the selected screen should appeared    ${Tela_Selecionada}
     [Teardown]
 
 ###########################################################################
 # Cenário 11 - 14: Teste Removido de Operação
 ###########################################################################
-Cenário 11: Add "Removido de Operação" card to CB
+Cenário 11: Add "Removido de Operação" card to point
     [Tags]      Cenário 11
-        ${Cartao}           set Variable     CB-Cartoes-DefinirRemovidoDeOperacao.png
-        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirRemovidoDeOperacao.png
-        log   "Definir Removido de Operação em um CB"
-        When the CB is selected
-        And clicked on CB-Cartoes
-        And clicked on CB-Cartoes-Custom     ${Cartao}
+        ${Cartao}           set Variable     point-Cartoes-DefinirRemovidoDeOperacao.png
+        ${ExcluirCartao}    set Variable     point-Cartoes-ExcluirRemovidoDeOperacao.png
+        log   "Definir Removido de Operação em um point"
+        When the point is selected              ${Ponto}
+        And clicked on point-Cartoes
+        And clicked on point-Cartoes-Custom     ${Cartao}
         And filled the TAInformation card
-        Then the card should be applied      ${ExcluirCartao}
+        Then the card should be applied/removed     ${Ponto}    ${Cartao}   ${ExcluirCartao}    ${True}
     [Teardown]
 
 Cenário 12: Verify "Removido de Operação" screen in "Cartões"
     [Tags]      Cenário 12
         ${Cartoes_Custom}   set Variable    Cartoes-RemovidoDeOperacao.PNG
-        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-RemovidoDeOperacao.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao(${Environment}).PNG       
+
         log     "Verificar tela Removido de Operação em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should contain the Custom card      ${Cartoes_Report}
-        Close card window
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}    
+        Then the screen should/shouldn't contain the Custom card      ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}     ${Cartoes_Custom_Window}    ${True}
+        Close card window              ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 13: Delete "Removido de Operação" card from the CB
+Cenário 13: Delete "Removido de Operação" card from the point
     [Tags]      Cenário 13
-        ${Cartao}           set Variable     CB-Cartoes-DefinirRemovidoDeOperacao.png
-        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirRemovidoDeOperacao.png
+        ${Cartao}           set Variable     point-Cartoes-DefinirRemovidoDeOperacao.png
+        ${ExcluirCartao}    set Variable     point-Cartoes-ExcluirRemovidoDeOperacao.png
         log     "Exclui Removido de Operação em Cartões"
-        When the CB is selected
-        And clicked on CB-Cartoes
-        And clicked on CB-Cartoes-ExcluirCustom      ${ExcluirCartao}  
-        Then the card should be removed                     ${Cartao} 
+        When the point is selected              ${Ponto}     
+        And clicked on point-Cartoes
+        And clicked on point-Cartoes-ExcluirCustom      ${ExcluirCartao}  
+        Then the card should be applied/removed     ${Ponto}    ${Cartao}   ${ExcluirCartao}    ${False}
     [Teardown]
 
 Cenário 14: Verify "Removido de Operação" screen in "Cartões"
     [Tags]      Cenário 14
         ${Cartoes_Custom}   set Variable    Cartoes-RemovidoDeOperacao.PNG
-        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-RemovidoDeOperacao.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao(${Environment}).PNG   
+
         log     "Verificar tela Removido de Operação em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should not contain the Custom card  ${Cartoes_Report}
-        Close card window
+        Then the screen should/shouldn't contain the Custom card  ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}       ${Cartoes_Custom_Window}    ${False}
+        Close card window              ${Cartoes_Custom_Window}
     [Teardown]
+
 
 ###########################################################################
 # Cenário 15 - 18: Teste Controle Inibido
 ###########################################################################
 
-Cenário 15: Add "Controle Inibido" card to CB
+Cenário 15: Add "Controle Inibido" card to point
     [Tags]      Cenário 15
-        ${Cartao}           set Variable     CB-Cartoes-DefinirControleInibido.png
-        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirControleInibido.png
-        log   "Definir Controle Inibido em um CB"
-        When the CB is selected
-        And clicked on CB-Cartoes
-        And clicked on CB-Cartoes-Custom     ${Cartao}
+        ${Cartao}           set Variable     point-Cartoes-DefinirControleInibido.png
+        ${ExcluirCartao}    set Variable     point-Cartoes-ExcluirControleInibido.png
+        log   "Definir Controle Inibido em um point"
+        When the point is selected              ${Ponto}
+        And clicked on point-Cartoes
+        And clicked on point-Cartoes-Custom     ${Cartao}
         And filled the TAInformation card
-        Then the card should be applied      ${ExcluirCartao}
+        Then the card should be applied/removed    ${Ponto}  ${Cartao}   ${ExcluirCartao}    ${True}
     [Teardown]
 
 Cenário 16: Verify "Controle Inibido" screen in "Cartões"
     [Tags]      Cenário 16
         ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
-        ${Cartoes_Report}   set Variable    TesteControleInibido.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-ControleInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao(${Environment}).PNG   
+
         log     "Verificar tela Controle Inibido em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should contain the Custom card      ${Cartoes_Report}
-        Close card window
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}    
+        Then the screen should/shouldn't contain the Custom card      ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}     ${Cartoes_Custom_Window}    ${True}
+        Close card window              ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 17: Delete "Controle Inibido" card from the CB
+Cenário 17: Delete "Controle Inibido" card from the point
     [Tags]      Cenário 17
-        ${Cartao}           set Variable     CB-Cartoes-DefinirControleInibido.png
-        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirControleInibido.png       
+        ${Cartao}           set Variable     point-Cartoes-DefinirControleInibido.png
+        ${ExcluirCartao}    set Variable     point-Cartoes-ExcluirControleInibido.png       
         log     "Exclui Controle Inibido em Cartões"
-        When the CB is selected
-        And clicked on CB-Cartoes
-        And clicked on CB-Cartoes-ExcluirCustom      ${ExcluirCartao}  
-        Then the card should be removed                     ${Cartao} 
+        When the point is selected              ${Ponto}
+        And clicked on point-Cartoes
+        And clicked on point-Cartoes-ExcluirCustom      ${ExcluirCartao}  
+        Then the card should be applied/removed    ${Ponto}  ${Cartao}   ${ExcluirCartao}    ${False}
     [Teardown]
 
 Cenário 18: Verify "Controle Inibido" screen in "Cartões"
     [Tags]      Cenário 18
         ${Cartoes_Custom}   set Variable    Cartoes-ControleInibido.PNG
-        ${Cartoes_Report}   set Variable    TesteControleInibido.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-ControleInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao(${Environment}).PNG   
+
         log     "Verificar tela Controle Inibido em Cartões"
         Given that I'm in BaSiDi
-        And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should not contain the Custom card      ${Cartoes_Report}
-        Close card window
+        And clicked on Cartoes-Custom  ${Cartoes_Custom}    
+        Then the screen should/shouldn't contain the Custom card      ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}     ${Cartoes_Custom_Window}    ${False}
+        Close card window              ${Cartoes_Custom_Window}
     [Teardown]
 
 ###########################################################################
 # Cenário 19 - 22: Teste Alarme Inibido
 ###########################################################################
 
-Cenário 19: Add "Alarme Inibido" card to CB
+Cenário 19: Add "Alarme Inibido" card to point
     [Tags]      Cenário 19
-        ${Cartao}           set Variable     CB-Cartoes-DefinirAlarmeInibido.png
-        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirAlarmeInibido.png
-        log   "Definir Alarme Inibido em um CB"
-        When the CB is selected
-        And clicked on CB-Cartoes
-        And clicked on CB-Cartoes-Custom     ${Cartao}
+        ${Cartao}           set Variable     point-Cartoes-DefinirAlarmeInibido.png
+        ${ExcluirCartao}    set Variable     point-Cartoes-ExcluirAlarmeInibido.png
+        log   "Definir Alarme Inibido em um point"
+        When the point is selected          ${Ponto}
+        And clicked on point-Cartoes
+        And clicked on point-Cartoes-Custom            ${Cartao}
         And filled the TAInformation card
-        Then the card should be applied             ${ExcluirCartao}
+        Then the card should be applied/removed    ${Ponto}  ${Cartao}   ${ExcluirCartao}    ${True}
     [Teardown]
 
 Cenário 20: Verify "Alarme Inibido" screen in "Cartões"
     [Tags]      Cenário 20
         ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
-        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-AlarmeInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao(${Environment}).PNG          
+
         log     "Verificar tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should contain the Custom card      ${Cartoes_Report}
-        Close card window
+        Then the screen should/shouldn't contain the Custom card      ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}     ${Cartoes_Custom_Window}    ${True}
+        Close card window              ${Cartoes_Custom_Window}
     [Teardown]
 
-Cenário 21: Delete "Alarme Inibido" card from the CB
+Cenário 21: Delete "Alarme Inibido" card from the point
     [Tags]      Cenário 21
-        ${Cartao}           set Variable     CB-Cartoes-DefinirAlarmeInibido.png
-        ${ExcluirCartao}    set Variable     CB-Cartoes-ExcluirAlarmeInibido.png
+        ${Cartao}           set Variable     point-Cartoes-DefinirAlarmeInibido.png
+        ${ExcluirCartao}    set Variable     point-Cartoes-ExcluirAlarmeInibido.png
         log     "Exclui Alarme Inibido em Cartões"
-        When the CB is selected
-        And clicked on CB-Cartoes
-        And clicked on CB-Cartoes-ExcluirCustom      ${ExcluirCartao}  
-        Then the card should be removed                     ${Cartao} 
+        When the point is selected          ${Ponto}
+        And clicked on point-Cartoes
+        And clicked on point-Cartoes-ExcluirCustom     ${ExcluirCartao}  
+        Then the card should be applied/removed     ${Ponto}    ${Cartao}   ${ExcluirCartao}    ${False}
     [Teardown]
 
 Cenário 22: Verify "Alarme Inibido" screen in "Cartões"
     [Tags]      Cenário 22
         ${Cartoes_Custom}   set Variable    Cartoes-AlarmeInibido.PNG
-        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao.PNG
+        ${Cartoes_Custom_Window}    set Variable    CartoesWindow-AlarmeInibido.PNG
+        ${Cartoes_Report}   set Variable    TesteRemovidoDeOperacao(${Environment}).PNG   
+
         log     "Verificar tela Alarme Inibido em Cartões"
         Given that I'm in BaSiDi
         And clicked on Cartoes-Custom  ${Cartoes_Custom}
-        Then the screen should not contain the Custom card      ${Cartoes_Report}
-        Close card window
+        Then the screen should/shouldn't contain the Custom card      ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}     ${Cartoes_Custom_Window}    ${False}
+        Close card window              ${Cartoes_Custom_Window}
     [Teardown]
 
 Cenário 23: Close Windows
-    [Tags]      Cenário 23
-        Close non-BaSiDi window
-        Close non-BaSiDi window
+    [Tags]      Cenário 23 
+        Close all non-BaSiDi windows
     [Teardown]

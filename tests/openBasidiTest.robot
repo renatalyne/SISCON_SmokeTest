@@ -7,16 +7,17 @@ Test Teardown     Stop Remote Server
 *** Variables ***
 ${Login}            spectrum
 ${Password}         spectrum
-${Environment}      dvl  
+${Environment}      dvl
+${RuntimeSetting}   RuntimeSetting(dvl).PNG  
 
 *** Test Cases ***
 Cenário 00: Setup 
     [Tags]      Cenário 00
         IF      "${Environment}" == "dvl"     
-            set Global Variable      ${Environment}      RuntimeSetting(dvl).PNG
+            set Global Variable      ${RuntimeSetting}      RuntimeSetting(dvl).PNG
         END   
         IF      "${Environment}" == "admmst"     
-            set Global Variable      ${Environment}      RuntimeSetting(admmst).PNG
+            set Global Variable      ${RuntimeSetting}      RuntimeSetting(admmst).PNG
         END
 
     [Teardown]    
@@ -24,7 +25,7 @@ Cenário 00: Setup
 Cenário 01: Open BaSiDi
     [Tags]      Cenário 01
         log      "Abre o BaSiDi"
-        When BaSiDi Login screen is opened          ${ENVIRONMENT}
+        When BaSiDi Login screen is opened          ${RuntimeSetting}
         Then an security message should appeared
     [Teardown]
 
