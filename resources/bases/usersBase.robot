@@ -1,7 +1,4 @@
 *** Settings ***
-#TODO: Organizar nome dos testes.
-#TODO: Organizar as TAGS.
-
 
 Library     SikuliLibrary
 Library     OperatingSystem

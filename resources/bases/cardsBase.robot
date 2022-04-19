@@ -1,7 +1,4 @@
 *** Settings ***
-#TODO: Organizar nome dos testes.
-#TODO: Organizar as TAGS.
-
 
 Library     SikuliLibrary
 Library     OperatingSystem
@@ -23,7 +20,6 @@ Add Cards Image Path
 When the point is selected
     [Arguments]         ${Ponto}
     Right Click         ${Ponto}
-    # Right Click                 point.PNG              -45
 
 And the display list finished loading 
     Wait Until Screen Contain           Carregamento.png       60
@@ -74,7 +70,6 @@ Then the Cards screen should appeared
     # Wait Until Screen not Contain       Carregamento.png       30
     Sleep               5
     ${score}        Get Match Score     ${Cartoes_Custom_Window}
-    # log many  "Achei a imagem com um score de  ${score} "
     IF      ${score} < 0.92     
         Fail    Given image did not achieve the ${score} score.
     END
@@ -85,9 +80,6 @@ Then the Display list screen should appeared
 Then the selected screen should appeared
     [Arguments]                 ${Tela_Selecionada}
     Wait Until Screen Contain   ${Tela_Selecionada}     30
-
-# Then the US-S3/13/Bay7 screen should appeared
-#     Wait Until Screen Contain   USS3-13-Bay7Window.png     30
 
 Then the card should be applied/removed
     [Arguments]                     ${Ponto}    ${Cartao}   ${ExcluirCartao}    ${Applied}
@@ -100,19 +92,6 @@ Then the card should be applied/removed
     END
     Click                           conectado.png    
 
-
-# Then the card should be applied
-#     [Arguments]                 ${ExcluirCartao}
-#     When the point is selected
-#     And clicked on point-Cartoes
-#     Wait Until Screen Contain   ${ExcluirCartao}       ${TEMPO}
-
-# Then the card should be removed
-#     [Arguments]                 ${Cartao} 
-#     When the point is selected
-#     And clicked on point-Cartoes
-#     Wait Until Screen Contain   ${Cartao}        ${TEMPO} 
-
 Then the screen should/shouldn't contain the Custom card
     [Arguments]                     ${Nome_B1}      ${Nome_B2}      ${Nome_B3}  ${Cartoes_Report}   ${Cartoes_Custom_Window}    ${Should_Contain}
     Then the Cards screen should appeared   ${Cartoes_Custom_Window}
@@ -124,22 +103,6 @@ Then the screen should/shouldn't contain the Custom card
     ELSE
         Wait Until Screen Not Contain   ${Cartoes_Report}     ${TEMPO}
     END
-
-# Then the screen should contain the Custom card
-#     [Arguments]                     ${Nome_B1}      ${Nome_B2}      ${Nome_B3}  ${Cartoes_Report}   ${Cartoes_Custom_Window}
-#     Then the Cards screen should appeared   ${Cartoes_Custom_Window}
-#     and refresh the search bar
-#     And filled the card search bar  ${Nome_B1}      ${Nome_B2}      ${Nome_B3}
-#     Sleep                           2
-#     Wait Until Screen Contain   ${Cartoes_Report}     30
-
-# Then the screen should not contain the Custom card
-#     [Arguments]                     ${Nome_B1}      ${Nome_B2}      ${Nome_B3}      ${Cartoes_Report}       ${Cartoes_Custom_Window}
-#     Then the cards screen should appeared       ${Cartoes_Custom_Window}
-#     and refresh the search bar
-#     And filled the card search bar  ${Nome_B1}      ${Nome_B2}      ${Nome_B3}
-#     Sleep                           2
-#     Wait Until Screen Not Contain   ${Cartoes_Report}     ${TEMPO}
 
 Close card window 
     [Arguments]                 ${Cartoes_Custom_Window}

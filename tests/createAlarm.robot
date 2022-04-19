@@ -45,8 +45,7 @@ Cenário 00: Setup
     [Teardown]
 
 Cenário 1: Criar Alarme de Disjuntor de proteção
+    [Tags]      Cenário 01
     Then Disj - Protecao Alarm is created       ${Host}     ${Username}     ${Password}
     Then I confirm Disj in General and Disj Alarmes
     [Teardown]
-
-# Cenário 2: Criar Alarme de Medida

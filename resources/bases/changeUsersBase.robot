@@ -34,10 +34,6 @@ Then an expected error should appeared
 Then the change user windows should appeared
     Wait Until Screen Contain   MudarUsuarioWindow.png      ${TEMPO}
 
-# Expected Sucess
-#     Wait Until Screen Contain   Sucess.PNG     ${TEMPO}
-#     Click                       Sucess.PNG
-
 Then an sucessfull message should appeared 
     Wait Until Screen Contain   MudarUsuarioSucesso.PNG     ${TEMPO}
     Click                       MudarUsuarioSucesso.PNG     150     70

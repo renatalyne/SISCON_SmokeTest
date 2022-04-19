@@ -1,6 +1,5 @@
 *** Settings ***
-#TODO: Organizar nome dos testes.
-#TODO: Organizar as TAGS.
+
 
 
 Library     SikuliLibrary
@@ -103,19 +102,7 @@ Then Comunicação Alarm List should be appeared
 
 Then Disj - Protecao Alarm is created
     [Arguments]     ${Host}     ${Username}     ${Password}
-    # Exec Command                        ${SPSY}
-    # Sleep   3
-    # Exec Command                        ${BAU}
-    # Sleep   3
-    # Exec Command                        ${DISJ}
-    # Sleep   3
-    # Exec Command                        ${ON}
-    # Sleep   3
-    # Exec Command                        ${OPEN}
-    # Disconnect
     Send Command                          ${Host}     ${Username}     ${Password}
-    # Exec Command                         ${TEST}
-    # Disconnect 
 
 Then I confirm Disj in General and Disj Alarmes
     Click                               SA-Geral.png

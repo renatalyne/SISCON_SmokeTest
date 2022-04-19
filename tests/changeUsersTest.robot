@@ -22,8 +22,6 @@ Cenário 00: Setup
         IF      "${Environment}" == "admmst"     
             set Global Variable      ${RuntimeSetting}      RuntimeSetting(admmst).PNG
         END
-
-        # set Global Variable    ${Login}     testeQA 
     [Teardown]
 
 Cenário 01: Abrir tela de Troca Usuário
@@ -37,7 +35,6 @@ Cenário 01: Abrir tela de Troca Usuário
 Cenário 02: Fill in the data
     [Tags]    Cenário 02
         log     "Preenche formulário de troca de usuário"
-        # ${Login}        set Variable    testeQA
         ${Password}     set Variable    testeQA
         When the data is filled     ${Login}     ${Password}
         Then an expected error should appeared
@@ -68,7 +65,6 @@ Cenário 04: Open BaSiDi
 Cenário 05: Try Login in BaSiDi
     [Tags]      Cenário 05
         log     "Preenche login e senha"
-        # ${Login}        set Variable    testeQA 
         ${Password}     set Variable    testeQA       
         log     "Tenta Logar no BaSiDi"
         When the BaSiDi Login screen is filled  ${Login}     ${Password}
@@ -142,7 +138,6 @@ Cenário 12: New password sucess
         log     "Sucesso em gerar uma nova senha"
         ${Password}     set Variable    teste123
         When the BaSiDi new password field is filled      ${Password}
-        #Then and no numeric in password message should appeared
         Then the sucesfull password changed successfully message should appeared
 
     [Teardown]
